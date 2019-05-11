@@ -1,0 +1,21 @@
+{
+  "name": "Light Theme",
+  "component": false,
+  "license_url": "https://github.com/freeCodeCamp/discourse-theme/blob/master/LICENSE",
+  "about_url": "https://www.freecodecamp.org/forum",
+  "assets": {},
+  "color_schemes": {
+    "freeCodeCamp Light": {
+      "primary": "222222",
+      "secondary": "ffffff",
+      "tertiary": "0088cc",
+      "quaternary": "e45735",
+      "header_background": "006400",
+      "header_primary": "333333",
+      "highlight": "ffff4d",
+      "danger": "e45735",
+      "success": "009900",
+      "love": "fa6c8d"
+    }
+  }
+}
