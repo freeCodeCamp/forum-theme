@@ -876,7 +876,7 @@ td.poster-names a {
 }
 
 #whos-online {
-  color: dark-light-choose($primary-medium, $secondary-medium);
+  color: dark-light-choose($primary-medium, $secondary-medium) $i;
 }
 
 //buttons
@@ -1073,6 +1073,11 @@ svg.fa.d-icon.d-icon-reply.svg-icon.svg-node {
 
 svg.fa.d-icon.d-icon-d-tracking.svg-icon.svg-string {
   display: $n;
+}
+
+.reply-details
+  .select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
+  content: "";
 }
 
 // link
