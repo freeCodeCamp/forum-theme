@@ -1,0 +1,112 @@
+<script type="text/discourse-plugin" version="0.8">
+  const h = require("virtual-dom").h;
+    api.reopenWidget("user-dropdown", {
+      html(attrs) {
+          console.log(attrs);
+          return h(
+            "a.icon",
+            {
+              attributes: {
+                href: 'attrs.user.get("path")',
+                "data-auto-route": true
+              }
+            },
+            this.attach("header-notifications", attrs)
+          );
+        }
+    });
+</script>
+
+<script type="text/x-handlebars" data-template-name="topic-list-header.raw">
+  {{#if bulkSelectEnabled}}
+    <th class="bulk-select">
+      {{#if canBulkSelect}}
+        {{raw "flat-button" class="bulk-select" icon="list" title="topics.bulk.toggle"}}
+      {{/if}}
+    </th>
+  {{/if}}
+  {{raw "topic-list-header-column" order='default' name=listTitle bulkSelectEnabled=bulkSelectEnabled showBulkToggle=toggleInTitle canBulkSelect=canBulkSelect}}
+  {{#if showPosters}}
+    {{raw "topic-list-header-column" number='true' forceName='Posters'}}
+  {{/if}}
+  {{raw "topic-list-header-column" sortable=sortable number='true' order='posts' name='replies'}}
+  {{#if showLikes}}
+    {{raw "topic-list-header-column" sortable=sortable number='true' order='likes' name='likes'}}
+  {{/if}}
+  {{#if showOpLikes}}
+    {{raw "topic-list-header-column" sortable=sortable number='true' order='op_likes' name='likes'}}
+  {{/if}}
+  {{raw "topic-list-header-column" sortable=sortable number='true' order='views' name='views'}}
+  {{raw "topic-list-header-column" sortable=sortable number='true' order='activity' name='activity'}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="list/topic-list-item.raw">
+    {{#if bulkSelectEnabled}}
+    <td class="bulk-select">
+      <input type="checkbox" class="bulk-select">
+    </td>
+  {{/if}}
+
+  {{!--
+    The `~` syntax strip spaces between the elements, making it produce
+    `<a class=topic-post-badges>Some text</a><span class=topic-post-badges>`,
+    with no space between them.
+    This causes the topic-post-badge to be considered the same word as "text"
+    at the end of the link, preventing it from line wrapping onto its own line.
+  --}}
+  <td class='main-link clearfix' colspan="1">
+    <span class='link-top-line'>
+      {{~raw-plugin-outlet name="topic-list-before-status"}}
+      {{~raw "topic-status" topic=topic}}
+      {{~topic-link topic class="raw-link raw-topic-link"}}
+      {{~#if topic.featured_link}}
+      {{~topic-featured-link topic}}
+      {{~/if}}
+      {{~raw-plugin-outlet name="topic-list-after-title"}}
+      {{~raw "list/unread-indicator" includeUnreadIndicator=includeUnreadIndicator
+                                     topicId=topic.id
+                                     unreadClass=unreadClass~}}
+      {{~#if showTopicPostBadges}}
+      {{~raw "topic-post-badges" unread=topic.unread newPosts=topic.displayNewPosts unseen=topic.unseen url=topic.lastUnreadUrl newDotText=newDotText}}
+      {{~/if}}
+    </span>
+    <div class="link-bottom-line">
+      {{#unless hideCategory}}
+        {{#unless topic.isPinnedUncategorized}}
+          {{category-link topic.category}}
+        {{/unless}}
+      {{/unless}}
+      {{discourse-tags topic mode="list" tagsForUser=tagsForUser}}
+      {{raw "list/action-list" topic=topic postNumbers=topic.liked_post_numbers className="likes" icon="heart"}}
+    </div>
+    {{#if expandPinned}}
+      {{raw "list/topic-excerpt" topic=topic}}
+    {{/if}}
+  </td>
+
+  {{#if showPosters}}
+      <td class="poster-names"><a href="/users/{{topic.creator.username}}" data-auto-route="true" data-user-card="{{topic.creator.username}}">{{topic.creator.username}}</a></td>
+  {{/if}}
+  {{raw "list/posts-count-column" topic=topic}}
+
+  {{#if showLikes}}
+    <td class="num likes">
+      {{#if hasLikes}}
+        <a href='{{topic.summaryUrl}}'>
+          {{number topic.like_count}} {{d-icon "heart"}}</td>
+    </a>
+  {{/if}}
+  {{/if}}
+
+  {{#if showOpLikes}}
+    <td class="num likes">
+      {{#if hasOpLikes}}
+        <a href='{{topic.summaryUrl}}'>
+          {{number topic.op_like_count}} {{d-icon "heart"}}</td>
+    </a>
+  {{/if}}
+  {{/if}}
+
+  <td class="num views {{topic.viewsHeat}}">{{number topic.views numberKey="views_long"}}</td>
+  {{raw "list/activity-column" topic=topic class="num" tagName="td"}}
+</script>
