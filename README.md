@@ -6,24 +6,9 @@
 
 ### Themes
 
-We have [separate branches](https://github.com/freeCodeCamp/discourse-theme/branches) for dark and light color schemes. 
-
-You should make fixes and make pull requests against these indiviually for them to work on the variants. These branches are intentionally orphaned to prevent any conflicts. You should make changes on each branch that you want to fix separately, by starting off from them as base branches, like so:
-
-```sh
-git checkout production-light-theme
-git checkout -b fix/update-common-styles-light
-```
-
-```sh
-git checkout production-dark-theme
-git checkout -b fix/update-common-styles-dark
-```
-
-> Note: All pull requests against the master branch will be closed, its a document only branch.
+Both dark and light themes are managed in this repo using different schemes.
 
 You can learn more about themes in this comprehensive article: https://meta.discourse.org/t/developer-s-guide-to-discourse-themes/93648
-
 
 ### Plugins
 
@@ -33,7 +18,7 @@ Some of the theme plugins we are using as of now are:
 
 - [Unformatted Code Detector](https://github.com/lionel-rowe/unformatted_code_detector)
 - [Hamburger Theme Selector](https://github.com/discourse/discourse-hamburger-theme-selector)
-- [Users Top Nav](https://github.com/freeCodeCamp/discourse-users-nav) - *forked from discourse*
+- [Users Top Nav](https://github.com/freeCodeCamp/discourse-users-nav) - _forked from discourse_
 - [Trust Level Avatar Flair](https://github.com/tshenry/discourse-trust-level-avatar-flair)
 
 ## Support:
