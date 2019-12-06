@@ -6,7 +6,7 @@
 
 ### Themes
 
-Both dark and light themes are managed in this repo using different schemes.
+Both dark and light themes are managed in this repo using different color schemes.
 
 You can learn more about themes in this comprehensive article: https://meta.discourse.org/t/developer-s-guide-to-discourse-themes/93648
 
