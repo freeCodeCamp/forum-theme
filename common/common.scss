@@ -7,8 +7,7 @@
 }
 
 // Variables  ---------------------------------------------------------------------------------
-$n: none;
-$i: !important;
+// theme based variables
 $fcc-primary-color: mix($primary, $secondary, 100%);
 $fcc-secondary-color: mix($primary, $secondary, 93%);
 $fcc-tertiary-color: mix($primary, $secondary, 87%);
@@ -23,28 +22,24 @@ $fcc-primary-background: mix($primary, $secondary, 0%);
 $fcc-highlight-color: $tertiary;
 $fcc-highlight-background: fcc-highlight-lightness-switch($fcc-highlight-color);
 $fcc-highlight-mid: mix($fcc-highlight-color, $fcc-highlight-background, 50%);
-
 $secondary-header-background: mix($header_primary, $header_background, 93%);
 
+//fixed variables
+// header_primary and header_background should always be set to #0a0a23 and #fff respectivley
+$n: none;
+$i: !important;
 $--header-height: 38px;
-$--gray90: #0a0a23;
-$--theme-color: #0a0a23;
 $--dark-blue: #002ead;
-$--theme-color: #0a0a23;
-$--gray90: #0a0a23;
-$--gray85: #1b1b32;
-$--gray80: #2a2a40;
-$--gray75: #3b3b4f;
-$--gray15: #d0d0d5;
-$--gray10: #dfdfe2;
-$--gray05: #eeeef0;
-$--gray00: #fff;
-
-// settings -------------------------------
-$body-background-pattern-opacity: 0.25 !default;
-$body-background-gradient-opacity: 0.45 !default;
-$body-gradient-color-first: $fcc-highlight-color;
-$body-gradient-color-second: $fcc-highlight-color;
+$header_primary: #fff;
+$header_background: #0a0a23;
+$--gray90: mix($header_background, $header_primary, 100%);
+$--gray85: mix($header_background, $header_primary, 93%);
+$--gray80: mix($header_background, $header_primary, 87%);
+$--gray75: mix($header_background, $header_primary, 80%);
+$--gray15: mix($header_background, $header_primary, 20%);
+$--gray10: mix($header_background, $header_primary, 13%);
+$--gray05: mix($header_background, $header_primary, 7%);
+$--gray00: mix($header_background, $header_primary, 0%);
 
 // fonts --------------------------------------------------------------------------------------
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
@@ -62,8 +57,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
-  /* overflow-y: auto; */
   position: fixed;
   height: 40px;
   font-size: 18px;
@@ -149,7 +142,7 @@ html {
 }
 
 .site-nav .nav li a:hover {
-  color: $--theme-color;
+  color: $--gray90;
   text-decoration: none;
 }
 
@@ -273,7 +266,7 @@ html {
   }
   .reverse-toggle-color {
     background-color: white;
-    color: $--theme-color;
+    color: $--gray90;
   }
 }
 
@@ -681,6 +674,7 @@ img.avatar {
 
 .d-header {
   height: $--header-height;
+  background-color: $--gray85;
   border-bottom: 1px solid $--gray75;
   box-shadow: none;
   position: fixed;
@@ -805,8 +799,8 @@ img.avatar {
   }
   &:hover,
   &:focus {
-    background-color: $--theme-color;
-    color: $--theme-color;
+    background-color: $--gray90;
+    color: $--gray90;
   }
 }
 
