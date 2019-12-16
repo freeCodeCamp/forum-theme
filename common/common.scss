@@ -24,6 +24,8 @@ $fcc-highlight-color: $tertiary;
 $fcc-highlight-background: fcc-highlight-lightness-switch($fcc-highlight-color);
 $fcc-highlight-mid: mix($fcc-highlight-color, $fcc-highlight-background, 50%);
 
+$secondary-header-background: mix($header_primary, $header_background, 93%);
+
 $--header-height: 38px;
 $--gray90: #0a0a23;
 $--theme-color: #0a0a23;
@@ -48,7 +50,7 @@ $body-gradient-color-second: $fcc-highlight-color;
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700");
 
-// general -------
+// general ---------------------------------------------------------------
 html {
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -60,9 +62,9 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  // position: fixed;
+
   /* overflow-y: auto; */
-  position: absolute;
+  position: fixed;
   height: 40px;
   font-size: 18px;
   font-family: Lato, sans-serif;
@@ -674,7 +676,14 @@ img.avatar {
 }
 
 .d-header {
-  background: $--gray90;
+  background: $secondary-header-background;
+}
+
+.d-header {
+  height: $--header-height;
+  border-bottom: 1px solid $--gray75;
+  box-shadow: none;
+  position: fixed;
 }
 
 .badge-notification,
@@ -694,10 +703,6 @@ img.avatar {
   margin-top: $--header-height;
 }
 
-.docked .ember-application .d-header {
-  margin-top: 0;
-}
-
 .btn:hover d-icon {
   color: inherit;
 }
@@ -709,7 +714,7 @@ img.avatar {
   padding-left: none;
 }
 
-d-header-icons .badge-notification {
+.d-header-icons .badge-notification {
   left: 0;
   top: -2px;
 }
@@ -781,6 +786,12 @@ d-header-icons .badge-notification {
 .drop-down-mode .d-header-icons .active .icon {
   color: $--gray90;
 }
+//new topic
+@media screen and (max-width: 850px) {
+  button#create-topic span {
+    display: inline;
+  }
+}
 
 //exeptions
 .docked .d-header .title a {
@@ -829,12 +840,6 @@ d-header-icons .badge-notification {
 
 .site-nav {
   border-bottom: 1px solid $--gray75;
-}
-
-.d-header {
-  height: $--header-height;
-  border-bottom: 1px solid $--gray75;
-  box-shadow: none;
 }
 
 .d-header .widget-link.topic-link {
