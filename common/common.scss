@@ -66,6 +66,7 @@ html {
   z-index: 10000;
   color: #fff;
   width: 100%;
+  top: 0px;
 }
 
 .site-nav-middle {
@@ -125,6 +126,7 @@ html {
   margin: 0;
   padding: 0;
   list-style: none;
+  width: 90px;
 }
 
 .site-nav .nav li a {
@@ -137,13 +139,15 @@ html {
   font-family: "Roboto Mono", monospace;
 }
 
-.site-nav .nav li:hover {
-  background: white;
-}
+@media (hover: hover) {
+  .site-nav .nav li:hover {
+    background: white;
+  }
 
-.site-nav .nav li a:hover {
-  color: $--gray90;
-  text-decoration: none;
+  .site-nav .nav li a:hover {
+    color: $--gray90;
+    text-decoration: none;
+  }
 }
 
 .site-nav-right {
@@ -153,11 +157,11 @@ html {
   height: $--header-height;
 }
 
-.toggle-button-nav {
+.toggle-search-nav {
   display: none;
   padding: 2px 14px 3px;
-  border: 1px solid #fff;
   outline: none;
+
   background-color: $--gray90;
   cursor: pointer;
   margin-right: 15px;
@@ -239,6 +243,16 @@ html {
   fill: #fff;
 }
 
+@media (min-width: 400px) and (max-width: 999px) {
+  .site-nav-logo {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    right: 50%;
+    margin-left: -105px;
+  }
+}
+
 @media (max-width: 999px) {
   .site-header {
     padding-right: 0;
@@ -248,21 +262,22 @@ html {
     margin-left: 0px;
   }
   .site-nav .nav {
-    display: none;
     position: absolute;
     background-color: $--gray90;
-    top: $--header-height * 2;
-    right: 20px;
+    top: $--header-height;
+    right: 15px;
   }
 
-  .toggle-button-nav {
-    display: flex;
+  .site-nav .hide-main-nav-items {
+    display: none;
   }
-  .site-nav .show-main-nav-items {
-    display: flex;
+
+  .site-nav {
+    min-height: 2 * $--header-height;
   }
-  .expand-nav {
-    min-height: 3 * $--header-height;
+
+  .toggle-search-nav {
+    display: flex;
   }
   .reverse-toggle-color {
     background-color: white;
@@ -607,9 +622,6 @@ p.footer-donation {
   .footer-col-3 {
     margin-left: 50%;
   }
-  /* .footer-container .col-spacer {
-      margin-top: -1.45rem;
-  } */
 }
 
 @media (min-width: 800px) {
@@ -658,16 +670,7 @@ p.footer-donation {
   }
 }
 
-// theme specific
-
-img.avatar {
-  border-radius: 0px;
-}
-
-.topic-list .posters a:first-child .avatar.latest:not(.single) {
-  box-shadow: none;
-}
-
+// local navigation
 .d-header {
   background: $secondary-header-background;
 }
@@ -678,11 +681,7 @@ img.avatar {
   border-bottom: 1px solid $--gray75;
   box-shadow: none;
   position: fixed;
-}
-
-.badge-notification,
-.badge-group {
-  border-radius: none;
+  margin-top: #{$--header-height * 2};
 }
 
 .d-header-icons .badge-notification {
@@ -693,12 +692,43 @@ img.avatar {
   min-width: 0.6em;
 }
 
-.ember-application .d-header {
+.d-header .d-header-icons {
+  font-family: "Roboto Mono", monospace;
+}
+
+#main {
   margin-top: $--header-height;
 }
 
+@media (min-width: 1000px) {
+  .d-header {
+    margin-top: $--header-height;
+  }
+}
+
+@media (max-width: 740px) {
+  .extra-info-wrapper .extra-info {
+    display: none;
+  }
+}
+
+// theme specific
+
 .btn:hover d-icon {
   color: inherit;
+}
+
+.d-header-icons .badge-notification {
+  left: 0;
+  top: -2px;
+}
+
+img.avatar {
+  border-radius: 0px;
+}
+
+.topic-list .posters a:first-child .avatar.latest:not(.single) {
+  box-shadow: none;
 }
 
 .modal-header .modal-close {
@@ -708,32 +738,25 @@ img.avatar {
   padding-left: none;
 }
 
-.d-header-icons .badge-notification {
-  left: 0;
-  top: -2px;
+.badge-notification,
+.badge-group {
+  border-radius: none;
 }
-/*----------------------------------removing nav icons for desktop----------------------------*/
+
+// removing nav icons for desktop ----------------------------
 
 #current-user a.icon:before {
-  content: "Profile";
-}
-
-.d-header .title a:before {
-  content: "Home";
-  position: absolute;
-  top: 8px;
-  left: 20px;
+  content: "profile";
 }
 
 #search-button:before {
-  content: "Search";
+  content: "forum search";
 }
 
 #toggle-hamburger-menu:before {
-  content: "Menu";
+  content: "menu";
 }
 
-.d-header .title a:before,
 #current-user a.icon:before,
 #toggle-hamburger-menu:before,
 #search-button:before {
@@ -747,32 +770,32 @@ img.avatar {
 
 .d-header #site-logo,
 #current-user div img,
+.d-header .title,
 .fa.d-icon.d-icon-search.svg-icon.svg-node,
 .fa.d-icon.d-icon-bars.svg-icon.svg-node {
   display: $n;
 }
 
-.d-header .title a,
 .d-header-icons .icon {
   &:hover,
   &:focus {
     background-color: white;
     color: $--gray90;
+    border: 0px;
   }
   height: $--header-height;
   width: 90px;
   padding: 0px;
+  border: 0px;
 }
 
-.d-header .title a {
-  height: 39px;
+.d-header-icons #search-button {
+  width: 150px;
 }
 
-.d-header .title a:hover:before,
 #current-user a:hover:before,
 #toggle-hamburger-menu:hover:before,
 #search-button:hover:before,
-.d-header .title a:focus:before,
 #current-user a:focus:before,
 #toggle-hamburger-menu:focus:before,
 #search-button:focus:before,
@@ -822,7 +845,7 @@ img.avatar {
 @media (max-width: 400px) {
 }
 
-//header notifications
+//header notifications ----------------------------
 
 .d-header-icons .unread-private-messages,
 .d-header-icons .ring {
@@ -830,7 +853,7 @@ img.avatar {
   right: 5px;
 }
 
-// header
+// header  ----------------------------
 
 .site-nav {
   border-bottom: 1px solid $--gray75;
@@ -854,17 +877,19 @@ img.avatar {
 @media (max-width: 400px) {
   .d-header .title a,
   .d-header-icons .icon {
-    width: 75px;
+    width: 80px;
   }
-  .d-header > .wrap {
-    margin: 0px;
+
+  .d-header-icons #search-button {
+    width: 135px;
   }
 
   .d-header-icons {
     margin: 0px;
   }
 }
-//main page grid
+
+//main page grid ----------------------------
 
 td.poster-names a {
   color: dark-light-choose($primary-medium, $secondary-medium);
@@ -874,7 +899,8 @@ td.poster-names a {
   color: dark-light-choose($primary-medium, $secondary-medium) $i;
 }
 
-//buttons
+//buttons ----------------------------
+
 .btn,
 .select-kit.dropdown-select-box .dropdown-select-box-header {
   position: relative;
@@ -935,8 +961,7 @@ td.poster-names a {
   background: $n;
 }
 
-// Pill nav
-// --------------------------------------------------
+// Pill nav ----------------------------
 
 .nav-pills {
   > li {
@@ -957,7 +982,7 @@ td.poster-names a {
   }
 }
 
-//topic-list
+//topic-list ----------------------------
 
 .list-controls {
   clear: both;
@@ -1028,8 +1053,7 @@ td.poster-names a {
   }
 }
 
-//icons remove
-/*----------------------------------icon and text replacemt----------------------------*/
+//icons remove ----------------------------
 
 // pencil icon
 svg.fa.d-icon.d-icon-pencil-alt.svg-icon.svg-node {

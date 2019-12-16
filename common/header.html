@@ -64,8 +64,8 @@
           </ul>
         </div>
       </div>
-      <button class="site-nav-right toggle-button-nav">
-        Menu
+      <button class="site-nav-right toggle-search-nav">
+      search
       </button>
     </nav>
 </script>
@@ -73,10 +73,9 @@
 <!-- toggle menu class toggle -->
 <script>
   $(document).ready(function() {
-    $(".toggle-button-nav").click(function() {
-      $(".nav").toggleClass("show-main-nav-items");
-      $(".site-nav").toggleClass("expand-nav");
-      $(".toggle-button-nav").toggleClass("reverse-toggle-color");
+    $(".toggle-search-nav").click(function() {
+      $(".nav").toggleClass("hide-main-nav-items");
+      $(".toggle-search-nav").toggleClass("reverse-toggle-color");
       $(".site-nav-left").toggleClass("display-search");
     });
   });
