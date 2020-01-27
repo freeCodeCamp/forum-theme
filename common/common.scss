@@ -707,12 +707,6 @@ p.footer-donation {
   }
 }
 
-@media (max-width: 740px) {
-  .extra-info-wrapper .extra-info {
-    display: none;
-  }
-}
-
 // theme specific
 
 .btn:hover d-icon {
@@ -788,6 +782,11 @@ img.avatar {
   width: 100px;
   padding: 0px;
   border: 0px;
+}
+
+.d-header-icons .header-dropdown-toggle.active .icon {
+  background-color: white;
+  color: $--gray90;
 }
 
 // .d-header-icons #current-user {
@@ -873,6 +872,10 @@ img.avatar {
 }
 
 .d-header .categories-wrapper {
+  display: none;
+}
+
+.d-header .extra-info-wrapper {
   display: none;
 }
 
