@@ -11,6 +11,28 @@
   });
 </script>
 
+<script type="text/discourse-plugin" version="0.8">
+  const h = require("virtual-dom").h;
+  console.log(Discourse.SiteSettings.site_logo_url);
+  const settings = Discourse.SiteSettings;
+  const logoUrl = settings.site_logo_url || ''
+
+  function logo() {
+    return        h("img#site-logo.logo-big", {
+      key: "logo-mobile",
+      attributes: { src: Discourse.getURL(logoUrl), alt: settings.title }
+    });
+  }
+
+  api.createWidget("home-logo-large", {
+    tagName: "div.my-widgets",
+    html() {
+      return h('a',{ attributes: { href: Discourse.getURL("/") } }, "/forum"),
+      logo();
+    }
+  });
+</script>
+
 <!-- inject the header in the plugin outlet -->
 <script
   type="text/x-handlebars"
@@ -47,7 +69,7 @@
       </div>
       <div class="site-nav-middle">
         <div class="site-nav-logo"
-          >{{mount-widget widget="home-logo"}}</div>
+          >{{mount-widget widget="home-logo-large"}}</div>
       </div>
       <div class="site-nav-right main-nav">
         <div class="main-nav-group">
