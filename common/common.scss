@@ -134,7 +134,7 @@ html {
   margin: 0;
   padding: 5px 15px;
   color: #fff;
-  height: $--header-height;
+  height: 28px;
   opacity: 1;
   font-family: "Roboto Mono", monospace;
 }
@@ -682,15 +682,16 @@ p.footer-donation {
   box-shadow: none;
   position: fixed;
   margin-top: #{$--header-height * 2};
+  z-index: 100000;
 }
 
-.d-header-icons .badge-notification {
-  position: absolute;
-  z-index: 1;
-  left: 6px;
-  top: -1px;
-  min-width: 0.6em;
-}
+// .d-header-icons .badge-notification {
+//   position: absolute;
+//   z-index: 1;
+//   left: 6px;
+//   top: -1px;
+//   min-width: 0.6em;
+// }
 
 .d-header .d-header-icons {
   font-family: "Roboto Mono", monospace;
@@ -718,10 +719,10 @@ p.footer-donation {
   color: inherit;
 }
 
-.d-header-icons .badge-notification {
-  left: 0;
-  top: -2px;
-}
+// .d-header-icons .badge-notification {
+//   left: 0;
+//   top: -2px;
+// }
 
 img.avatar {
   border-radius: 0px;
@@ -784,9 +785,17 @@ img.avatar {
     border: 0px;
   }
   height: $--header-height;
-  width: 90px;
+  width: 100px;
   padding: 0px;
   border: 0px;
+}
+
+// .d-header-icons #current-user {
+//   width: 100px;
+// }
+
+.d-header-icons #toggle-hamburger-menu {
+  width: 70px;
 }
 
 .d-header-icons #search-button {
@@ -847,11 +856,11 @@ img.avatar {
 
 //header notifications ----------------------------
 
-.d-header-icons .unread-private-messages,
-.d-header-icons .ring {
-  left: auto;
-  right: 5px;
-}
+// .d-header-icons .unread-private-messages,
+// .d-header-icons .ring {
+//   left: auto;
+//   right: 5px;
+// }
 
 // header  ----------------------------
 
