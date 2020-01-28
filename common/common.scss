@@ -28,7 +28,8 @@ $secondary-header-background: mix($header_primary, $header_background, 93%);
 // header_primary and header_background should always be set to #0a0a23 and #fff respectivley
 $n: none;
 $i: !important;
-$--header-height: 38px;
+$--global-nav-height: 38px;
+$--local-nav-height: 47px;
 $--dark-blue: #002ead;
 $header_primary: #fff;
 $header_background: #0a0a23;
@@ -62,7 +63,7 @@ html {
   height: 40px;
   font-size: 18px;
   font-family: Lato, sans-serif;
-  height: $--header-height;
+  height: $--global-nav-height;
   background-color: $--gray90;
   z-index: $hints-index - 2;
   color: #fff;
@@ -119,7 +120,7 @@ html {
 }
 
 .site-nav .nav {
-  height: $--header-height;
+  height: $--global-nav-height;
 }
 
 .site-nav .nav li {
@@ -155,7 +156,7 @@ html {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  height: $--header-height;
+  height: $--global-nav-height;
 }
 
 .toggle-search-nav {
@@ -265,7 +266,7 @@ html {
   .site-nav .nav {
     position: absolute;
     background-color: $--gray90;
-    top: $--header-height;
+    top: $--global-nav-height;
     right: 15px;
   }
 
@@ -274,7 +275,7 @@ html {
   }
 
   .site-nav {
-    min-height: 2 * $--header-height;
+    min-height: 2 * $--global-nav-height;
   }
 
   .toggle-search-nav {
@@ -497,7 +498,7 @@ a:active {
 
 #universal-search-form {
   position: absolute;
-  top: $--header-height;
+  top: $--global-nav-height;
   padding: 0px;
   left: 15px;
 }
@@ -678,34 +679,26 @@ p.footer-donation {
 }
 
 .d-header {
-  height: $--header-height;
+  height: $--local-nav-height;
   background-color: $--gray85;
   border-bottom: 1px solid $--gray75;
   box-shadow: none;
   position: fixed;
-  margin-top: #{$--header-height * 2};
-  z-index: $hints-index - 1;
+  margin-top: #{$--global-nav-height * 2};
+  z-index: $hints-index - 3;
 }
-
-// .d-header-icons .badge-notification {
-//   position: absolute;
-//   z-index: 1;
-//   left: 6px;
-//   top: -1px;
-//   min-width: 0.6em;
-// }
 
 .d-header .d-header-icons {
   font-family: "Roboto Mono", monospace;
 }
 
 #main {
-  margin-top: $--header-height;
+  margin-top: $--global-nav-height;
 }
 
 @media (min-width: 1000px) {
   .d-header {
-    margin-top: $--header-height;
+    margin-top: $--global-nav-height;
   }
 }
 
@@ -780,7 +773,7 @@ img.avatar {
     color: $--gray90;
     border: 0px;
   }
-  height: $--header-height;
+  height: $--local-nav-height;
   width: 100px;
   padding: 0px;
   border: 0px;
@@ -867,10 +860,6 @@ img.avatar {
 // }
 
 // header  ----------------------------
-
-.site-nav {
-  border-bottom: 1px solid $--gray75;
-}
 
 .d-header .widget-link.topic-link {
   color: $--gray05;
@@ -1011,7 +1000,7 @@ td.poster-names a {
     padding: 6px 12px;
     font-size: $font-up-1;
     transition: none;
-    height: $--header-height; // IE11 needs any height here for vertical centering, overriden elsewhere by min-height
+    height: $--global-nav-height; // IE11 needs any height here for vertical centering, overriden elsewhere by min-height
     &:hover,
     &:focus {
       color: $fcc-secondary-background;
