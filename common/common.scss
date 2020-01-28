@@ -40,7 +40,7 @@ $--gray15: mix($header_background, $header_primary, 20%);
 $--gray10: mix($header_background, $header_primary, 13%);
 $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
-$high-index: 10000;
+$hints-index: 100;
 
 // fonts --------------------------------------------------------------------------------------
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
@@ -64,7 +64,7 @@ html {
   font-family: Lato, sans-serif;
   height: $--header-height;
   background-color: $--gray90;
-  z-index: $high-index;
+  z-index: $hints-index - 2;
   color: #fff;
   width: 100%;
   top: 0px;
@@ -331,7 +331,7 @@ html {
   height: 26px;
   border-radius: 0px;
   display: inline-block;
-  z-index: $high-index + 2;
+  z-index: $hints-index;
 }
 
 #universal-search-input::placeholder {
@@ -356,7 +356,7 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  z-index: $high-index + 3;
+  z-index: $hints-index + 3;
 }
 
 .ais-SearchBox-submit:hover,
@@ -380,7 +380,6 @@ html {
 
 .algolia-autocomplete {
   width: 100%;
-  z-index: $high-index + 4;
 }
 
 .algolia-autocomplete .aa-input,
@@ -685,7 +684,7 @@ p.footer-donation {
   box-shadow: none;
   position: fixed;
   margin-top: #{$--header-height * 2};
-  z-index: $high-index + 1;
+  z-index: $hints-index - 1;
 }
 
 // .d-header-icons .badge-notification {
