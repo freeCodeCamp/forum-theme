@@ -29,7 +29,7 @@ $secondary-header-background: mix($header_primary, $header_background, 93%);
 $n: none;
 $i: !important;
 $--global-nav-height: 38px;
-$--local-nav-height: 47px;
+$--local-nav-height: $--global-nav-height;
 $--dark-blue: #002ead;
 $header_primary: #fff;
 $header_background: #0a0a23;
@@ -41,7 +41,7 @@ $--gray15: mix($header_background, $header_primary, 20%);
 $--gray10: mix($header_background, $header_primary, 13%);
 $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
-$hints-index: 100;
+$hints-index: 1000;
 
 // fonts --------------------------------------------------------------------------------------
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
@@ -55,7 +55,6 @@ html {
 
 // universal navigation ---------------------------------------------------------------------------------
 .site-nav {
-  z-index: 300;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -65,7 +64,7 @@ html {
   font-family: Lato, sans-serif;
   height: $--global-nav-height;
   background-color: $--gray90;
-  z-index: $hints-index - 2;
+  z-index: $hints-index;
   color: #fff;
   width: 100%;
   top: 0px;
@@ -708,10 +707,9 @@ p.footer-donation {
   color: inherit;
 }
 
-// .d-header-icons .badge-notification {
-//   left: 0;
-//   top: -2px;
-// }
+.d-header-icons .badge-notification {
+  top: 0px;
+}
 
 img.avatar {
   border-radius: 0px;
@@ -722,10 +720,12 @@ img.avatar {
 }
 
 .modal-header .modal-close {
-  align-self: flex-start;
-  order: 2;
-  margin-left: auto;
-  padding-left: none;
+  padding-left: 0;
+}
+
+.modal-header .modal-close:hover svg,
+.modal-header .modal-close:focus svg {
+  color: $fcc-quaternary-background $i;
 }
 
 .badge-notification,
@@ -853,11 +853,10 @@ img.avatar {
 
 //header notifications ----------------------------
 
-// .d-header-icons .unread-private-messages,
-// .d-header-icons .ring {
-//   left: auto;
-//   right: 5px;
-// }
+.d-header-icons .unread-private-messages,
+.d-header-icons .ring {
+  top: 0px;
+}
 
 // header  ----------------------------
 
@@ -965,6 +964,13 @@ td.poster-names a {
   border: $n;
   box-shadow: $n;
   background: $n;
+}
+
+// button exeptions
+.d-editor-button-bar
+  .select-kit.dropdown-select-box
+  .dropdown-select-box-header {
+  border: none;
 }
 
 // Pill nav ----------------------------
@@ -1216,9 +1222,9 @@ svg.fa.d-icon.d-icon-random.svg-icon.svg-string {
 }
 
 // exceptions
-
+.d-editor-button-bar svg,
 .user-menu svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node {
-  display: inline-flex;
+  display: inline-flex $i;
 }
 
 //remove badges
@@ -1232,4 +1238,10 @@ svg.fa.d-icon.d-icon-random.svg-icon.svg-string {
   .topic-post nav.post-controls button {
     max-width: none;
   }
+}
+
+//remove sudo elements
+.d-editor-button-bar
+  .select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
+  content: "";
 }

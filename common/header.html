@@ -13,7 +13,6 @@
 
 <script type="text/discourse-plugin" version="0.8">
   const h = require("virtual-dom").h;
-  console.log(Discourse.SiteSettings.site_logo_url);
   const settings = Discourse.SiteSettings;
   const logoUrl = settings.site_logo_url || ''
 
@@ -181,7 +180,6 @@
   */
     universal_form.addEventListener("submit", e => {
       e.preventDefault();
-      console.log(e.value);
       submitSearch();
     });
 
