@@ -27,8 +27,8 @@
   api.createWidget("home-logo-large", {
     tagName: "div.my-widgets",
     html() {
-      return h('a',{ attributes: { href: Discourse.getURL("/") } }, "/forum"),
-      logo();
+      return h('a',{ attributes: { href: Discourse.getURL("/") } }, logo());
+      ;
     }
   });
 </script>

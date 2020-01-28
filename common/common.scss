@@ -40,6 +40,7 @@ $--gray15: mix($header_background, $header_primary, 20%);
 $--gray10: mix($header_background, $header_primary, 13%);
 $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
+$high-index: 10000;
 
 // fonts --------------------------------------------------------------------------------------
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
@@ -63,7 +64,7 @@ html {
   font-family: Lato, sans-serif;
   height: $--header-height;
   background-color: $--gray90;
-  z-index: 10000;
+  z-index: $high-index;
   color: #fff;
   width: 100%;
   top: 0px;
@@ -318,7 +319,7 @@ html {
   height: auto;
 }
 
-#search-input {
+#universal-search-input {
   width: calc(100vw - 30px);
   color: $--gray00;
   background: $--gray75;
@@ -330,17 +331,17 @@ html {
   height: 26px;
   border-radius: 0px;
   display: inline-block;
-  z-index: 10000;
+  z-index: $high-index + 2;
 }
 
-#search-input::placeholder {
+#universal-search-input::placeholder {
   color: $--gray15;
 }
 
 .ais-SearchBox-submit {
   position: absolute;
-  left: 9px;
-  top: 30%;
+  left: 5px;
+  top: 25%;
   width: 20px;
   height: 20px;
   margin: 0;
@@ -505,7 +506,7 @@ a:active {
   .site-nav-left form {
     display: flex;
   }
-  #search-input {
+  #universal-search-input {
     width: 30vw;
     max-width: 500px;
     display: inherit;
@@ -518,8 +519,8 @@ a:active {
     left: 15px;
   }
   .ais-SearchBox-submit {
-    left: 15px;
-    top: 10px;
+    left: 5px;
+    top: 8px;
   }
   .main-nav-group {
     margin-right: 15px;
@@ -682,7 +683,7 @@ p.footer-donation {
   box-shadow: none;
   position: fixed;
   margin-top: #{$--header-height * 2};
-  z-index: 100000;
+  z-index: $high-index + 1;
 }
 
 // .d-header-icons .badge-notification {
