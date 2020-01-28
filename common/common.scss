@@ -356,6 +356,7 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  z-index: $high-index + 3;
 }
 
 .ais-SearchBox-submit:hover,
@@ -379,6 +380,7 @@ html {
 
 .algolia-autocomplete {
   width: 100%;
+  z-index: $high-index + 4;
 }
 
 .algolia-autocomplete .aa-input,
@@ -494,24 +496,24 @@ a:active {
   color: #0a0a23;
 }
 
-.display-search form {
-  display: flex;
+#universal-search-form {
   position: absolute;
   top: $--header-height;
   padding: 0px;
   left: 15px;
 }
 
+.display-search #universal-search-form {
+  display: flex;
+}
+
 @media (min-width: 1000px) {
-  .site-nav-left form {
-    display: flex;
-  }
   #universal-search-input {
     width: 30vw;
     max-width: 500px;
     display: inherit;
   }
-  .display-search form {
+  #universal-search-form {
     display: flex;
     position: absolute;
     top: 0;
