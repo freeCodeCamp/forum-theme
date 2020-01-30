@@ -1086,7 +1086,10 @@ td.poster-names a {
     display: $n;
   }
 
-  button.widget-button.btn-flat.edit.no-text.btn-icon:after,
+  #topic-title
+    .title-wrapper
+    .fa.d-icon.d-icon-pencil-alt.svg-icon.svg-string
+    button.widget-button.btn-flat.edit.no-text.btn-icon:after,
   .post-info.edits:after {
     content: "edit";
   }
