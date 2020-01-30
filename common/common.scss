@@ -713,6 +713,20 @@ p.footer-donation {
 
 img.avatar {
   border-radius: 0px;
+  background: $fcc-gray-mid;
+}
+
+.topic-list .posters a:first-child .avatar.latest:not(.single) {
+  position: relative;
+  top: 0px;
+  left: -2px;
+}
+
+.topic-list .posters a {
+  border: 2px solid transparent;
+  position: relative;
+  top: 0px;
+  left: -2px;
 }
 
 .topic-list .posters a:first-child .avatar.latest:not(.single) {
@@ -1223,6 +1237,9 @@ td.poster-names a {
 
   // exceptions
   .d-editor-button-bar svg,
+  .menu-panel .slide-in,
+  .notification-history,
+  .reply-area,
   .user-menu svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node {
     display: inline-flex $i;
   }
