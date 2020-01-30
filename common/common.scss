@@ -1065,183 +1065,184 @@ td.poster-names a {
   }
 }
 
-//icons remove ----------------------------
-
-// pencil icon
-svg.fa.d-icon.d-icon-pencil-alt.svg-icon.svg-node {
-  display: $n;
-}
-
-button.widget-button.btn-flat.edit.no-text.btn-icon:after,
-.post-info.edits:after {
-  content: "edit";
-}
-
-.post-info.edits:hover {
-  text-decoration: underline;
-}
-
-// reply icon
-button.widget-button.btn.btn-default.create.no-text.btn-icon:before {
-  content: "reply";
-}
-
-svg.fa.d-icon.d-icon-reply.svg-icon.svg-node {
-  display: $n;
-}
-
-//tracking
-.select-kit.dropdown-select-box .dropdown-select-box-header.is-focused,
-.widget-component-connector
-  .select-kit.dropdown-select-box
-  .dropdown-select-box-header:before {
-  content: "tracking";
-}
-
-.select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
-  content: "tracking";
-}
-
-svg.fa.d-icon.d-icon-d-tracking.svg-icon.svg-string {
-  display: $n;
-}
-
-.reply-details
-  .select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
-  content: "";
-}
-
-// link
-
-button.widget-button.btn-flat.share.no-text.btn-icon:before {
-  content: "share";
-}
-
-svg.fa.d-icon.d-icon-link.svg-icon.svg-node {
-  display: $n;
-}
-
-//more
-.notifications button.widget-button.btn.no-text.btn-icon:before,
-button.widget-button.btn-flat.show-more-actions.no-text.btn-icon:before {
-  content: "more";
-}
-
-svg.fa.d-icon.d-icon-ellipsis-h.svg-icon.svg-node {
-  display: $n;
-}
-
-//flag
-button.widget-button.btn-flat.create-flag.no-text.btn-icon:before {
-  content: "flag";
-}
-
-svg.fa.d-icon.d-icon-flag.svg-icon.svg-node {
-  display: $n;
-}
-
-//bookmark
-button.widget-button.btn-flat.bookmark.bookmarked.no-text.btn-icon:before {
-  content: "clear bookmark";
-}
-
-button.widget-button.btn-flat.bookmark.no-text.btn-icon:before {
-  content: "bookmark";
-}
-svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node.d-hover {
-  display: $n;
-}
-
-//dropdown
-.map button.widget-button.btn.btn.no-text.btn-icon:before {
-  content: "collapse";
-}
-
-.map-collapsed button.widget-button.btn.btn.no-text.btn-icon:before {
-  content: "expand";
-}
-
-svg.fa.d-icon.d-icon-chevron-down.svg-icon.svg-node {
-  display: $n;
-}
-
-//search
-.btn-primary.search-cta.btn.no-text.btn-icon:before {
-  content: "search";
-}
-
-svg.fa.d-icon.d-icon-far-trash-alt.svg-icon.svg-node {
-  display: $n;
-}
-
-// delete
-button.widget-button.btn-flat.delete.no-text.btn-icon:before {
-  content: "delete";
-}
-
-//remove icons on post footer
-svg.fa.d-icon.d-icon-plus.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-envelope.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-chart-bar.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-magic.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-caret-right.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-chevron-up.svg-icon.svg-node,
-svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node,
-svg.fa.d-icon.d-icon-d-muted.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-d-watching.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-d-regular.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-link.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-flag.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-reply.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-pencil-alt.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-search.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-certificate.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-user.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-check-square.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-d-watching-first.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-heart.svg-icon.svg-node,
-svg.fa.d-icon.d-icon-certificate.svg-icon.svg-node,
-svg.fa.d-icon.d-icon-comment.svg-icon.glyph.svg-string,
-svg.fa.d-icon.d-icon-far-envelope.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-paint-brush.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-cog.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-eye.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-angle-double-down.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-angle-double-up.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-far-trash-alt.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-bars.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-far-sun.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-far-moon.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-bed.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-briefcase.svg-icon.svg-string,
-svg.fa.d-icon.d-icon-sign-out-alt.svg-icon.svg-node,
-svg.fa.d-icon.d-icon-user.svg-icon.svg-node,
-svg.fa.d-icon.d-icon-random.svg-icon.svg-string {
-  display: $n;
-}
-
-// exceptions
-.d-editor-button-bar svg,
-.user-menu svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node {
-  display: inline-flex $i;
-}
-
-//remove badges
-.badge-card .badge-contents .badge-icon,
-.user-menu .quick-access-panel li .d-icon {
-  display: none;
-}
-
-//mobile view
-.mobile-view {
-  .topic-post nav.post-controls button {
-    max-width: none;
+//icons remove for desktop----------------------------
+.desktop-view {
+  // pencil icon
+  svg.fa.d-icon.d-icon-pencil-alt.svg-icon.svg-node {
+    display: $n;
   }
-}
 
-//remove sudo elements
-.d-editor-button-bar
+  button.widget-button.btn-flat.edit.no-text.btn-icon:after,
+  .post-info.edits:after {
+    content: "edit";
+  }
+
+  .post-info.edits:hover {
+    text-decoration: underline;
+  }
+
+  // reply icon
+  button.widget-button.btn.btn-default.create.no-text.btn-icon:before {
+    content: "reply";
+  }
+
+  svg.fa.d-icon.d-icon-reply.svg-icon.svg-node {
+    display: $n;
+  }
+
+  //tracking
+  .select-kit.dropdown-select-box .dropdown-select-box-header.is-focused,
+  .widget-component-connector
+    .select-kit.dropdown-select-box
+    .dropdown-select-box-header:before {
+    content: "tracking";
+  }
+
   .select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
-  content: "";
+    content: "tracking";
+  }
+
+  svg.fa.d-icon.d-icon-d-tracking.svg-icon.svg-string {
+    display: $n;
+  }
+
+  .reply-details
+    .select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
+    content: "";
+  }
+
+  // link
+
+  button.widget-button.btn-flat.share.no-text.btn-icon:before {
+    content: "share";
+  }
+
+  svg.fa.d-icon.d-icon-link.svg-icon.svg-node {
+    display: $n;
+  }
+
+  //more
+  .notifications button.widget-button.btn.no-text.btn-icon:before,
+  button.widget-button.btn-flat.show-more-actions.no-text.btn-icon:before {
+    content: "more";
+  }
+
+  svg.fa.d-icon.d-icon-ellipsis-h.svg-icon.svg-node {
+    display: $n;
+  }
+
+  //flag
+  button.widget-button.btn-flat.create-flag.no-text.btn-icon:before {
+    content: "flag";
+  }
+
+  svg.fa.d-icon.d-icon-flag.svg-icon.svg-node {
+    display: $n;
+  }
+
+  //bookmark
+  button.widget-button.btn-flat.bookmark.bookmarked.no-text.btn-icon:before {
+    content: "clear bookmark";
+  }
+
+  button.widget-button.btn-flat.bookmark.no-text.btn-icon:before {
+    content: "bookmark";
+  }
+  svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node.d-hover {
+    display: $n;
+  }
+
+  //dropdown
+  .map button.widget-button.btn.btn.no-text.btn-icon:before {
+    content: "collapse";
+  }
+
+  .map-collapsed button.widget-button.btn.btn.no-text.btn-icon:before {
+    content: "expand";
+  }
+
+  svg.fa.d-icon.d-icon-chevron-down.svg-icon.svg-node {
+    display: $n;
+  }
+
+  //search
+  .btn-primary.search-cta.btn.no-text.btn-icon:before {
+    content: "search";
+  }
+
+  svg.fa.d-icon.d-icon-far-trash-alt.svg-icon.svg-node {
+    display: $n;
+  }
+
+  // delete
+  button.widget-button.btn-flat.delete.no-text.btn-icon:before {
+    content: "delete";
+  }
+
+  //remove icons on post footer
+  svg.fa.d-icon.d-icon-plus.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-envelope.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-chart-bar.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-magic.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-caret-right.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-chevron-up.svg-icon.svg-node,
+  svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node,
+  svg.fa.d-icon.d-icon-d-muted.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-d-watching.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-d-regular.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-link.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-flag.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-reply.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-pencil-alt.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-search.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-certificate.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-user.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-check-square.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-d-watching-first.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-heart.svg-icon.svg-node,
+  svg.fa.d-icon.d-icon-certificate.svg-icon.svg-node,
+  svg.fa.d-icon.d-icon-comment.svg-icon.glyph.svg-string,
+  svg.fa.d-icon.d-icon-far-envelope.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-paint-brush.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-cog.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-eye.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-angle-double-down.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-angle-double-up.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-far-trash-alt.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-bars.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-far-sun.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-far-moon.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-bed.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-briefcase.svg-icon.svg-string,
+  svg.fa.d-icon.d-icon-sign-out-alt.svg-icon.svg-node,
+  svg.fa.d-icon.d-icon-user.svg-icon.svg-node,
+  svg.fa.d-icon.d-icon-random.svg-icon.svg-string {
+    display: $n;
+  }
+
+  // exceptions
+  .d-editor-button-bar svg,
+  .user-menu svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node {
+    display: inline-flex $i;
+  }
+
+  //remove badges
+  .badge-card .badge-contents .badge-icon,
+  .user-menu .quick-access-panel li .d-icon {
+    display: none;
+  }
+
+  //mobile view
+  .mobile-view {
+    .topic-post nav.post-controls button {
+      max-width: none;
+    }
+  }
+
+  //remove sudo elements
+  .d-editor-button-bar
+    .select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
+    content: "";
+  }
 }
