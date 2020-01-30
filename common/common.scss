@@ -1086,10 +1086,7 @@ td.poster-names a {
     display: $n;
   }
 
-  #topic-title
-    .title-wrapper
-    .fa.d-icon.d-icon-pencil-alt.svg-icon.svg-string
-    button.widget-button.btn-flat.edit.no-text.btn-icon:after,
+  button.widget-button.btn-flat.edit.no-text.btn-icon:after,
   .post-info.edits:after {
     content: "edit";
   }
@@ -1239,6 +1236,7 @@ td.poster-names a {
   }
 
   // exceptions
+  #topic-title a.edit-topic svg,
   .menu-panel svg,
   .notification-history svg,
   .reply-area,
