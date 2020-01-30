@@ -1074,7 +1074,7 @@ svg.fa.d-icon.d-icon-pencil-alt.svg-icon.svg-node {
 
 button.widget-button.btn-flat.edit.no-text.btn-icon:after,
 .post-info.edits:after {
-  content: "Edit";
+  content: "edit";
 }
 
 .post-info.edits:hover {
@@ -1083,7 +1083,7 @@ button.widget-button.btn-flat.edit.no-text.btn-icon:after,
 
 // reply icon
 button.widget-button.btn.btn-default.create.no-text.btn-icon:before {
-  content: "Reply";
+  content: "reply";
 }
 
 svg.fa.d-icon.d-icon-reply.svg-icon.svg-node {
@@ -1095,11 +1095,11 @@ svg.fa.d-icon.d-icon-reply.svg-icon.svg-node {
 .widget-component-connector
   .select-kit.dropdown-select-box
   .dropdown-select-box-header:before {
-  content: "Tracking";
+  content: "tracking";
 }
 
 .select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
-  content: "Tracking";
+  content: "tracking";
 }
 
 svg.fa.d-icon.d-icon-d-tracking.svg-icon.svg-string {
@@ -1114,7 +1114,7 @@ svg.fa.d-icon.d-icon-d-tracking.svg-icon.svg-string {
 // link
 
 button.widget-button.btn-flat.share.no-text.btn-icon:before {
-  content: "Share";
+  content: "share";
 }
 
 svg.fa.d-icon.d-icon-link.svg-icon.svg-node {
@@ -1124,7 +1124,7 @@ svg.fa.d-icon.d-icon-link.svg-icon.svg-node {
 //more
 .notifications button.widget-button.btn.no-text.btn-icon:before,
 button.widget-button.btn-flat.show-more-actions.no-text.btn-icon:before {
-  content: "More";
+  content: "more";
 }
 
 svg.fa.d-icon.d-icon-ellipsis-h.svg-icon.svg-node {
@@ -1133,7 +1133,7 @@ svg.fa.d-icon.d-icon-ellipsis-h.svg-icon.svg-node {
 
 //flag
 button.widget-button.btn-flat.create-flag.no-text.btn-icon:before {
-  content: "Flag";
+  content: "flag";
 }
 
 svg.fa.d-icon.d-icon-flag.svg-icon.svg-node {
@@ -1142,11 +1142,11 @@ svg.fa.d-icon.d-icon-flag.svg-icon.svg-node {
 
 //bookmark
 button.widget-button.btn-flat.bookmark.bookmarked.no-text.btn-icon:before {
-  content: "Clear Bookmark";
+  content: "clear bookmark";
 }
 
 button.widget-button.btn-flat.bookmark.no-text.btn-icon:before {
-  content: "Bookmark";
+  content: "bookmark";
 }
 svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node.d-hover {
   display: $n;
@@ -1154,11 +1154,11 @@ svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node.d-hover {
 
 //dropdown
 .map button.widget-button.btn.btn.no-text.btn-icon:before {
-  content: "Collapse";
+  content: "collapse";
 }
 
 .map-collapsed button.widget-button.btn.btn.no-text.btn-icon:before {
-  content: "Expand";
+  content: "expand";
 }
 
 svg.fa.d-icon.d-icon-chevron-down.svg-icon.svg-node {
@@ -1167,7 +1167,7 @@ svg.fa.d-icon.d-icon-chevron-down.svg-icon.svg-node {
 
 //search
 .btn-primary.search-cta.btn.no-text.btn-icon:before {
-  content: "Search";
+  content: "search";
 }
 
 svg.fa.d-icon.d-icon-far-trash-alt.svg-icon.svg-node {
