@@ -1236,8 +1236,9 @@ td.poster-names a {
   }
 
   // exceptions
+  .d-editor-preview svg,
   .d-editor-button-bar svg,
-  .menu-panel .slide-in,
+  .menu-panel,
   .notification-history,
   .reply-area,
   .user-menu svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node {
