@@ -1236,10 +1236,8 @@ td.poster-names a {
   }
 
   // exceptions
-  .d-editor-preview svg,
-  .d-editor-button-bar svg,
-  .menu-panel,
-  .notification-history,
+  .menu-panel svg,
+  .notification-history svg,
   .reply-area,
   .user-menu svg.fa.d-icon.d-icon-bookmark.svg-icon.svg-node {
     display: inline-flex $i;
