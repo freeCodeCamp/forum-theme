@@ -703,7 +703,9 @@ p.footer-donation {
 
 // theme specific
 
-.btn:hover d-icon {
+.btn:hover d-icon,
+.btn .d-icon,
+.btn-primary .d-icon {
   color: inherit;
 }
 
