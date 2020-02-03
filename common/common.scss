@@ -868,10 +868,13 @@ img.avatar {
 }
 
 //header notifications ----------------------------
-
-.d-header-icons .unread-private-messages,
-.d-header-icons .ring {
-  top: 0px;
+.d-header-icons {
+  .unread-private-messages,
+  .ring {
+    top: 0px;
+    right: auto;
+    left: -3px;
+  }
 }
 
 // header  ----------------------------
