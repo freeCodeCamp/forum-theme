@@ -69,6 +69,30 @@
       "sucess-medium": "055c37",
       "love": "d41313",
       "love-low": "3a1e38"
+    },
+    "test-dark": {
+      "primary": "F5F6F7",
+      "secondary": "1b1b32",
+      "header_background": "0a0a23",
+      "header_primary": "fff",
+      "tertiary": "0088cc",
+      "tertiary-low": "082345",
+      "tertiary-medium": "054978",
+      "tertiary-high": "036299",
+      "quaternary": "0088cc",
+      "quaternary-low": "063c67",
+      "highlight": "0088cc",
+      "highlight-low": "091734",
+      "highlight-medium": "063c67",
+      "highlight-high": "66b8e0",
+      "danger": "e45735",
+      "danger-low": "361927",
+      "danger-medium": "a34030",
+      "success": "019245",
+      "sucess-low": "08252a",
+      "sucess-medium": "055c37",
+      "love": "d41313",
+      "love-low": "3a1e38"
     }
   },
   "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
