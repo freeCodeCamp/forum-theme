@@ -71,8 +71,8 @@
       "love-low": "3a1e38"
     },
     "test-dark": {
-      "primary": "F5F6F7",
-      "secondary": "1b1b32",
+      "primary": "DDDEE0",
+      "secondary": "313146",
       "header_background": "0a0a23",
       "header_primary": "fff",
       "tertiary": "0088cc",
