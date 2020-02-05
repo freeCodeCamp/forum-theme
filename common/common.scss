@@ -29,7 +29,6 @@ $secondary-header-background: mix($header_primary, $header_background, 93%);
 $n: none;
 $i: !important;
 $--global-nav-height: 38px;
-$--local-nav-height: $--global-nav-height;
 $--dark-blue: #002ead;
 $header_primary: #fff;
 $header_background: #0a0a23;
@@ -678,7 +677,7 @@ p.footer-donation {
 }
 
 .d-header {
-  height: $--local-nav-height;
+  height: $--global-nav-height;
   background-color: $--gray85;
   border-bottom: 1px solid $--gray75;
   box-shadow: none;
@@ -702,6 +701,10 @@ p.footer-donation {
 }
 
 // theme specific
+
+.desktop-view #main-outlet {
+  padding-top: $--global-nav-height * 2;
+}
 
 .btn:hover d-icon,
 .btn .d-icon,
@@ -789,7 +792,7 @@ img.avatar {
     color: $--gray90;
     border: 0px;
   }
-  height: $--local-nav-height;
+  height: $--global-nav-height;
   width: 100px;
   padding: 0px;
   border: 0px;
