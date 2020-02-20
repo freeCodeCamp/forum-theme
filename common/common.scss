@@ -1000,9 +1000,11 @@ td.poster-names a {
   .btn-social {
     background-color: transparent $i;
   }
-  #login-buttons:not(.hidden) button {
-    white-space: nornmal;
-  }
+}
+
+.login-modal #login-buttons:not(.hidden) button,
+.create-account #login-buttons:not(.hidden) button {
+  white-space: nornmal;
 }
 
 // Pill nav ----------------------------
