@@ -23,4 +23,4 @@ Some of the theme plugins we are using as of now are:
 
 ## Support:
 
-You can report any support issues, bugs in our [Contributors Chat room](https://gitter.im/FreeCodeCamp/Contributors).
+You can report any support issues, bugs in our [Contributors Chat room](https://gitter.im/FreeCodeCamp/Contributors) or on the [main repository's issue tracker](https://github.com/freeCodeCamp/freeCodeCamp/issues).
