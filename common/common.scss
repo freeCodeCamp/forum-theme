@@ -995,6 +995,16 @@ td.poster-names a {
   border: none;
 }
 
+.login-modal,
+.create-account {
+  .btn-social {
+    background-color: transparent $i;
+  }
+  #login-buttons:not(.hidden) button {
+    white-space: nornmal;
+  }
+}
+
 // Pill nav ----------------------------
 
 .nav-pills {
