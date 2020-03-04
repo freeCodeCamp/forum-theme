@@ -1268,7 +1268,7 @@ td.poster-names a {
     display: inline-flex $i;
   }
 
-  //show badges
+  // icon display exceptions for badges
   .badge-card .badge-contents .badge-icon svg,
   .user-menu .quick-access-panel li .d-icon svg{
     display: flex $i;
