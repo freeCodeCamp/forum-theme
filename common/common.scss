@@ -1271,7 +1271,7 @@ td.poster-names a {
   //show badges
   .badge-card .badge-contents .badge-icon svg,
   .user-menu .quick-access-panel li .d-icon svg{
-    display: flex;
+    display: flex $i;
   }
 
   //mobile view
