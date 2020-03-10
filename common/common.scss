@@ -1268,10 +1268,10 @@ td.poster-names a {
     display: inline-flex $i;
   }
 
-  //remove badges
-  .badge-card .badge-contents .badge-icon,
-  .user-menu .quick-access-panel li .d-icon {
-    display: none;
+  // icon display exceptions for badges
+  .badge-card .badge-contents .badge-icon svg,
+  .user-menu .quick-access-panel li .d-icon svg{
+    display: flex $i;
   }
 
   //mobile view
