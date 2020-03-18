@@ -690,6 +690,11 @@ p.footer-donation {
   font-family: "Roboto Mono", monospace;
 }
 
+.d-header .extra-info-wrapper + .panel .header-buttons,
+.d-header .extra-info-wrapper + .panel .d-header-icons {
+  display: flex;
+}
+
 #main {
   margin-top: $--global-nav-height;
 }
@@ -1270,7 +1275,7 @@ td.poster-names a {
 
   // icon display exceptions for badges
   .badge-card .badge-contents .badge-icon svg,
-  .user-menu .quick-access-panel li .d-icon svg{
+  .user-menu .quick-access-panel li .d-icon svg {
     display: flex $i;
   }
 
