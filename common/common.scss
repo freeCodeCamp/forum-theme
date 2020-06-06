@@ -84,6 +84,11 @@ html {
   text-decoration: none;
 }
 
+.footer-container a:hover,
+.footer-container a:active {
+  text-decoration: underline;
+}
+
 .footer-container .col-header {
   flex: 0 0 100%;
   padding-bottom: 15px;
@@ -136,6 +141,11 @@ html {
 p.footer-donation {
   font-weight: 700;
   font-size: 18px;
+}
+
+.footer-donation a:hover,
+.footer-donation a:active {
+  text-decoration: none;
 }
 
 .footer-container .col-spacer {
@@ -227,13 +237,13 @@ p.footer-donation {
   }
 
   .footer-col-1 {
-    flex: 1 0 25%;
+    flex: 1 0 22%;
   }
   .footer-col-3 {
     flex: 1 0 30%;
   }
   .footer-col-2 {
-    flex: 1 0 20%;
+    flex: 1 0 18%;
   }
 
   p.footer-donation {
@@ -456,6 +466,12 @@ img.avatar {
 
 .topic-list .posters a:first-child .avatar.latest:not(.single) {
   box-shadow: none;
+}
+
+@media screen and (min-width: 851px) {
+  .topic-list .posters {
+    width: 162px;
+  }
 }
 
 .modal-header .modal-close {
