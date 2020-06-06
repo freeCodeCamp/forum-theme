@@ -303,10 +303,6 @@ p.footer-donation {
   padding-top: $--global-nav-height * 2;
 }
 
-#curriculum-nav {
-  margin-top: $--global-nav-height;
-}
-
 .d-header {
   background: $secondary-header-background;
   margin-top: $--global-nav-height;
@@ -329,16 +325,17 @@ p.footer-donation {
   display: flex;
 }
 
-#curriculum-nav {
+a.curriculum-nav {
   z-index: 1000;
   color: white;
   position: fixed;
+  padding: 0 10px;
   left: 15px;
   height: $--global-nav-height;
-  display: flexbox;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -2px;
 }
 
 @media (min-width: 800px) {
@@ -354,8 +351,7 @@ p.footer-donation {
     left: 50%;
     margin-left: -105px;
   }
-  .d-header,
-  #curriculum-nav {
+  .d-header {
     margin-top: 0px;
   }
 }
@@ -489,9 +485,6 @@ img.avatar {
 }
 
 // removing nav icons and adding additional nav ----------------------------
-#curriculum-nav:before {
-  content: "Visit the Curriculum";
-}
 
 #current-user a.icon:before {
   content: "Profile";
@@ -505,7 +498,6 @@ img.avatar {
   content: "Menu";
 }
 
-#curriculum-nav:before,
 #current-user a.icon:before,
 #toggle-hamburger-menu:before,
 #search-button:before {
@@ -523,7 +515,7 @@ img.avatar {
   display: $n;
 }
 
-#curriculum-nav,
+a.curriculum-nav,
 .d-header-icons .icon {
   &:hover,
   &:focus {
@@ -531,6 +523,9 @@ img.avatar {
     color: $--gray90;
     border: 0px;
   }
+}
+
+.d-header-icons .icon {
   height: $--global-nav-height;
   width: 100px;
   padding: 0px;
@@ -542,10 +537,6 @@ img.avatar {
   color: $--gray90;
 }
 
-#curriculum-nav {
-  width: 180px;
-}
-
 .d-header-icons #toggle-hamburger-menu {
   width: 70px;
 }
@@ -553,7 +544,7 @@ img.avatar {
 .d-header-icons #search-button {
   width: 90px;
 }
-#curriculum-nav:hover:before,
+
 #current-user a:hover:before,
 #toggle-hamburger-menu:hover:before,
 #search-button:hover:before,
@@ -628,15 +619,6 @@ img.avatar {
   max-width: 100vw;
 }
 
-@media screen and (max-width: 600px) {
-  #curriculum-nav:before {
-    content: "Curriculum";
-  }
-  #curriculum-nav {
-    width: 110px;
-  }
-}
-
 @media (max-width: 400px) {
   .d-header > .wrap {
     margin: 0px 5px;
@@ -646,8 +628,9 @@ img.avatar {
   .d-header-icons #search-button {
     width: 80px;
   }
-  #curriculum-nav {
+  a.curriculum-nav {
     left: 5px;
+    padding: 0 5px;
   }
 
   .d-header-icons {
@@ -659,14 +642,11 @@ img.avatar {
   .d-header > .wrap {
     margin: 0px 0px;
   }
-  #curriculum-nav {
+  a.curriculum-nav {
     left: 0px;
   }
   .d-header-icons #toggle-hamburger-menu {
     width: 60px;
-  }
-  #curriculum-nav {
-    width: 100px;
   }
 }
 

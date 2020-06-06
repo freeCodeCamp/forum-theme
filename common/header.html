@@ -32,6 +32,17 @@
   });
 </script>
 
+<script type="text/discourse-plugin" version="0.8.12">
+  api.decorateWidget('header-buttons:before', function (helper) {
+          let rawLabel = helper.widget.site.mobileView ? "Curriculum" : "Visit the Curriculum";
+          return helper.attach('link', {
+              href: 'https://www.freecodecamp.org/learn/',
+              rawLabel,
+              className: "curriculum-nav"
+          });
+  });
+</script>
+
 <!-- inject the header in the plugin outlet -->
 <script
   type="text/x-handlebars"
@@ -41,5 +52,4 @@
       <div class="site-nav-logo"
         >{{mount-widget widget="home-logo-large"}}</div>
   </nav>
-  <a id="curriculum-nav" href='https://www.freecodecamp.org/learn/'></a>
 </script>
