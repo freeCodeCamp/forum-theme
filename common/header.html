@@ -1,12 +1,13 @@
 <!-- create a link home -->
 <script type="text/discourse-plugin" version="0.8">
   const h = require("virtual-dom").h;
+  const getURL = require("discourse-common/lib/get-url").default;
 
   api.createWidget("home-link", {
     tagName: "div.my-widget",
 
     html() {
-      return h('a',{ attributes: { href: "/" } }, "/forum");
+      return h('a',{ attributes: { href: getURL("/") } }, "/forum");
     }
   });
 </script>
@@ -14,19 +15,20 @@
 <script type="text/discourse-plugin" version="0.8">
   const h = require("virtual-dom").h;
   const settings = Discourse.SiteSettings;
-  const logoUrl = settings.site_logo_url || ''
+  const logoUrl = settings.site_logo_url || '';
+  const getURL = require("discourse-common/lib/get-url").default;
 
   function logo() {
     return h("img#site-logo.logo-big", {
       key: "logo-mobile",
-      attributes: { src: logoUrl, alt: settings.title }
+      attributes: { src: getURL(logoUrl), alt: settings.title }
     });
   }
 
   api.createWidget("home-logo-large", {
     tagName: "div.my-widgets",
     html() {
-      return h('a',{ attributes: { href: "/" } }, logo());
+      return h('a',{ attributes: { href: getURL("/") } }, logo());
       ;
     }
   });
