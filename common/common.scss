@@ -855,16 +855,16 @@ td.poster-names a {
     display: $n;
   }
 
-  //tracking
+  //notification
   .select-kit.dropdown-select-box .dropdown-select-box-header.is-focused,
   .widget-component-connector
     .select-kit.dropdown-select-box
     .dropdown-select-box-header:before {
-    content: "tracking";
+    content: "notification";
   }
 
   .select-kit-header.btn-default.dropdown-select-box-header.btn.no-text.btn-icon:before {
-    content: "tracking";
+    content: "notification";
   }
 
   svg.fa.d-icon.d-icon-d-tracking.svg-icon.svg-string {
