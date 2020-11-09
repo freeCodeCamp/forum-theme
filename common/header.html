@@ -36,9 +36,9 @@
 
 <script type="text/discourse-plugin" version="0.8.12">
   api.decorateWidget('header-buttons:before', function (helper) {
-          let rawLabel = helper.widget.site.mobileView ? "Curriculum" : "Visit the Curriculum";
+          let rawLabel = helper.widget.site.mobileView ? settings.curriculum_title_short : settings.curriculum_title;
           return helper.attach('link', {
-              href: 'https://www.freecodecamp.org/learn/',
+              href: settings.curriculum_src,
               rawLabel,
               className: "curriculum-nav"
           });

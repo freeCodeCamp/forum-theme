@@ -1,0 +1,127 @@
+# Navigation
+curriculum_title:
+  default: Visit the Curriculum
+  description: "This text will be displayed in the curriculum navigation item"
+curriculum_title_short:
+  default: Curriculum
+  description: "This is the short version of curriculum title used for mobile devices"
+curriculum_src:
+  default: https://www.freecodecamp.org/learn
+  description: "This the link to related language curriculum"
+
+# Analytics
+Google_Tag_Manager:
+  default: ""
+  description: "Google Tag Manager ID"
+
+# Footer description section
+footer_paragraph_1:
+  default: "freeCodeCamp is a donor-supported tax-exempt 501(c)(3) nonprofit
+    organization (United States Federal Tax Identification Number:
+    82-0779546)"
+  description: "First footer paragraph"
+footer_paragraph_2:
+  default:
+    "Our mission: to help people learn to code for free. We accomplish this
+    by creating thousands of videos, articles, and interactive coding
+    lessons - all freely available to the public. We also have thousands
+    of freeCodeCamp study groups around the world."
+  description: "Second footer paragraph"
+footer_paragraph_3:
+  default: "Donations to freeCodeCamp go toward our education initiatives, and
+    help pay for servers, services, and staff."
+  description: "Second footer paragraph"
+footer_donation_cta:
+  default: "You can make a tax-deductible donation here."
+  description: "Footer donation paragraph"
+
+# Footer columns section
+footer_columns_header:
+  default: "Trending Guides"
+  description: "Header for footer link columns"
+footer_col1_item1_link: "https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/"
+footer_col1_item1_text: "Git Clone"
+footer_col1_item2_link: "https://www.freecodecamp.org/news/agile-methods-and-methodology-for-beginners/"
+footer_col1_item2_text: "Agile Methods"
+footer_col1_item3_link: "https://www.freecodecamp.org/news/if-name-main-python-example/"
+footer_col1_item3_text: "Python Main"
+footer_col1_item4_link: "https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/"
+footer_col1_item4_text: "Callback"
+footer_col1_item5_link: "https://www.freecodecamp.org/news/debounce-javascript-tutorial-how-to-make-your-js-wait-up/"
+footer_col1_item5_text: "Debounce"
+footer_col1_item6_link: "https://www.freecodecamp.org/news/javascript-url-encode-example-how-to-use-encodeuricomponent-and-encodeuri/"
+footer_col1_item6_text: "URL Encode"
+footer_col1_item7_link: "https://www.freecodecamp.org/news/make-it-blink-html-tutorial-how-to-use-the-blink-tag-with-code-examples/"
+footer_col1_item7_text: "Blink HTML"
+footer_col1_item8_link: "https://www.freecodecamp.org/news/python-returns-multiple-values-how-to-return-a-tuple-list-dictionary/"
+footer_col1_item8_text: "Python Tuple"
+footer_col1_item9_link: "https://www.freecodecamp.org/news/javascript-array-insert-how-to-add-to-an-array-with-the-push-unshift-and-concat-functions/"
+footer_col1_item9_text: "JavaScript Push"
+footer_col1_item10_link: "https://www.freecodecamp.org/news/java-list-tutorial-util-list-api-example/"
+footer_col1_item10_text: "Java List"
+footer_col2_item1_link: "https://www.freecodecamp.org/news/learn-ux-design-self-taught-user-experience-designer/"
+footer_col2_item1_text: "UX"
+footer_col2_item2_link: "https://www.freecodecamp.org/news/what-is-design-thinking-an-introduction-to-the-design-process-for-entrepreneurs-and-developers/"
+footer_col2_item2_text: "Design Thinking"
+footer_col2_item3_link: "https://www.freecodecamp.org/news/prime-numbers-list-chart-of-primes/"
+footer_col2_item3_text: "Prime Numbers List"
+footer_col2_item4_link: "https://www.freecodecamp.org/news/product-design-explained-in-plain-english/"
+footer_col2_item4_text: "Product Design"
+footer_col2_item5_link: "https://www.freecodecamp.org/news/what-is-digital-design-and-why-does-it-matter/"
+footer_col2_item5_text: "Digital Design"
+footer_col2_item6_link: "https://www.freecodecamp.org/news/best-coding-games-online-adults-learn-to-code/"
+footer_col2_item6_text: "Coding Games"
+footer_col2_item7_link: "https://www.freecodecamp.org/news/svm-machine-learning-tutorial-what-is-the-support-vector-machine-algorithm-explained-with-code-examples/"
+footer_col2_item7_text: "SVM"
+footer_col2_item8_link: "https://www.freecodecamp.org/news/javascript-foreach-how-to-loop-through-an-array-in-js/"
+footer_col2_item8_text: "JavaScript forEach"
+footer_col2_item9_link: "https://www.freecodecamp.org/news/google-bert-nlp-machine-learning-tutorial/"
+footer_col2_item9_text: "Google BERT"
+footer_col2_item10_link: "https://www.freecodecamp.org/news/sql-create-table-statement-with-example-syntax/"
+footer_col2_item10_text: "Create Table SQL"
+footer_col3_item1_link: "https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/"
+footer_col3_item1_text: "Responsive Web Design"
+footer_col3_item2_link: "https://www.freecodecamp.org/news/svg-basics-what-are-scalable-vector-graphics-and-how-do-you-use-them/"
+footer_col3_item2_text: "What Is an SVG File?"
+footer_col3_item3_link: "https://www.freecodecamp.org/news/pdf-password-remover-guide-how-to-remove-password-protection-from-a-pdf/"
+footer_col3_item3_text: "PDF Password Remover"
+footer_col3_item4_link: "https://www.freecodecamp.org/news/what-is-a-pdf-file-and-how-do-you-open-it-solved/"
+footer_col3_item4_text: "What Is a PDF?"
+footer_col3_item5_link: "https://www.freecodecamp.org/news/what-is-python-used-for-10-coding-uses-for-the-python-programming-language/"
+footer_col3_item5_text: "What Is Python?"
+footer_col3_item6_link: "https://www.freecodecamp.org/news/what-is-tls-transport-layer-security-encryption-explained-in-plain-english/"
+footer_col3_item6_text: "What Is TLS?"
+footer_col3_item7_link: "https://www.freecodecamp.org/news/what-is-a-lan-local-area-network-explained-in-plain-english/"
+footer_col3_item7_text: "What Is a LAN?"
+footer_col3_item8_link: "https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/"
+footer_col3_item8_text: "What Is npm?"
+footer_col3_item9_link: "https://www.freecodecamp.org/news/rsync-examples-rsync-options-and-how-to-copy-files-over-ssh/"
+footer_col3_item9_text: "RSync Examples"
+footer_col3_item10_link: "https://www.freecodecamp.org/news/how-to-use-the-tree-based-algorithm-for-machine-learning/"
+footer_col3_item10_text: "Random Forest"
+
+footer_our_org_header:
+  default: "Our Nonprofit"
+  description: "Title for organizational links"
+footer_about_link: "https://www.freecodecamp.org/news/about/"
+footer_about_text: "About"
+footer_Alumni_Network_link: "https://www.linkedin.com/school/free-code-camp/people/"
+footer_Alumni_Network_text: "Alumni Network"
+footer_Open_Source_link: "https://github.com/freeCodeCamp/"
+footer_Open_Source_text: "Open Source"
+footer_Shop_link: "https://www.freecodecamp.org/shop/"
+footer_Shop_text: "Shop"
+footer_Support_link: "https://www.freecodecamp.org/news/support/"
+footer_Support_text: "Support"
+footer_Sponsors_link: "https://www.freecodecamp.org/news/sponsors/"
+footer_Sponsors_text: "Sponsors"
+footer_Academic_Honesty_link: "https://www.freecodecamp.org/news/academic-honesty-policy/"
+footer_Academic_Honesty_text: "Academic Honesty"
+footer_Code_of_Conduct_link: "https://www.freecodecamp.org/news/code-of-conduct/"
+footer_Code_of_Conduct_text: "Code of Conduct"
+footer_Privacy_Policy_link: "https://www.freecodecamp.org/news/privacy-policy/"
+footer_Privacy_Policy_text: "Privacy Policy"
+footer_Terms_of_Service_link: "https://www.freecodecamp.org/news/terms-of-service/"
+footer_Terms_of_Service_text: "Terms of Service"
+footer_Copyright_Policy_link: "https://www.freecodecamp.org/news/copyright-policy/"
+footer_Copyright_Policy_text: "Copyright Policy"
