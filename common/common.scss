@@ -307,7 +307,7 @@ p.footer-donation {
   height: $--global-nav-height;
   background-color: $--gray85;
   box-shadow: none;
-  position: fixed;
+  position: absolute;
   z-index: $hints-index - 3;
 }
 .d-header .title {
