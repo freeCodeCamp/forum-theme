@@ -309,6 +309,7 @@ p.footer-donation {
   box-shadow: none;
   position: fixed;
   z-index: $hints-index - 3;
+  top: 0;
 }
 .d-header .title {
   display: none;
