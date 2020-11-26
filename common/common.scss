@@ -337,15 +337,11 @@ p.footer-donation {
 .d-header-icons .icon:hover,
 .d-header-icons .icon:focus {
   border: 0px;
+  background-color: $--gray80;
 }
 
 .d-header-icons .d-icon {
   color: $--gray65;
-}
-
-.d-header-icons .icon:hover,
-.d-header-icons .icon:focus {
-  background-color: $--gray80;
 }
 
 .d-header-icons .icon:hover .d-icon,
@@ -458,82 +454,7 @@ a.curriculum-nav:focus {
   }
 }
 
-// social
-.social-links {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.social-links a:last-of-type {
-  padding-right: 20px;
-}
-
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 10px;
-  color: #fff;
-  opacity: 0.8;
-}
-
-.social-link:hover {
-  opacity: 1;
-}
-
-.social-link svg {
-  height: 1.8rem;
-  fill: #fff;
-}
-
-.social-link-fb svg {
-  height: 1.5rem;
-}
-
-.social-link-wb svg {
-  height: 1.6rem;
-}
-
-.social-link-wb svg path {
-  stroke: #fff;
-}
-
-.social-link-rss svg {
-  height: 1.9rem;
-}
-
-.subscribe-button {
-  display: block;
-  padding: 4px 10px;
-  border: #fff 1px solid;
-  color: #fff;
-  font-size: 1.2rem;
-  line-height: 1em;
-  opacity: 0.8;
-}
-
-.subscribe-button:hover {
-  text-decoration: none;
-  opacity: 1;
-}
-
-.rss-button {
-  opacity: 0.8;
-}
-
-.rss-button:hover {
-  opacity: 1;
-}
-
-.rss-button svg {
-  margin-bottom: 1px;
-  height: 2.1rem;
-  fill: #fff;
-}
-
-// theme specific
+// theme specific --------------------
 .btn:hover d-icon,
 .btn .d-icon,
 .btn-primary .d-icon {
