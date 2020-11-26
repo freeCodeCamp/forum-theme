@@ -344,6 +344,7 @@ a.curriculum-nav {
     background-color: $--gray90;
   }
   .site-nav {
+    z-index: 10000;
     width: 210px;
     background-color: none;
     left: 50%;
