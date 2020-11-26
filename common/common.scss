@@ -514,16 +514,6 @@ img.avatar {
   }
 }
 
-//header notifications ----------------------------
-.d-header-icons {
-  .unread-private-messages,
-  .ring {
-    top: 0px;
-    right: auto;
-    left: -3px;
-  }
-}
-
 //main page grid ----------------------------
 td.poster-names a {
   color: dark-light-choose($primary-medium, $secondary-medium);
