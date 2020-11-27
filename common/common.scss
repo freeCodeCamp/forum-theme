@@ -322,7 +322,8 @@ body.no-ember {
     background-color: $--gray90;
 
     #site-logo {
-      max-width: 210px;
+      max-width: 40vw;
+      height: auto;
       max-height: 24px;
     }
     .title {
@@ -515,6 +516,7 @@ img.avatar {
   }
 }
 
+#banner .close,
 .modal-header .modal-close {
   padding-left: 0;
 }
