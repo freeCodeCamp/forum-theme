@@ -3,7 +3,7 @@
   "about_url": "https://github.com/freeCodeCamp/discourse-theme",
   "license_url": "https://github.com/freeCodeCamp/discourse-theme/blob/master/LICENSE",
   "authors": "FreeCodeCamp",
-  "theme_version": "1.0",
+  "theme_version": "1.1",
   "assets": {},
   "color_schemes": {
     "light": {
