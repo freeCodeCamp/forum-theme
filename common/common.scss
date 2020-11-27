@@ -310,8 +310,29 @@ p.footer-donation {
   position: fixed;
   z-index: $hints-index - 3;
 }
+
 .d-header .title {
   display: none;
+}
+
+body.no-ember {
+  .d-header {
+    margin-top: 0px;
+    top: 0px;
+    background-color: $--gray90;
+
+    #site-logo {
+      max-width: 210px;
+      max-height: 24px;
+    }
+    .title {
+      display: flex;
+    }
+  }
+  .curriculum-nav,
+  .site-nav {
+    display: none;
+  }
 }
 
 .d-header .d-header-icons {
@@ -378,11 +399,7 @@ a.curriculum-nav:focus {
   color: $--gray05;
 }
 
-.d-header .title,
-.d-header .categories-wrapper {
-  display: none;
-}
-
+.d-header .categories-wrapper,
 .d-header .extra-info-wrapper {
   display: none;
 }
@@ -451,6 +468,12 @@ a.curriculum-nav:focus {
   .d-header {
     margin-top: 0px;
     top: 0px;
+  }
+  body.no-ember .d-header #site-logo {
+    position: absolute;
+    margin: 7px 0 7px -105px;
+    top: 0px;
+    left: 50%;
   }
 }
 
