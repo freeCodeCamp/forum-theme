@@ -357,6 +357,8 @@ body.no-ember {
   margin: 0px;
   border: 0px;
 }
+
+.drop-down-mode .d-header-icons .active .icon,
 .d-header-icons .icon:hover,
 .d-header-icons .icon:focus {
   border: 0px;
@@ -469,6 +471,9 @@ a.curriculum-nav:focus {
   .d-header {
     margin-top: 0px;
     top: 0px;
+  }
+  .d-header-icons .icon {
+    width: 45px;
   }
   body.no-ember .d-header #site-logo {
     position: absolute;
