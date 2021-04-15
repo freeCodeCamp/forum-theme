@@ -9,8 +9,8 @@
 Both dark and light themes are managed in this repo using different color
 schemes.
 
-You can learn more about themes in this comprehensive article:
-https://meta.discourse.org/t/developer-s-guide-to-discourse-themes/93648
+You can learn more about themes in [this comprehensive article](https://meta.discourse.org/t/developer-s-guide-to-discourse-themes/93648) and learn how to test your changes with theme creator using [this article](https://meta.discourse.org/t/beginners-guide-to-using-theme-creator-and-theme-cli-to-start-building-a-discourse-theme/108444).
+
 
 ### Plugins
 
