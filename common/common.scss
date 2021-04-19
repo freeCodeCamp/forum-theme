@@ -633,6 +633,13 @@ td.poster-names a {
   white-space: initial;
 }
 
+#reply-control .btn-mini-toggle:hover,
+#reply-control .btn-mini-toggle:focus {
+  .d-icon {
+    color: $secondary;
+  }
+}
+
 // Pill nav ----------------------------
 
 .nav-pills {
