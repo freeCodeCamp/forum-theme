@@ -621,6 +621,11 @@ td.poster-names a {
   border: none;
 }
 
+// All categories button sizing exception fix
+div.select-kit-header {
+    margin-bottom: 0 !important;
+}
+
 .login-modal,
 .create-account {
   .btn-social {
@@ -672,7 +677,7 @@ td.poster-names a {
     padding: 6px 12px;
     font-size: $font-up-1;
     transition: none;
-    height: $--global-nav-height;
+    height: 42px;
     &:hover,
     &:focus {
       color: $fcc-secondary-background;
