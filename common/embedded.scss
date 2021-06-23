@@ -1,6 +1,6 @@
 .discourse-embedding {
   background-color: #fff;
-  color: $--gray90;
+  color: #0a0a23;
   overflow-y: auto;
 }
 
@@ -15,7 +15,7 @@
   background-color: #feac32;
   background-image: linear-gradient(#fecc4c, #ffac33);
   border: 3px solid #feac32;
-  color: var(--theme-color);
+  color: #0a0a23;
   display: inline-flex;
   align-items: center;
 }
@@ -27,7 +27,7 @@
   border-width: 3px;
   border-color: #f1a02a;
   background-image: none;
-  color: var(--theme-color);
+  color: #0a0a23;
   text-decoration: none;
 }
 .discourse-embedding .button:active {
