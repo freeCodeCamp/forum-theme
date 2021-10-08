@@ -397,6 +397,9 @@ a.curriculum-nav:focus {
   background: $--gray00;
 }
 
+.navigation-container {
+  align-items: center;
+}
 // header  ----------------------------
 .d-header .widget-link.topic-link {
   color: $--gray05;
@@ -738,8 +741,4 @@ div.select-kit-header {
 
 .topic-timer-heading > span {
   display: none;
-}
-
-.category-breadcrumb .select-kit {
-  height: auto;
 }
