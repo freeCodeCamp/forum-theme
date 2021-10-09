@@ -623,7 +623,7 @@ td.poster-names a {
 
 // All categories button sizing exception fix
 div.select-kit-header {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .login-modal,
@@ -738,4 +738,8 @@ div.select-kit-header {
 
 .topic-timer-heading > span {
   display: none;
+}
+
+.category-breadcrumb .select-kit {
+  height: auto;
 }
