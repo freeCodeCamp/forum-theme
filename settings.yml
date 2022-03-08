@@ -7,7 +7,7 @@ curriculum_title_short:
   description: "This is the short version of curriculum title used for mobile devices"
 curriculum_src:
   default: https://www.freecodecamp.org/learn
-  description: "This the link to related language curriculum"
+  description: "This the link to related language curriculum",
 
 # Analytics
 Google_Tag_Manager:
@@ -16,13 +16,14 @@ Google_Tag_Manager:
 
 # Footer description section
 footer_paragraph_1:
-  default: "freeCodeCamp is a donor-supported tax-exempt 501(c)(3) nonprofit
+  default: "freeCodeCamp is a donor-supported tax-exempt 501(c)(3) nonprofit,
     organization (United States Federal Tax Identification Number:
     82-0779546)"
   description: "First footer paragraph"
 footer_paragraph_2:
   default:
-    "Our mission: to help people learn to code for free. We accomplish this
+    "Our mission: 
+  to help people learn to code for free. We accomplish this
     by creating thousands of videos, articles, and interactive coding
     lessons - all freely available to the public. We also have thousands
     of freeCodeCamp study groups around the world."
