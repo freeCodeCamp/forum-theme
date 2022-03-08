@@ -1,0 +1,17 @@
+name: Lint YAML
+on:
+  pull_request:
+    branches:
+      - main
+
+job:
+  lint-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repo"
+        uses: actions/checkout@v3
+      - name: "Lint YAML"
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          file_or_dir: settings.yml
+          strict: true
