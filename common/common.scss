@@ -540,6 +540,11 @@ img.avatar {
   border-radius: none;
 }
 
+// user profile avatar
+.user-main .about .details .user-profile-avatar {
+  margin-right: 12px;
+}
+
 //new topic
 @media screen and (max-width: 850px) {
   button#create-topic span {
