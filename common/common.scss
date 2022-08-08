@@ -540,11 +540,10 @@ img.avatar {
   border-radius: none;
 }
 
-// user profile avatar
-.user-main .about .details .user-profile-avatar {
-  margin-right: 12px;
+// user summary
+html.whos-online-ring.desktop-view body.user-page-online .primary img.avatar {
+  margin-right: 8px 20px 10px 8px;
 }
-
 //new topic
 @media screen and (max-width: 850px) {
   button#create-topic span {
