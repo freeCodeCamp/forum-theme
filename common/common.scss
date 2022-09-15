@@ -528,7 +528,10 @@ img.avatar {
 .topic-post.sticky-avatar .topic-avatar {
     top: calc(#{$--global-nav-height} - 0.25em);
 }
-
+.anchor {
+  padding-top: calc(#{$--global-nav-height} + 1rem);
+  margin-top: calc(0rem - #{$--global-nav-height} - 1rem);
+}
 #banner .close,
 .modal-header .modal-close {
   padding-left: 0;
