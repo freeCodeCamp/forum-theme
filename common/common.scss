@@ -526,7 +526,7 @@ img.avatar {
 }
 
 .topic-post.sticky-avatar .topic-avatar {
-    top: calc(#{--global-nav-height} - 0.25em);
+    top: calc(#{$--global-nav-height} - 0.25em);
 }
 
 #banner .close,
