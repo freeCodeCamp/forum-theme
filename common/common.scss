@@ -525,13 +525,16 @@ img.avatar {
   }
 }
 
-.topic-post.sticky-avatar .topic-avatar {
-    top: calc(#{$--global-nav-height} - 0.25em);
-}
 .anchor {
-  padding-top: calc(#{$--global-nav-height} + 1rem);
-  margin-top: calc(0rem - #{$--global-nav-height} - 1rem);
+  padding-top: calc(#{$--global-nav-height} * 2 + 1rem);
+  margin-top: calc(-1rem - #{$--global-nav-height} * 2);
 }
+
+@media screen and (min-width: 800px) {
+  .anchor {
+    padding-top: calc(#{$--global-nav-height} + 1rem);
+    margin-top: calc(-1rem - #{$--global-nav-height});
+  }
 #banner .close,
 .modal-header .modal-close {
   padding-left: 0;
