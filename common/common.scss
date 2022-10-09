@@ -45,6 +45,49 @@ $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
 $hints-index: 1000;
 
+// media query mixin --------------------------------------------------------------------------------------
+$breakpoints: (
+  'screen-xxs-max': 400px,
+  'screen-xs-min': 401px,
+  'screen-xs-max': 499px,
+  'screen-sm-min': 500px,
+  'screen-sm-max': 799px,
+  'screen-md-min': 800px,
+  'screen-md-max': 850px,
+  'screen-lg-min': 851px,
+  'screen-lg-max': 1019px,
+  'screen-xl-min': 1020px,
+  'screen-xl-max': 1109px,
+  'screen-xxl-min': 1200px
+);
+
+@mixin at-least($device-width) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $device-width);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+@mixin until($device-width) {
+  $value: map-get($breakpoints, $device-width);
+
+  @if $value != null {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+}
+
+// media query usage
+// @include at-least(screen-xxs-max) { ... }
+// @include until(screen-xxs-max) { ... }
+
 // fonts --------------------------------------------------------------------------------------
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700");
@@ -167,7 +210,7 @@ p.footer-donation {
   padding: 5px 10px;
 }
 
-@media (min-width: 500px) {
+@include at-least(screen-sm-min){
   .trending-guides-row {
     display: flex;
     flex-direction: row;
@@ -188,7 +231,7 @@ p.footer-donation {
   }
 }
 
-@media (min-width: 800px) {
+@include at-least(screen-md-min) {
   .footer-container {
     width: 750px;
   }
@@ -213,13 +256,13 @@ p.footer-donation {
   }
 }
 
-@media (min-width: 1020px) {
+@include at-least(screen-xl-min) {
   .footer-container {
     width: 850px;
   }
 }
 
-@media (min-width: 1200px) {
+@include at-least(screen-xxl-min) {
   .footer-container {
     width: 1170px;
   }
@@ -442,7 +485,7 @@ a.curriculum-nav:focus {
   width: auto;
 }
 
-@media (max-width: 400px) {
+@include until(screen-xxs-max) {
   .d-header > .wrap {
     margin: 0px 5px;
   }
@@ -457,7 +500,7 @@ a.curriculum-nav:focus {
   }
 }
 
-@media (min-width: 800px) {
+@include at-least(screen-md-min) {
   #main-outlet {
     padding-top: $--global-nav-height * 2;
   }
@@ -519,7 +562,7 @@ img.avatar {
   box-shadow: none;
 }
 
-@media screen and (min-width: 851px) {
+@include at-least(screen-lg-min) {
   .topic-list .posters {
     width: 162px;
   }
@@ -545,7 +588,7 @@ html.whos-online-ring.desktop-view body.user-page-online .primary img.avatar {
   margin: 8px 20px 10px 8px;
 }
 //new topic
-@media screen and (max-width: 850px) {
+@include until(screen-md-max) {
   button#create-topic span {
     display: inline;
   }
@@ -753,7 +796,7 @@ div.select-kit-header {
   margin-top: calc(-1rem - #{$--global-nav-height} * 2);
 }
 
-@media screen and (min-width: 800px) {
+@include at-least(screen-md-min) { 
   .anchor {
     padding-top: calc(#{$--global-nav-height} + 1rem);
     margin-top: calc(-1rem - #{$--global-nav-height});
