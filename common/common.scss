@@ -802,3 +802,8 @@ div.select-kit-header {
     margin-top: calc(-1rem - #{$--global-nav-height});
   }
 }
+
+// Display the Updated topic banner in the DOM flow
+#list-area .show-more {
+  position: relative;
+}
