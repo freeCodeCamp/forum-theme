@@ -23,6 +23,8 @@ $fcc-highlight-color: $tertiary;
 $fcc-highlight-background: fcc-highlight-lightness-switch($fcc-highlight-color);
 $fcc-highlight-mid: mix($fcc-highlight-color, $fcc-highlight-background, 50%);
 $secondary-header-background: mix($header_primary, $header_background, 93%);
+$fcc-d-selected: rgba($primary, 0.16);
+$fcc-d-hover: rgba($primary, 0.08);
 
 //fixed variables
 // header_primary and header_background should always be set to #0a0a23 and #fff respectivley
@@ -806,4 +808,14 @@ div.select-kit-header {
 // Display the Updated topic banner in the DOM flow
 #list-area .show-more {
   position: relative;
+}
+
+// Adjust hover and read(selected) states
+.user-menu .quick-access-panel li {
+ background-color: $fcc-d-selected;
+}
+
+.user-menu .quick-access-panel li:hover,
+.menu-panel .widget-link:hover, .menu-panel .widget-link:focus, .menu-panel .categories-link:hover, .menu-panel .categories-link:focus {
+  background-color: $fcc-d-hover;
 }
