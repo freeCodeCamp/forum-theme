@@ -1,6 +1,6 @@
 # Forum languages
 languages:
-  default: english|espanol|chinese|chinese-traditional|italiano|portugues|ukrainiai|japanese|discourse
+  default: english|espanol|chinese|chinese-traditional|italiano|portugues|ukrainiai|japanese
   description: "Languages forum slug names which are also available on freeCodeCamp curriculum"
   type: list
   list_type: simple
@@ -13,7 +13,6 @@ languages:
     - portugues
     - ukrainiai
     - japanese
-    - discourse
 
 # Navigation
 curriculum_title:
@@ -26,7 +25,7 @@ curriculum_src:
   default: https://www.freecodecamp.org/
   description: "This the link to related language curriculum"
 curriculum_slug:
-  default: learn|espanol/learn|chinese/learn|chinese-traditional/learn|italian/learn|portuguese/learn|ukrainiai/learn|japanese/learn|discourse/learn
+  default: learn|espanol/learn|chinese/learn|chinese-traditional/learn|italian/learn|portuguese/learn|ukrainiai/learn|japanese/learn
   description: "Slug which is going to be attached to curriculum_src"
   type: list
   list-type: simple
@@ -39,7 +38,6 @@ curriculum_slug:
     - portuguese/learn
     - ukrainiai/learn
     - japanese/learn
-    - discourse/learn
 
 # Analytics
 Google_Tag_Manager:
