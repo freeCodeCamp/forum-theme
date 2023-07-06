@@ -35,12 +35,25 @@
 </script>
 
 <script type="text/discourse-plugin" version="0.8.12">
-  api.decorateWidget('header-buttons:before', function (helper) {
-          let rawLabel = helper.widget.site.mobileView ? settings.curriculum_title_short : settings.curriculum_title;
-          return helper.attach('link', {
-              href: settings.curriculum_src,
-              rawLabel,
-              className: "curriculum-nav"
+  api.onPageChange(() => {
+          api.decorateWidget('header-buttons:before', function (helper) {
+                  let rawLabel = helper.widget.site.mobileView ? settings.curriculum_title_short : settings.curriculum_title;
+              
+                  const container = Discourse.__container__;
+                  const controller = container.lookup('controller:navigation/category');
+                  const category = controller.get("category");
+                  const curriculum_slugs = settings.curriculum_slug.split('|');
+
+                  let href = '';
+                  settings.languages.split('|').forEach((lang, i) => {
+                    lang === category.name ? href = settings.curriculum_src + curriculum_slugs[i] : href = settings.curriculum_src + curriculum_slugs[0]; 
+                  });
+              
+                  return helper.attach('link', {
+                    href: href,
+                    rawLabel,
+                    className: "curriculum-nav"
+                  });
           });
   });
 </script>
