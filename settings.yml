@@ -8,7 +8,7 @@ languages:
     - english
     - espanol
     - chinese
-    - chinese-traditional # This does not exist on forum currently, but is used to correspond to curriculum_slug id
+    - chinese-traditional     # This does not exist on forum currently, but is used to correspond to curriculum_slug id
     - italiano
     - portugues
     - ukrainiai
