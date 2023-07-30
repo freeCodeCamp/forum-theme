@@ -35,27 +35,48 @@
 </script>
 
 <script type="text/discourse-plugin" version="0.8.12">
-  api.onPageChange(() => {
-          api.decorateWidget('header-buttons:before', function (helper) {
-                  let rawLabel = helper.widget.site.mobileView ? settings.curriculum_title_short : settings.curriculum_title;
-              
-                  const container = Discourse.__container__;
-                  const controller = container.lookup('controller:navigation/category');
-                  const category = controller.get("category");
-                  const curriculum_slugs = settings.curriculum_slug.split('|');
-
-                  let href = '';
-                  settings.languages.split('|').forEach((lang, i) => {
-                    lang === category.name ? href = settings.curriculum_src + curriculum_slugs[i] : href = settings.curriculum_src + curriculum_slugs[0]; 
-                  });
-              
-                  return helper.attach('link', {
-                    href: href,
-                    rawLabel,
-                    className: "curriculum-nav"
-                  });
-          });
+  api.decorateWidget('header-buttons:before', function (helper) {
+    let rawLabel = helper.widget.site.mobileView ? settings.curriculum_title_short : settings.curriculum_title;
+    return helper.attach('link', {
+        href: settings.curriculum_src,
+        rawLabel,
+        className: "curriculum-nav"
+    });
   });
+</script>
+
+<!-- 
+  This script:
+    gets curriculum_nav to later change it's href with
+    api.onChange() and set the appropriate curriculum_slug
+    to it only when it needs to be changed
+ -->
+<script type="text/discourse-plugin" version="0.8.12">
+  let curriculum_nav = '';
+  const curriculum_slugs = settings.curriculum_slug.split('|');
+  const languages = settings.languages.split('|');
+
+  window.addEventListener("DOMContentLoaded", (event) => {
+    curriculum_nav = document.querySelector('.curriculum-nav');
+  });
+
+  api.onPageChange(() => {
+    const container = Discourse.__container__;
+    const controller = container.lookup('controller:navigation/category');
+    const category = controller.get("category");
+
+    languages.forEach((lang, i) => {
+      if (lang === category.name) {
+        if (curriculum_nav.href !== settings.curriculum_src + curriculum_nav.href.split('/')[3]) {
+          curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
+        }
+      } else {
+        if (curriculum_nav.href !== settings.curriculum_src) {
+          curriculum_nav.href = settings.curriculum_src;
+        }
+      }
+    });
+  })
 </script>
 
 <!-- inject the header in the plugin outlet -->
