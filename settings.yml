@@ -24,8 +24,7 @@ footer_paragraph_2:
   default:
     "Our mission: to help people learn to code for free. We accomplish this
     by creating thousands of videos, articles, and interactive coding
-    lessons - all freely available to the public. We also have thousands
-    of freeCodeCamp study groups around the world."
+    lessons - all freely available to the public."
   description: "Second footer paragraph"
 footer_paragraph_3:
   default: "Donations to freeCodeCamp go toward our education initiatives, and
