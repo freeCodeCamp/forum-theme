@@ -11,7 +11,6 @@ schemes.
 
 You can learn more about themes in [this comprehensive article](https://meta.discourse.org/t/developer-s-guide-to-discourse-themes/93648) and learn how to test your changes with theme creator using [this article](https://meta.discourse.org/t/beginners-guide-to-using-theme-creator-and-theme-cli-to-start-building-a-discourse-theme/108444).
 
-
 ### Plugins
 
 > Note: The theme plugins (our own and third party) have their own repositories.
@@ -26,5 +25,5 @@ Some of the theme plugins we are using as of now are:
 ## Support:
 
 You can report any support issues, bugs in our
-[Contributors Chat room](https://gitter.im/FreeCodeCamp/Contributors) or on the
+[Contributors Chat room](https://discord.gg/PRyKn3Vbay) or on the
 [main repository's issue tracker](https://github.com/freeCodeCamp/freeCodeCamp/issues).
