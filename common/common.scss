@@ -488,6 +488,10 @@ a.curriculum-nav:focus {
   width: auto;
 }
 
+.loading-indicator-container {
+  z-index: 1201;
+}
+
 @include until(screen-xxs-max) {
   .d-header > .wrap {
     margin: 0px 5px;
