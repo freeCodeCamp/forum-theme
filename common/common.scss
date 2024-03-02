@@ -824,3 +824,10 @@ div.select-kit-header {
 .menu-panel .widget-link:hover, .menu-panel .widget-link:focus, .menu-panel .categories-link:hover, .menu-panel .categories-link:focus {
   background-color: $fcc-d-hover;
 }
+
+// Dropdown items
+.select-kit-row.is-highlighted,
+.select-kit-row.is-selected, {
+  background-color: $primary $i;
+  color: $fcc-quaternary-background $i;
+}
