@@ -825,9 +825,17 @@ div.select-kit-header {
   background-color: $fcc-d-hover;
 }
 
-// Dropdown items
+// Dropdown
+.select-kit-header {
+  color: $fcc-primary-color $i;
+}
+
+.select-kit-header:hover,
+.select-kit.is-expanded .select-kit-header,
 .select-kit-row.is-highlighted,
-.select-kit-row.is-selected, {
+.select-kit-row.is-selected, 
+.select-kit-row.is-highlighted a,
+.select-kit-row.is-highlighted span {
   background-color: $primary $i;
-  color: $fcc-quaternary-background $i;
+  color: $primary-low $i;
 }
