@@ -816,13 +816,17 @@ div.select-kit-header {
 }
 
 // Adjust hover and read(selected) states
-.user-menu .quick-access-panel li {
- background-color: $fcc-d-selected;
-}
-
 .user-menu .quick-access-panel li:hover,
 .menu-panel .widget-link:hover, .menu-panel .widget-link:focus, .menu-panel .categories-link:hover, .menu-panel .categories-link:focus {
-  background-color: $fcc-d-hover;
+  background-color: $fcc-d-hover $i;
+}
+
+.user-menu .quick-access-panel li button {
+  border: none;
+
+  &:hover {
+    background-color: transparent $i;
+  }
 }
 
 // Dropdown items
