@@ -32,6 +32,7 @@ $n: none;
 $i: !important;
 $--global-nav-height: 38px;
 $--dark-blue: #002ead;
+$--blue-50: #198eee;
 $header_primary: #fff;
 $header_background: #0a0a23;
 $--gray90: mix($header_background, $header_primary, 100%);
@@ -94,10 +95,27 @@ $breakpoints: (
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700");
 
+// focus outline mixin ---------------------------------------------------------------
+
+@mixin focus-outline {
+  outline: 3px solid $--blue-50 $i;
+  outline-offset: 0 $i;
+}
+
 // general ---------------------------------------------------------------
 html {
   font-family: "Lato", sans-serif;
   font-size: 18px;
+}
+
+:focus-visible {
+  @include focus-outline;
+}
+
+@supports not selector(:focus-visible) {
+  :focus {
+    @include focus-outline;
+  }
 }
 
 /* Footer ---------------------------------------------------------- */
@@ -790,6 +808,12 @@ div.select-kit-header {
 
   a.title.visited:not(.badge-notification) {
     color: $primary-medium;
+  }
+}
+
+.topic-list .main-link {
+  &.focused {
+    box-shadow: none $i; /* Unset the default Discourse styles */
   }
 }
 
