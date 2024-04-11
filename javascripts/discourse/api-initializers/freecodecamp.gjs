@@ -6,7 +6,7 @@ export default apiInitializer("0.8", (api) => {
     ? settings.curriculum_title_short
     : settings.curriculum_title;
 
-  api.headerButtons.add("curriculum-nav", <template>
+  api.renderInOutlet("before-header-panel", <template>
     <a class="curriculum-nav" href={{settings.curriculum_src}}>{{rawLabel}}</a>
   </template>);
 

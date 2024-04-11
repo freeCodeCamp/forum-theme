@@ -230,7 +230,7 @@ p.footer-donation {
   padding: 5px 10px;
 }
 
-@include at-least(screen-sm-min){
+@include at-least(screen-sm-min) {
   .trending-guides-row {
     display: flex;
     flex-direction: row;
@@ -443,12 +443,8 @@ body.no-ember {
 }
 
 a.curriculum-nav {
-  z-index: 1000;
   color: white;
-  position: fixed;
   padding: 0 10px;
-  left: 15px;
-  margin-top: -19px;
   height: $--global-nav-height;
   display: flex;
   align-items: center;
@@ -827,7 +823,7 @@ div.select-kit-header {
   margin-top: calc(-1rem - #{$--global-nav-height} * 2);
 }
 
-@include at-least(screen-md-min) { 
+@include at-least(screen-md-min) {
   .anchor {
     padding-top: calc(#{$--global-nav-height} + 1rem);
     margin-top: calc(-1rem - #{$--global-nav-height});
