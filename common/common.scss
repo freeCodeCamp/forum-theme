@@ -611,7 +611,7 @@ td.poster-names a {
 }
 
 //buttons ----------------------------
-.btn,
+.btn:not(.btn-flat),
 .select-kit.dropdown-select-box .dropdown-select-box-header {
   position: relative;
   color: $primary $i;
