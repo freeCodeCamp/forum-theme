@@ -855,3 +855,10 @@ div.select-kit-header {
   background-color: $primary $i;
   color: $fcc-quaternary-background $i;
 }
+
+// `.search-input` is a div that wraps around the input and the search button.
+// This div already has an focus outline set by Discourse
+// so we need to remove ours to avoid having two focus outlines.
+.search-menu-container .search-input #search-term:focus-visible {
+  outline: none $i;
+}
