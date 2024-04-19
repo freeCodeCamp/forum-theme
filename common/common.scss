@@ -414,18 +414,18 @@ body.no-ember {
 }
 
 .d-header-icons .icon {
-  height: 34px;
-  width: 38px;
+  height: 38px;
+  width: 42px;
   padding: 2px;
-  margin: 0px;
-  border: 0px;
-}
+  box-sizing: border-box;
+  border: 0px $i;
 
-.drop-down-mode .d-header-icons .active .icon,
-.d-header-icons .icon:hover,
-.d-header-icons .icon:focus {
-  border: 0px;
-  background-color: $--gray75;
+  &:active,
+  &:hover,
+  &:focus {
+    border: 0px $i;
+    background-color: $--gray75 $i;
+  }
 }
 
 .d-header-icons .btn .d-icon {
@@ -540,7 +540,7 @@ a.curriculum-nav:focus {
     top: 0px;
   }
   .d-header-icons .icon {
-    width: 45px;
+    width: 49px;
   }
   body.no-ember .d-header #site-logo {
     position: absolute;
