@@ -862,3 +862,11 @@ div.select-kit-header {
 .search-menu-container .search-input #search-term:focus-visible {
   outline: none $i;
 }
+
+.topic-body .contents details {
+  &:not([open]):hover,
+  &:not([open]):focus,
+  &:not([open]):focus-within {
+    background-color: $fcc-d-hover;
+  }
+}
