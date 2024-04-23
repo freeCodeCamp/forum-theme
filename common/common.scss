@@ -554,7 +554,7 @@ a.curriculum-nav:focus {
 .btn:hover .d-icon,
 .btn .d-icon,
 .btn-primary .d-icon {
-  color: inherit $i;
+  color: inherit;
 }
 
 .d-header-icons .badge-notification {
@@ -862,6 +862,14 @@ div.select-kit-header {
   // so we need to remove ours to avoid having nested focus outlines.
   #search-term:focus-visible {
     outline: none $i;
+  }
+
+  .btn.show-advanced-search {
+    margin-right: 0.5em;
+  }
+
+  .btn.show-advanced-search .d-icon {
+    color: inherit;
   }
 }
 
