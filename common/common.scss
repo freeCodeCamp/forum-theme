@@ -129,12 +129,13 @@ html {
 .footer-container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
   padding-right: 15px;
+  padding-left: 15px;
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 16px;
   overflow-x: hidden;
+  width: min(100%, 1300px);
 }
 
 .footer-container p {
@@ -168,24 +169,9 @@ html {
   margin: 0px;
 }
 
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 16px;
-}
-
-.footer-right,
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 100%;
-}
-
-.footer-col a {
-  padding: 5px 0px;
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
 }
 
 .footer-desc-col {
@@ -230,44 +216,30 @@ p.footer-donation {
   padding: 5px 10px;
 }
 
+.trending-guides-articles {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0.5rem;
+}
+
 @include at-least(screen-sm-min) {
-  .trending-guides-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .footer-col-3 {
-    flex: 1 0 100%;
-    flex-direction: row;
+  .footer-top {
+    grid-template-columns: repeat(auto-fit, minmax(30.5em, 1fr));
   }
 
-  .footer-col-1,
-  .footer-col-2,
-  .footer-right,
-  .footer-left {
-    flex: 1 0 43%;
-    height: auto;
-    font-size: 15;
+  .trending-guides-articles {
+    grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
   }
 }
 
 @include at-least(screen-md-min) {
-  .footer-container {
-    width: 750px;
+  .trending-guides-articles {
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   }
-  .footer-col-1,
-  .footer-col-2,
-  .footer-col-3 {
-    flex: 1 0 25%;
-    height: auto;
-    font-size: 16.5;
-  }
-  .footer-col-3 {
-    flex-direction: column;
-  }
-  .footer-right {
-    padding-left: 0px;
-  }
+
   .footer-container .col-spacer {
     margin-top: 40px;
   }
@@ -277,34 +249,17 @@ p.footer-donation {
 }
 
 @include at-least(screen-xl-min) {
-  .footer-container {
-    width: 850px;
+  .trending-guides-articles {
+    grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
   }
 }
 
 @include at-least(screen-xxl-min) {
-  .footer-container {
-    width: 1170px;
-  }
-  .footer-top {
-    display: flex;
-    flex-direction: row;
-  }
   .footer-desc-col {
     flex: 1 0 45%;
   }
   .trending-guides {
     flex: 1 0 58%;
-  }
-
-  .footer-col-1 {
-    flex: 1 0 22%;
-  }
-  .footer-col-3 {
-    flex: 1 0 30%;
-  }
-  .footer-col-2 {
-    flex: 1 0 18%;
   }
 
   p.footer-donation {
