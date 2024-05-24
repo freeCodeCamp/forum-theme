@@ -2,41 +2,41 @@
 # These settings are needed because forum languages and /learn/(language here) are different
 # /learn/(language here) - These are under curriculum_slug below
 languages:
-  default: espanol|chinese|chinese-traditional|italiano|portugues|ukrainiai|japanese
+  default: espanol|chinese|chinese-traditional|italiano|portugues|ukrainian|japanese
   description: "Languages forum slug names which are also available on freeCodeCamp curriculum"
   type: list
   list_type: simple
   choices:
     - espanol
     - chinese
-    - chinese-traditional  # This does not exist on forum currently, but is used to correspond to curriculum_slug id
+    - chinese-traditional # This does not exist on forum currently, but is used to correspond to curriculum_slug id
     - italiano
     - portugues
-    - ukrainiai
+    - ukrainian
     - japanese
 
 # Navigation
 curriculum_title:
   default: Visit the Curriculum
-  description: "This text will be displayed in the curriculum navigation item"
+  description: "Text displayed in the curriculum navigation item"
 curriculum_title_short:
   default: Curriculum
-  description: "This is the short version of curriculum title used for mobile devices"
+  description: "The short version of curriculum title used for mobile devices"
 curriculum_src:
   default: https://www.freecodecamp.org/learn/
-  description: "This the link to related language curriculum"
+  description: "The link to related language curriculum"
 curriculum_slug:
   default: espanol|chinese|chinese-traditional|italian|portuguese|ukrainiai|japanese
-  description: "Slug which is going to be attached to curriculum_src"
+  description: "Slug attached to curriculum_src"
   type: list
   list-type: simple
   choices:
     - espanol
     - chinese
-    - chinese-traditional  # This does not exist on forum currently, but is used to correspond to curriculum_slug id
+    - chinese-traditional # This does not exist on forum currently, but is used to correspond to curriculum_slug id
     - italian
     - portuguese
-    - ukrainiai
+    - ukrainian
     - japanese
 
 # Analytics
