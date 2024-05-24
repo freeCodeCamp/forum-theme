@@ -25,7 +25,7 @@ export default apiInitializer("0.8", (api) => {
     </nav>
   </template>);
 
-    let curriculum_nav = '';
+  let curriculum_nav = '';
   const curriculum_slugs = settings.curriculum_slug.split('|');
   const languages = settings.languages.split('|');
 
@@ -33,15 +33,12 @@ export default apiInitializer("0.8", (api) => {
     curriculum_nav = document.querySelector('.curriculum-nav');
   });
 
-  api.onPageChange(() => {
-    // const container = Discourse.__container__;
+  api.onPageChange((_url, _title) => {
     const controller = api.container.lookup('controller:navigation/category');
-    console.log(controller);
     const category = controller.get("category");
-    console.log(category);
 
     languages.forEach((lang, i) => {
-      if (lang.toLowerCase() === category.name.toLowerCase()) {
+      if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
         if (curriculum_nav.href !== settings.curriculum_src + curriculum_nav.href.split('/')[3]) {
           curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
         }
