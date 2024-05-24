@@ -1,6 +1,5 @@
 # Forum languages
-# These settings are needed because forum languages and /learn/(language here) are different
-# /learn/(language here) - These are under curriculum_slug below
+# These settings are needed because forum languages and /learn/<language> are different
 languages:
   default: espanol|chinese|chinese-traditional|italiano|portugues|ukrainian|japanese
   description: "Languages forum slug names which are also available on freeCodeCamp curriculum"
@@ -26,7 +25,7 @@ curriculum_src:
   default: https://www.freecodecamp.org/learn/
   description: "The link to related language curriculum"
 curriculum_slug:
-  default: espanol|chinese|chinese-traditional|italian|portuguese|ukrainiai|japanese
+  default: espanol|chinese|chinese-traditional|italian|portuguese|ukrainian|japanese
   description: "Slug attached to curriculum_src"
   type: list
   list-type: simple

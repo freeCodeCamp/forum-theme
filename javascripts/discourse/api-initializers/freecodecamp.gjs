@@ -25,13 +25,9 @@ export default apiInitializer("0.8", (api) => {
     </nav>
   </template>);
 
-  // let curriculum_nav = '';
   const curriculum_slugs = settings.curriculum_slug.split('|');
   const languages = settings.languages.split('|');
-
-  // window.addEventListener("DOMContentLoaded", (event) => {
-  //   const curriculum_nav = document.querySelector('.curriculum-nav');
-  // });
+  console.log(curriculum_slugs, languages);
 
   api.onPageChange((_url, _title) => {
     const curriculum_nav = document.querySelector('.curriculum-nav');
@@ -45,7 +41,7 @@ export default apiInitializer("0.8", (api) => {
       if (!curriculum_nav) {
         return;
       }
-      console.log(curriculum_slugs, i);
+      console.log(lang, curriculum_slugs[i]);
       if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
         curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
       } else {
