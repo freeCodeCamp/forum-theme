@@ -36,6 +36,9 @@ export default apiInitializer("0.8", (api) => {
   api.onPageChange((_url, _title) => {
     const category = api.container.lookup("service:discovery").category;
 
+    console.log(category);
+    console.log(settings.curriculum_src);
+    console.log(curriculum_nav);
     languages.forEach((lang, i) => {
       if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
         if (curriculum_nav.href !== settings.curriculum_src + curriculum_nav.href.split('/')[3]) {
@@ -47,5 +50,7 @@ export default apiInitializer("0.8", (api) => {
         }
       }
     });
+    console.log(settings.curriculum_src);
+    console.log(curriculum_nav);
   })
 });
