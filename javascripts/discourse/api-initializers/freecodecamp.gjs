@@ -24,4 +24,25 @@ export default apiInitializer("0.8", (api) => {
       </div>
     </nav>
   </template>);
+
+  const curriculum_slugs = settings.curriculum_slug.split('|');
+  const languages = settings.languages.split('|');
+
+  api.onPageChange((_url, _title) => {
+    const curriculum_nav = document.querySelector('.curriculum-nav');
+    const category = api.container.lookup("service:discovery").category;
+
+    if (!curriculum_nav) {
+      return;
+    }
+    // Reset to default href;
+    curriculum_nav.href = settings.curriculum_src;
+
+    languages.forEach((lang, i) => {
+      if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
+        const url_path = new URL(curriculum_slugs[i], settings.curriculum_src);
+        curriculum_nav.href = url_path.href;
+      }
+    });
+  })
 });
