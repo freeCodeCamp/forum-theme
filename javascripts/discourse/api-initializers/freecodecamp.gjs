@@ -33,29 +33,19 @@ export default apiInitializer("0.8", (api) => {
     curriculum_nav = document.querySelector('.curriculum-nav');
   });
 
-  api.registerHomeLogoHrefCallback(() => {
-    console.log(api.container.lookup("service:discovery"));
-    if (api.container.lookup("service:discovery")) {
-      return "https://forum.example.com/categories";
-    }
- 
-    return "https://forum.example.com/";
-  });
+  api.onPageChange((_url, _title) => {
+    const category = api.container.lookup("service:discovery").category;
 
-//  api.onPageChange((_url, _title) => {
-//    const controller = api.container.lookup('controller:navigation/category');
-//    const category = controller.get("category");
-//
-//    languages.forEach((lang, i) => {
-//      if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
-//        if (curriculum_nav.href !== settings.curriculum_src + curriculum_nav.href.split('/')[3]) {
-//          curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
-//        }
-//      } else {
-//        if (curriculum_nav.href !== settings.curriculum_src) {
-//          curriculum_nav.href = settings.curriculum_src;
-//        }
-//      }
-//    });
-//  })
+    languages.forEach((lang, i) => {
+      if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
+        if (curriculum_nav.href !== settings.curriculum_src + curriculum_nav.href.split('/')[3]) {
+          curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
+        }
+      } else {
+        if (curriculum_nav.href !== settings.curriculum_src) {
+          curriculum_nav.href = settings.curriculum_src;
+        }
+      }
+    });
+  })
 });
