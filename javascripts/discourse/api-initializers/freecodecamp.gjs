@@ -27,28 +27,21 @@ export default apiInitializer("0.8", (api) => {
 
   const curriculum_slugs = settings.curriculum_slug.split('|');
   const languages = settings.languages.split('|');
-  console.log(curriculum_slugs, languages);
 
   api.onPageChange((_url, _title) => {
     const curriculum_nav = document.querySelector('.curriculum-nav');
     const category = api.container.lookup("service:discovery").category;
-    console.log(api.container.lookup("service:discovery"));
 
-    console.log(category);
-    console.log(settings.curriculum_src);
-    console.log(curriculum_nav);
+    if (!curriculum_nav) {
+      return;
+    }
+    // Reset to default href;
+    curriculum_nav.href = settings.curriculum_src;
+
     languages.forEach((lang, i) => {
-      if (!curriculum_nav) {
-        return;
-      }
-      console.log(lang, curriculum_slugs[i]);
       if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
         curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
-      } else {
-        curriculum_nav.href = settings.curriculum_src;
       }
     });
-    console.log(settings.curriculum_src);
-    console.log(curriculum_nav);
   })
 });
