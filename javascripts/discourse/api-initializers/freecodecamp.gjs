@@ -45,14 +45,11 @@ export default apiInitializer("0.8", (api) => {
       if (!curriculum_nav) {
         return;
       }
+      console.log(curriculum_slugs, i);
       if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
-        if (curriculum_nav.href !== settings.curriculum_src + curriculum_nav.href?.split('/')?.[3]) {
-          curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
-        }
+        curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
       } else {
-        if (curriculum_nav.href !== settings.curriculum_src) {
-          curriculum_nav.href = settings.curriculum_src;
-        }
+        curriculum_nav.href = settings.curriculum_src;
       }
     });
     console.log(settings.curriculum_src);
