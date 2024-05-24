@@ -22,7 +22,7 @@ curriculum_title_short:
   default: Curriculum
   description: "The short version of curriculum title used for mobile devices"
 curriculum_src:
-  default: https://www.freecodecamp.org/learn/
+  default: https://www.freecodecamp.org/
   description: "The link to related language curriculum"
 curriculum_slug:
   default: espanol|chinese|chinese-traditional|italian|portuguese|ukrainian|japanese

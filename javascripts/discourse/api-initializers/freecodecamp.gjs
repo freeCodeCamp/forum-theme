@@ -40,7 +40,8 @@ export default apiInitializer("0.8", (api) => {
 
     languages.forEach((lang, i) => {
       if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
-        curriculum_nav.href = settings.curriculum_src + curriculum_slugs[i];
+        const url_path = new URL(curriculum_slugs[i], settings.curriculum_src);
+        curriculum_nav.href = url_path.href;
       }
     });
   })
