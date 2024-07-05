@@ -694,6 +694,18 @@ div.select-kit-header {
     a.active::after {
       display: none;
     }
+
+    a .d-icon,
+    button .d-icon {
+      transition: none; // Disable the default delay in color change when the icon is hovered
+    }
+
+    a.active .d-icon,
+    a:hover .d-icon,
+    button.active .d-icon,
+    button:hover .d-icon {
+      color: inherit;
+    }
   }
 }
 
