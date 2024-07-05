@@ -689,6 +689,11 @@ div.select-kit-header {
       background-color: $primary;
       border: 3px solid $primary;
     }
+
+    // This pseudo element is a blue underline.
+    a.active::after {
+      display: none;
+    }
   }
 }
 
