@@ -689,6 +689,23 @@ div.select-kit-header {
       background-color: $primary;
       border: 3px solid $primary;
     }
+
+    // This pseudo element is a blue underline.
+    a.active::after {
+      display: none;
+    }
+
+    a .d-icon,
+    button .d-icon {
+      transition: none; // Disable the default delay in color change when the icon is hovered
+    }
+
+    a.active .d-icon,
+    a:hover .d-icon,
+    button.active .d-icon,
+    button:hover .d-icon {
+      color: inherit;
+    }
   }
 }
 
@@ -842,4 +859,10 @@ div.select-kit-header {
   &:not([open]):focus-within {
     background-color: $fcc-d-hover;
   }
+}
+
+// Categories sidebar
+.sidebar-section-link-wrapper .sidebar-section-link:hover,
+.sidebar-section-link-wrapper .sidebar-section-link.active {
+  color: $primary-low;
 }
