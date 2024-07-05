@@ -843,3 +843,9 @@ div.select-kit-header {
     background-color: $fcc-d-hover;
   }
 }
+
+// Categories sidebar
+.sidebar-section-link-wrapper .sidebar-section-link:hover,
+.sidebar-section-link-wrapper .sidebar-section-link.active {
+  color: $primary-low;
+}
