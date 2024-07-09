@@ -18,8 +18,8 @@ You can learn more about themes in [this comprehensive article](https://meta.dis
 Some of the theme plugins we are using as of now are:
 
 - [Hamburger Theme Selector](https://github.com/discourse/discourse-hamburger-theme-selector)
-- [Users Top Nav](https://github.com/freeCodeCamp/discourse-users-nav) - _forked
-  from discourse_
+- ~~[Users Top Nav](https://github.com/freeCodeCamp/discourse-users-nav) - _forked
+  from discourse_~~ [User Top Nav](https://github.com/discourse/discourse-users-nav) Using the official plugin. 
 - [Trust Level Avatar Flair](https://github.com/tshenry/discourse-trust-level-avatar-flair)
 
 ## Support:
