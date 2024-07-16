@@ -18,7 +18,7 @@ export default apiInitializer("0.8", (api) => {
             id="site-logo"
             class="logo-big"
             src={{siteSettings.site_logo_url}}
-            alt={{settings.title}}
+            alt={{siteSettings.title}}
           />
         </a>
       </div>
