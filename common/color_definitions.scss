@@ -50,7 +50,7 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --fcc-tertiary-background: #{mix($primary, $secondary, 13%)}; 
   --fcc-secondary-background: #{mix($primary, $secondary, 7%)};
   --fcc-primary-background: #{mix($primary, $secondary, 0%)};
-  --fcc-highlight-color: $tertiary;
+  --fcc-highlight-color: #{$tertiary};
   --secondary-header-background: #{mix($header_primary, $header_background, 93%)};
 
   --gray90: #{mix($header_background, $header_primary, 100%)};
@@ -62,7 +62,7 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --gray00: #{mix($header_background, $header_primary, 0%)};
 
 
-  --fcc-d-hover: rgba($primary, 0.08);
+  --fcc-d-hover: rgba(var(--primary), 0.08);
   --dark-blue: #002ead;
   --blue-50: #198eee;
   --header_primary: #fff;
