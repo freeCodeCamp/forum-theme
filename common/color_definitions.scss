@@ -9,7 +9,7 @@ $fcc-quaternary-background: mix($primary, $secondary, 20%);
 $fcc-tertiary-background: mix($primary, $secondary, 13%);
 $fcc-secondary-background: mix($primary, $secondary, 7%);
 $fcc-primary-background: mix($primary, $secondary, 0%);
-$fcc-highlight-color: var(--tertiary);
+$fcc-highlight-color: $tertiary;
 $fcc-highlight-background: fcc-highlight-lightness-switch($fcc-highlight-color);
 $fcc-highlight-mid: mix($fcc-highlight-color, $fcc-highlight-background, 50%);
 $secondary-header-background: mix($header_primary, $header_background, 93%);
@@ -29,6 +29,9 @@ $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
 
 :root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --tertiary: #{tertiary};
   --fcc-primary-color: #{mix($primary, $secondary, 100%)}; 
   --fcc-secondary-color: #{mix($primary, $secondary, 93%)}; 
   --fcc-tertiary-color: #{mix($primary, $secondary, 87%)}; 
@@ -38,7 +41,7 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --fcc-tertiary-background: #{mix($primary, $secondary, 13%)}; 
   --fcc-secondary-background: #{mix($primary, $secondary, 7%)};
   --fcc-primary-background: #{mix($primary, $secondary, 0%)};
-  --fcc-highlight-color: var(--tertiary);
+  --fcc-highlight-color: $tertiary;
   --secondary-header-background: #{mix($header_primary, $header_background, 93%)};
 
   --gray90: #{mix($header_background, $header_primary, 100%)};
