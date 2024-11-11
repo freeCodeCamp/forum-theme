@@ -1,10 +1,4 @@
-// functions  --------------------------------------------------------------------------------
-@function fcc-highlight-lightness-switch($color) {
-  @if $color == mix(#002ead, #002ead, 100%) {
-    @return #99c9ff;
-  }
-  @return #002ead;
-}
+
 
 // Variables  ---------------------------------------------------------------------------------
 // theme based variables

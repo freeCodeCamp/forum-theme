@@ -1,3 +1,12 @@
+// functions  --------------------------------------------------------------------------------
+@function fcc-highlight-lightness-switch($color) {
+  @if $color == mix(#002ead, #002ead, 100%) {
+    @return #99c9ff;
+  }
+  @return #002ead;
+}
+
+
 $fcc-primary-color: mix($primary, $secondary, 100%);
 $fcc-secondary-color: mix($primary, $secondary, 93%);
 $fcc-tertiary-color: mix($primary, $secondary, 87%);
