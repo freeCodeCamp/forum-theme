@@ -789,7 +789,7 @@ div.select-kit-header {
 
 // Dropdown
 .select-kit-header {
-  color: $fcc-primary-color !important;
+  color: var(--fcc-primary-color) !important;
 }
 
 .select-kit-header:hover,
