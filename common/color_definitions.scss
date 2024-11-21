@@ -1,0 +1,61 @@
+$fcc-primary-color: mix($primary, $secondary, 100%);
+$fcc-secondary-color: mix($primary, $secondary, 93%);
+$fcc-tertiary-color: mix($primary, $secondary, 87%);
+$fcc-quaternary-color: mix($primary, $secondary, 80%);
+$fcc-disabled-color: mix($primary, $secondary, 65%);
+$fcc-gray-mid: mix($primary, $secondary, 50%);
+$fcc-disabled-background: mix($primary, $secondary, 35%);
+$fcc-quaternary-background: mix($primary, $secondary, 20%);
+$fcc-tertiary-background: mix($primary, $secondary, 13%);
+$fcc-secondary-background: mix($primary, $secondary, 7%);
+$fcc-primary-background: mix($primary, $secondary, 0%);
+$fcc-highlight-color: $tertiary;
+$fcc-highlight-background: if($fcc-highlight-color == #002ead, #99c9ff,#002ead); // Automatically lighten color 
+$fcc-highlight-mid: mix($fcc-highlight-color, $fcc-highlight-background, 50%);
+$secondary-header-background: mix($header_primary, $header_background, 93%);
+$fcc-d-selected: rgba($primary, 0.16);
+$fcc-d-hover: rgba($primary, 0.08);
+
+$--gray90: mix($header_background, $header_primary, 100%);
+$--gray85: mix($header_background, $header_primary, 93%);
+$--gray80: mix($header_background, $header_primary, 87%);
+$--gray75: mix($header_background, $header_primary, 80%);
+$--gray70: mix($header_background, $header_primary, 73%);
+$--gray65: mix($header_background, $header_primary, 67%);
+$--gray45: mix($header_background, $header_primary, 50%);
+$--gray15: mix($header_background, $header_primary, 20%);
+$--gray10: mix($header_background, $header_primary, 13%);
+$--gray05: mix($header_background, $header_primary, 7%);
+$--gray00: mix($header_background, $header_primary, 0%);
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --tertiary: #{tertiary};
+  --fcc-primary-color: #{mix($primary, $secondary, 100%)}; 
+  --fcc-secondary-color: #{mix($primary, $secondary, 93%)}; 
+  --fcc-tertiary-color: #{mix($primary, $secondary, 87%)}; 
+  --fcc-quaternary-color: #{mix($primary, $secondary, 80%)}; 
+  --fcc-gray-mid: #{mix($primary, $secondary, 50%)}; 
+  --fcc-quaternary-background: #{mix($primary, $secondary, 20%)}; 
+  --fcc-tertiary-background: #{mix($primary, $secondary, 13%)}; 
+  --fcc-secondary-background: #{mix($primary, $secondary, 7%)};
+  --fcc-primary-background: #{mix($primary, $secondary, 0%)};
+  --fcc-highlight-color: #{$tertiary};
+  --secondary-header-background: #{mix($header_primary, $header_background, 93%)};
+
+  --gray90: #{mix($header_background, $header_primary, 100%)};
+  --gray85: #{mix($header_background, $header_primary, 93%)}; 
+  --gray75: #{mix($header_background, $header_primary, 80%)};
+  --gray65: #{mix($header_background, $header_primary, 67%)};
+  --gray45: #{mix($header_background, $header_primary, 50%)}; 
+  --gray05: #{mix($header_background, $header_primary, 7%)};
+  --gray00: #{mix($header_background, $header_primary, 0%)};
+
+
+  --fcc-d-hover: rgba(var(--primary), 0.08);
+  --dark-blue: #002ead;
+  --blue-50: #198eee;
+  --header_primary: #fff;
+  --header_background: #0a0a23;
+}

@@ -1,51 +1,12 @@
-// functions  --------------------------------------------------------------------------------
-@function fcc-highlight-lightness-switch($color) {
-  @if $color == mix(#002ead, #002ead, 100%) {
-    @return #99c9ff;
-  }
-  @return #002ead;
-}
+
 
 // Variables  ---------------------------------------------------------------------------------
 // theme based variables
-$fcc-primary-color: mix($primary, $secondary, 100%);
-$fcc-secondary-color: mix($primary, $secondary, 93%);
-$fcc-tertiary-color: mix($primary, $secondary, 87%);
-$fcc-quaternary-color: mix($primary, $secondary, 80%);
-$fcc-disabled-color: mix($primary, $secondary, 65%);
-$fcc-gray-mid: mix($primary, $secondary, 50%);
-$fcc-disabled-background: mix($primary, $secondary, 35%);
-$fcc-quaternary-background: mix($primary, $secondary, 20%);
-$fcc-tertiary-background: mix($primary, $secondary, 13%);
-$fcc-secondary-background: mix($primary, $secondary, 7%);
-$fcc-primary-background: mix($primary, $secondary, 0%);
-$fcc-highlight-color: $tertiary;
-$fcc-highlight-background: fcc-highlight-lightness-switch($fcc-highlight-color);
-$fcc-highlight-mid: mix($fcc-highlight-color, $fcc-highlight-background, 50%);
-$secondary-header-background: mix($header_primary, $header_background, 93%);
-$fcc-d-selected: rgba($primary, 0.16);
-$fcc-d-hover: rgba($primary, 0.08);
 
 //fixed variables
-// header_primary and header_background should always be set to #0a0a23 and #fff respectivley
-$n: none;
-$i: !important;
+// header_primary and header_background should always be set to #0a0a23 and #fff respectively
 $--global-nav-height: 38px;
-$--dark-blue: #002ead;
-$--blue-50: #198eee;
-$header_primary: #fff;
-$header_background: #0a0a23;
-$--gray90: mix($header_background, $header_primary, 100%);
-$--gray85: mix($header_background, $header_primary, 93%);
-$--gray80: mix($header_background, $header_primary, 87%);
-$--gray75: mix($header_background, $header_primary, 80%);
-$--gray70: mix($header_background, $header_primary, 73%);
-$--gray65: mix($header_background, $header_primary, 67%);
-$--gray45: mix($header_background, $header_primary, 50%);
-$--gray15: mix($header_background, $header_primary, 20%);
-$--gray10: mix($header_background, $header_primary, 13%);
-$--gray05: mix($header_background, $header_primary, 7%);
-$--gray00: mix($header_background, $header_primary, 0%);
+
 $hints-index: 1000;
 
 // media query mixin --------------------------------------------------------------------------------------
@@ -98,8 +59,8 @@ $breakpoints: (
 // focus outline mixin ---------------------------------------------------------------
 
 @mixin focus-outline {
-  outline: 3px solid $--blue-50 $i;
-  outline-offset: 0 $i;
+  outline: 3px solid var(--blue-50) !important;
+  outline-offset: 0 !important;
 }
 
 // general ---------------------------------------------------------------
@@ -121,8 +82,8 @@ html {
 /* Footer ---------------------------------------------------------- */
 .site-footer {
   position: relative;
-  color: $fcc-secondary-color;
-  background: $fcc-secondary-background;
+  color: var(--fcc-secondary-color);
+  background: var(--fcc-secondary-background);
   line-height: 1.6;
 }
 
@@ -144,7 +105,7 @@ html {
 }
 
 .footer-container a {
-  color: $fcc-secondary-color;
+  color: var(--fcc-secondary-color);
   text-decoration: none;
 }
 
@@ -205,14 +166,14 @@ p.footer-donation {
   margin: 0 0 3rem;
 }
 
-.footer-buttom .our-nonprofit {
+.footer-bottom .our-nonprofit {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.footer-buttom .our-nonprofit a {
+.footer-bottom .our-nonprofit a {
   padding: 5px 10px;
 }
 
@@ -243,7 +204,7 @@ p.footer-donation {
   .footer-container .col-spacer {
     margin-top: 40px;
   }
-  .footer-buttom .our-nonprofit a {
+  .footer-bottom .our-nonprofit a {
     padding: 5px;
   }
 }
@@ -266,21 +227,21 @@ p.footer-donation {
     margin-top: 18px;
   }
 
-  .footer-buttom .our-nonprofit {
+  .footer-bottom .our-nonprofit {
     padding: 0 10px;
     justify-content: space-between;
   }
 
-  .footer-buttom .col-header {
+  .footer-bottom .col-header {
     display: none;
   }
   .our-nonprofit {
     margin-top: 20px;
   }
-  .footer-divder {
+  .footer-divider {
     height: 1px;
     margin: 0 15px;
-    background-color: $fcc-tertiary-background;
+    background-color: var(--fcc-tertiary-background);
   }
 }
 
@@ -292,7 +253,7 @@ p.footer-donation {
   position: fixed;
   font-family: Lato, sans-serif;
   height: $--global-nav-height;
-  background-color: $--gray90;
+  background-color: var(--gray90);
   z-index: $hints-index;
   color: #fff;
   width: 100%;
@@ -320,10 +281,10 @@ p.footer-donation {
 }
 
 .d-header {
-  background: $secondary-header-background;
+  background: var(--secondary-header-background);
   margin-top: $--global-nav-height;
   height: $--global-nav-height;
-  background-color: $--gray85;
+  background-color: var(--gray85);
   box-shadow: none;
   position: fixed;
   z-index: $hints-index - 3;
@@ -338,8 +299,7 @@ body.no-ember {
   .d-header {
     margin-top: 0px;
     top: 0px;
-    background-color: $--gray90;
-
+    background-color: var(--gray90);
     #site-logo {
       max-width: 40vw;
       height: auto;
@@ -373,23 +333,23 @@ body.no-ember {
   width: 42px;
   padding: 2px;
   box-sizing: border-box;
-  border: 0px $i;
+  border: 0px !important;
 
   &:active,
   &:hover,
   &:focus {
-    border: 0px $i;
-    background-color: $--gray75 $i;
+    border: 0px !important;
+    background-color: var(--gray75) !important;
   }
 }
 
 .d-header-icons .btn .d-icon {
-  color: $--gray65;
+  color: var(--gray65);
 }
 
 .d-header-icons .icon:hover .d-icon,
 .d-header-icons .icon:focus .d-icon {
-  color: $--gray45;
+  color: var(--gray45);
 }
 
 .d-header-icons .icon img.avatar {
@@ -408,8 +368,8 @@ a.curriculum-nav {
 
 a.curriculum-nav:hover,
 a.curriculum-nav:focus {
-  color: $--gray90;
-  background: $--gray00;
+  color: var(--gray90);
+  background: var(--gray00);
 }
 
 .navigation-container {
@@ -417,7 +377,7 @@ a.curriculum-nav:focus {
 }
 // header  ----------------------------
 .d-header .widget-link.topic-link {
-  color: $--gray05;
+  color: var(--gray05);
 }
 
 .d-header .categories-wrapper,
@@ -447,8 +407,8 @@ a.curriculum-nav:focus {
   }
   &:hover,
   &:focus {
-    background-color: $--gray90;
-    color: $--gray90;
+    background-color: var(--gray90);
+    color: var(--gray90);
   }
 }
 
@@ -481,7 +441,7 @@ a.curriculum-nav:focus {
     padding-top: $--global-nav-height * 2;
   }
   .d-header {
-    background-color: $--gray90;
+    background-color: var(--gray90);
   }
   .site-nav {
     z-index: 1200;
@@ -518,7 +478,7 @@ a.curriculum-nav:focus {
 
 img.avatar {
   border-radius: 0px;
-  background: $fcc-gray-mid;
+  background: var(--fcc-gray-mid);
 }
 
 .topic-list .posters a:first-child .avatar.latest:not(.single) {
@@ -551,7 +511,7 @@ img.avatar {
 
 .modal-header .modal-close:hover svg,
 .modal-header .modal-close:focus svg {
-  color: $fcc-primary-background $i;
+  color: var(--fcc-primary-background) !important;
 }
 
 .badge-notification,
@@ -576,16 +536,16 @@ td.poster-names a {
 }
 
 #whos-online {
-  color: dark-light-choose($primary-medium, $secondary-medium) $i;
+  color: dark-light-choose($primary-medium, $secondary-medium) !important;
 }
 
 //buttons ----------------------------
 .btn:not(.btn-flat),
 .select-kit.dropdown-select-box .dropdown-select-box-header {
   position: relative;
-  color: $primary $i;
+  color: var(--primary) !important;
   background-color: transparent;
-  border: 3px solid $primary;
+  border: 3px solid var(--primary);
 
   &:focus,
   &:hover,
@@ -594,53 +554,53 @@ td.poster-names a {
   &.btn-social.btn-hover,
   &:active,
   &.btn-active {
-    background-color: $primary $i;
-    color: $fcc-quaternary-background $i;
+    background-color: var(--primary) !important;
+    color: var(--fcc-quaternary-background) !important;
   }
 
   &[href] {
-    color: $fcc-quaternary-color;
+    color: var(--fcc-quaternary-color);
   }
 
   &[disabled],
   &.disabled {
-    opacity: 0.6 $i;
+    opacity: 0.6 !important;
   }
 
   &.hidden {
-    display: $n;
+    display: none;
   }
 
   &.btn-primary {
-    color: $fcc-tertiary-color;
-    background-color: $fcc-tertiary-background;
+    color: var(--fcc-tertiary-color);
+    background-color: var(--fcc-tertiary-background);
     &:hover,
     &.btn-hover {
-      background-color: $fcc-highlight-color;
-      color: $fcc-secondary-background;
+      background-color: var(--fcc-highlight-color);
+      color: var(--fcc-secondary-background);
     }
   }
 
   &.btn-danger {
-    color: $fcc-quaternary-color;
+    color: var(--fcc-quaternary-color);
     background-color: $danger;
 
     &:hover,
     &.btn-hover {
       background-color: lighten($danger, 15%);
-      color: $fcc-quaternary-color;
+      color: var(--fcc-quaternary-color);
     }
   }
 }
 
 .d-editor-button-bar .btn {
   background-color: transparent;
-  border: $n;
-  box-shadow: $n;
-  background: $n;
+  border: none;
+  box-shadow: none;
+  background: none;
 }
 
-// button exeptions
+// button exceptions
 .d-editor-button-bar
   .select-kit.dropdown-select-box
   .dropdown-select-box-header {
@@ -655,7 +615,7 @@ div.select-kit-header {
 .login-modal,
 .create-account {
   .btn-social {
-    background-color: transparent $i;
+    background-color: transparent !important;
   }
 }
 
@@ -676,18 +636,18 @@ div.select-kit-header {
 .nav-pills {
   > li {
     > a {
-      color: $primary;
-      border: 3px solid $primary;
+      color: var(--primary);
+      border: 3px solid var(--primary);
       &:hover {
-        color: $fcc-secondary-background;
-        background-color: $primary;
-        border: 3px solid $primary;
+        color: var(--fcc-secondary-background);
+        background-color: var(--primary);
+        border: 3px solid var(--primary);
       }
     }
     a.active {
-      color: $fcc-secondary-background;
-      background-color: $primary;
-      border: 3px solid $primary;
+      color: var(--fcc-secondary-background);
+      background-color: var(--primary);
+      border: 3px solid var(--primary);
     }
 
     // This pseudo element is a blue underline.
@@ -715,16 +675,16 @@ div.select-kit-header {
   margin-bottom: 5px;
   .combo-box .combo-box-header {
     background: $secondary;
-    color: $primary;
-    border: 3px solid $primary;
+    color: var(--primary);
+    border: 3px solid var(--primary);
     padding: 6px 12px;
     font-size: $font-up-1;
     transition: none;
     height: 42px;
     &:hover,
     &:focus {
-      color: $fcc-secondary-background;
-      background-color: $primary;
+      color: var(--fcc-secondary-background);
+      background-color: var(--primary);
     }
   }
   .select-kit {
@@ -756,7 +716,7 @@ div.select-kit-header {
 .latest-topic-list-item.visited,
 .category-topic-link.visited {
   a.title:not(.badge-notification) {
-    color: $primary-medium;
+    color: var(--primary)-medium;
   }
 }
 
@@ -765,23 +725,23 @@ div.select-kit-header {
   a.title {
     padding: 15px 0;
     word-break: break-word;
-    color: $primary;
+    color: var(--primary);
   }
 
   .anon & {
     a.title:visited:not(.badge-notification) {
-      color: $primary-medium;
+      color: var(--primary)-medium;
     }
   }
 
   a.title.visited:not(.badge-notification) {
-    color: $primary-medium;
+    color: var(--primary)-medium;
   }
 }
 
 .topic-list .main-link {
   &.focused {
-    box-shadow: none $i; /* Unset the default Discourse styles */
+    box-shadow: none !important; /* Unset the default Discourse styles */
   }
 }
 
@@ -810,20 +770,20 @@ div.select-kit-header {
 // Adjust hover and read(selected) states
 .user-menu .quick-access-panel li:hover,
 .menu-panel .widget-link:hover, .menu-panel .widget-link:focus, .menu-panel .categories-link:hover, .menu-panel .categories-link:focus {
-  background-color: $fcc-d-hover $i;
+  background-color: var(--fcc-d-hover) !important;
 }
 
 .user-menu .quick-access-panel li button {
   border: none;
 
   &:hover {
-    background-color: transparent $i;
+    background-color: transparent !important;
   }
 }
 
 // Dropdown
 .select-kit-header {
-  color: $fcc-primary-color $i;
+  color: var(--fcc-primary-color) !important;
 }
 
 .select-kit-header:hover,
@@ -832,8 +792,8 @@ div.select-kit-header {
 .select-kit-row.is-selected, 
 .select-kit-row.is-highlighted a,
 .select-kit-row.is-highlighted span {
-  background-color: $primary $i;
-  color: $primary-low $i;
+  background-color: var(--primary) !important;
+  color: var(--primary-low) !important;
 }
 
 .search-menu-container .search-input {
@@ -841,7 +801,7 @@ div.select-kit-header {
   // This div already has an focus outline set by Discourse,
   // so we need to remove ours to avoid having nested focus outlines.
   #search-term:focus-visible {
-    outline: none $i;
+    outline: none !important;
   }
 
   .btn.show-advanced-search {
@@ -857,12 +817,12 @@ div.select-kit-header {
   &:not([open]):hover,
   &:not([open]):focus,
   &:not([open]):focus-within {
-    background-color: $fcc-d-hover;
+    background-color: var(--fcc-d-hover);
   }
 }
 
 // Categories sidebar
 .sidebar-section-link-wrapper .sidebar-section-link:hover,
 .sidebar-section-link-wrapper .sidebar-section-link.active {
-  color: $primary-low;
+  color: var(--primary-low);
 }
