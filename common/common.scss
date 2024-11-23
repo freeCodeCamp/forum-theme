@@ -366,6 +366,12 @@ a.curriculum-nav {
   justify-content: center;
 }
 
+a.curriculum-nav:hover,
+a.curriculum-nav:focus {
+  color: var(--gray90);
+  background-color: var(--gray10);
+}
+
 .navigation-container {
   align-items: center;
 }
