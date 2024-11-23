@@ -58,4 +58,6 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --blue-50: #198eee;
   --header_primary: #fff;
   --header_background: #0a0a23;
+  --fcc-highlight-mid: #{$fcc-highlight-mid};
+  --fcc-highlight-background: #{fcc-highlight-background}; 
 }

@@ -532,11 +532,11 @@ html.whos-online-ring.desktop-view body.user-page-online .primary img.avatar {
 
 //main page grid ----------------------------
 td.poster-names a {
-  color: dark-light-choose($primary-medium, $secondary-medium);
+  color: dark-light-choose(var(--primary-medium), var(--secondary-medium));
 }
 
 #whos-online {
-  color: dark-light-choose($primary-medium, $secondary-medium) !important;
+  color: dark-light-choose(var(--primary-medium), var(--secondary-medium)) !important;
 }
 
 //buttons ----------------------------
@@ -583,11 +583,11 @@ td.poster-names a {
 
   &.btn-danger {
     color: var(--fcc-quaternary-color);
-    background-color: $danger;
+    background-color: var(--danger);
 
     &:hover,
     &.btn-hover {
-      background-color: lighten($danger, 15%);
+      background-color: lighten(var(--danger), 15%);
       color: var(--fcc-quaternary-color);
     }
   }
@@ -627,7 +627,7 @@ div.select-kit-header {
 #reply-control .btn-mini-toggle:hover,
 #reply-control .btn-mini-toggle:focus {
   .d-icon {
-    color: $secondary;
+    color: var(--secondary);
   }
 }
 
@@ -674,7 +674,7 @@ div.select-kit-header {
   clear: both;
   margin-bottom: 5px;
   .combo-box .combo-box-header {
-    background: $secondary;
+    background: var(--secondary);
     color: var(--primary);
     border: 3px solid var(--primary);
     padding: 6px 12px;
@@ -716,7 +716,7 @@ div.select-kit-header {
 .latest-topic-list-item.visited,
 .category-topic-link.visited {
   a.title:not(.badge-notification) {
-    color: var(--primary)-medium;
+    color: var(--primary-medium);
   }
 }
 
@@ -730,12 +730,12 @@ div.select-kit-header {
 
   .anon & {
     a.title:visited:not(.badge-notification) {
-      color: var(--primary)-medium;
+      color: var(--primary-medium);
     }
   }
 
   a.title.visited:not(.badge-notification) {
-    color: var(--primary)-medium;
+    color: var(--primary-medium);
   }
 }
 
