@@ -48,7 +48,7 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --gray75: #{mix($header_background, $header_primary, 80%)};
   --gray65: #{mix($header_background, $header_primary, 67%)};
   --gray45: #{mix($header_background, $header_primary, 50%)}; 
-  --gray10: #{$gray10};
+  --gray10: #{$--gray10};
   --gray05: #{mix($header_background, $header_primary, 7%)};
   --gray00: #{$--gray00};
 
