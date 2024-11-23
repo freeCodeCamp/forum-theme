@@ -29,9 +29,8 @@ $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
 
 :root {
-  --primary: #{$primary};
-  --secondary: #{$secondary};
-  --tertiary: #{tertiary};
+  --primary-low: #{$primary-low}; 
+  --primary-very-low: #{$primary-very-low}; 
   --fcc-primary-color: #{mix($primary, $secondary, 100%)}; 
   --fcc-secondary-color: #{mix($primary, $secondary, 93%)}; 
   --fcc-tertiary-color: #{mix($primary, $secondary, 87%)}; 
@@ -59,5 +58,5 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --header_primary: #fff;
   --header_background: #0a0a23;
   --fcc-highlight-mid: #{$fcc-highlight-mid};
-  --fcc-highlight-background: #{fcc-highlight-background}; 
+  --fcc-highlight-background: #{$fcc-highlight-background}; 
 }
