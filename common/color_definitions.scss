@@ -29,9 +29,8 @@ $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
 
 :root {
-  --primary: #{$primary};
-  --secondary: #{$secondary};
-  --tertiary: #{tertiary};
+  --primary-low: #{$primary-low}; 
+  --primary-very-low: #{$primary-very-low}; 
   --fcc-primary-color: #{mix($primary, $secondary, 100%)}; 
   --fcc-secondary-color: #{mix($primary, $secondary, 93%)}; 
   --fcc-tertiary-color: #{mix($primary, $secondary, 87%)}; 
@@ -44,13 +43,14 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --fcc-highlight-color: #{$tertiary};
   --secondary-header-background: #{mix($header_primary, $header_background, 93%)};
 
-  --gray90: #{mix($header_background, $header_primary, 100%)};
+  --gray90: #{$--gray90};
   --gray85: #{mix($header_background, $header_primary, 93%)}; 
   --gray75: #{mix($header_background, $header_primary, 80%)};
   --gray65: #{mix($header_background, $header_primary, 67%)};
   --gray45: #{mix($header_background, $header_primary, 50%)}; 
+  --gray10: #{$--gray10};
   --gray05: #{mix($header_background, $header_primary, 7%)};
-  --gray00: #{mix($header_background, $header_primary, 0%)};
+  --gray00: #{$--gray00};
 
 
   --fcc-d-hover: rgba(var(--primary), 0.08);
@@ -58,4 +58,6 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --blue-50: #198eee;
   --header_primary: #fff;
   --header_background: #0a0a23;
+  --fcc-highlight-mid: #{$fcc-highlight-mid};
+  --fcc-highlight-background: #{$fcc-highlight-background}; 
 }
