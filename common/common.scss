@@ -583,11 +583,11 @@ td.poster-names a {
 
   &.btn-danger {
     color: var(--fcc-quaternary-color);
-    background-color: var(--danger);
+    background-color: $danger;
 
     &:hover,
     &.btn-hover {
-      background-color: lighten(var(--danger), 15%);
+      background-color: lighten($danger, 15%);
       color: var(--fcc-quaternary-color);
     }
   }
