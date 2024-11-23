@@ -43,13 +43,13 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --fcc-highlight-color: #{$tertiary};
   --secondary-header-background: #{mix($header_primary, $header_background, 93%)};
 
-  --gray90: #{mix($header_background, $header_primary, 100%)};
+  --gray90: #{$--gray90};
   --gray85: #{mix($header_background, $header_primary, 93%)}; 
   --gray75: #{mix($header_background, $header_primary, 80%)};
   --gray65: #{mix($header_background, $header_primary, 67%)};
   --gray45: #{mix($header_background, $header_primary, 50%)}; 
   --gray05: #{mix($header_background, $header_primary, 7%)};
-  --gray00: #{mix($header_background, $header_primary, 0%)};
+  --gray00: #{$--gray00};
 
 
   --fcc-d-hover: rgba(var(--primary), 0.08);
