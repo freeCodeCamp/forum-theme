@@ -673,6 +673,7 @@ div.select-kit-header {
 .list-controls {
   clear: both;
   margin-bottom: 5px;
+  display:flex; 
   .combo-box .combo-box-header {
     background: var(--secondary);
     color: var(--primary);
