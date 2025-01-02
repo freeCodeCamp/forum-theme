@@ -9,6 +9,8 @@ $--global-nav-height: 38px;
 
 $hints-index: 1000;
 
+$--header-offset: 10px; 
+
 // media query mixin --------------------------------------------------------------------------------------
 $breakpoints: (
   'screen-xxs-max': 400px,
@@ -583,11 +585,11 @@ td.poster-names a {
 
   &.btn-danger {
     color: var(--fcc-quaternary-color);
-    background-color: $danger;
+    background-color: var(--danger);
 
     &:hover,
     &.btn-hover {
-      background-color: lighten($danger, 15%);
+      background-color: var(--light-danger);
       color: var(--fcc-quaternary-color);
     }
   }
@@ -830,4 +832,8 @@ div.select-kit-header {
 
 .hamburger-panel .revamped {
 	--d-sidebar-row-height: 1.5em;
+}
+
+.menu-panel.drop-down .panel-body {
+  max-width: calc(100vw - 2em);
 }
