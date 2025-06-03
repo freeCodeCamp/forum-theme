@@ -9,6 +9,8 @@ $--global-nav-height: 38px;
 
 $hints-index: 1000;
 
+$--header-offset: 10px; 
+
 // media query mixin --------------------------------------------------------------------------------------
 $breakpoints: (
   'screen-xxs-max': 400px,
@@ -506,7 +508,8 @@ img.avatar {
 
 #banner .close,
 .modal-header .modal-close {
-  padding-left: 0;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
 }
 
 .modal-header .modal-close:hover svg,
@@ -583,11 +586,11 @@ td.poster-names a {
 
   &.btn-danger {
     color: var(--fcc-quaternary-color);
-    background-color: $danger;
+    background-color: var(--danger);
 
     &:hover,
     &.btn-hover {
-      background-color: lighten($danger, 15%);
+      background-color: var(--light-danger);
       color: var(--fcc-quaternary-color);
     }
   }
@@ -821,6 +824,11 @@ div.select-kit-header {
   }
 }
 
+.activate-account-page .alert-error {
+  margin: 1em;
+  padding-top: 1.875em;
+}
+
 // Categories sidebar
 .sidebar-section-link-wrapper .sidebar-section-link:hover,
 .sidebar-section-link-wrapper .sidebar-section-link.active {
@@ -831,3 +839,6 @@ div.select-kit-header {
 	--d-sidebar-row-height: 1.5em;
 }
 
+.menu-panel.drop-down .panel-body {
+  max-width: calc(100vw - 2em);
+}

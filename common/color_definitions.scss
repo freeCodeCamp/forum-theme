@@ -27,6 +27,8 @@ $--gray15: mix($header_background, $header_primary, 20%);
 $--gray10: mix($header_background, $header_primary, 13%);
 $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
+$--light-danger:lighten($danger, 15%);
+
 
 :root {
   --primary-low: #{$primary-low}; 
@@ -52,7 +54,7 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --gray05: #{mix($header_background, $header_primary, 7%)};
   --gray00: #{$--gray00};
 
-
+  --light-danger: #{$--light-danger}; 
   --fcc-d-hover: rgba(var(--primary), 0.08);
   --dark-blue: #002ead;
   --blue-50: #198eee;
@@ -60,4 +62,5 @@ $--gray00: mix($header_background, $header_primary, 0%);
   --header_background: #0a0a23;
   --fcc-highlight-mid: #{$fcc-highlight-mid};
   --fcc-highlight-background: #{$fcc-highlight-background}; 
+  --d-hover: #{$fcc-d-hover}; 
 }
