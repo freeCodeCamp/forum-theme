@@ -288,7 +288,7 @@ p.footer-donation {
   height: $--global-nav-height;
   background-color: var(--gray85);
   box-shadow: none;
-  position: fixed;
+  position: static;
   z-index: $hints-index - 3;
   top: 0;
 }
@@ -832,7 +832,7 @@ div.select-kit-header {
 // Categories sidebar
 .sidebar-section-link-wrapper .sidebar-section-link:hover,
 .sidebar-section-link-wrapper .sidebar-section-link.active {
-  color: var(--primary-low);
+  color: var(--primary);
 }
 
 .hamburger-panel .revamped {
