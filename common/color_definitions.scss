@@ -56,6 +56,7 @@ $--light-danger:lighten($danger, 15%);
 
   --light-danger: #{$--light-danger}; 
   --fcc-d-hover: rgba(var(--primary), 0.08);
+  --fcc-d-selected: #{$fcc-d-selected}; 
   --dark-blue: #002ead;
   --blue-50: #198eee;
   --header_primary: #fff;
@@ -63,4 +64,5 @@ $--light-danger:lighten($danger, 15%);
   --fcc-highlight-mid: #{$fcc-highlight-mid};
   --fcc-highlight-background: #{$fcc-highlight-background}; 
   --d-hover: #{$fcc-d-hover}; 
+  --d-selected: #{$fcc-d-selected};
 }
