@@ -2,14 +2,20 @@ import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("0.8", (api) => {
   const siteSettings = api.container.lookup("service:site-settings");
-  const rawLabel = api.container.lookup("service:site").mobileView
-    ? settings.curriculum_title_short
-    : settings.curriculum_title;
 
+  // Determine label based on mobile/desktop view
+  const getCurriculumLabel = () => {
+    return api.container.lookup("service:site").mobileView
+      ? settings.curriculum_title_short
+      : settings.curriculum_title;
+  };
+
+  // Render curriculum link in universal navigation
   api.renderInOutlet("before-header-panel", <template>
-    <a class="curriculum-nav" href={{settings.curriculum_src}}>{{rawLabel}}</a>
+    <a class="curriculum-nav" href={{settings.curriculum_src}}>{{getCurriculumLabel()}}</a>
   </template>);
 
+  // Render site logo in navigation
   api.renderInOutlet("above-site-header", <template>
     <nav class="site-nav nav-padding">
       <div class="site-nav-logo">
@@ -25,24 +31,28 @@ export default apiInitializer("0.8", (api) => {
     </nav>
   </template>);
 
-  const curriculum_slugs = settings.curriculum_slug.split('|');
+  const curriculumSlugs = settings.curriculum_slug.split('|');
   const languages = settings.languages.split('|');
 
-  api.onPageChange((_url, _title) => {
-    const curriculum_nav = document.querySelector('.curriculum-nav');
+  // Update curriculum link dynamically on page change
+  api.onPageChange(() => {
+    const curriculumNav = document.querySelector('.curriculum-nav');
     const category = api.container.lookup("service:discovery").category;
 
-    if (!curriculum_nav) {
-      return;
-    }
-    // Reset to default href;
-    curriculum_nav.href = settings.curriculum_src;
+    if (!curriculumNav) return;
 
+    // Reset to default link
+    curriculumNav.href = settings.curriculum_src;
+
+    // Update link if current category matches a language
     languages.forEach((lang, i) => {
       if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
-        const url_path = new URL(curriculum_slugs[i], settings.curriculum_src);
-        curriculum_nav.href = url_path.href;
+        const urlPath = new URL(curriculumSlugs[i], settings.curriculum_src);
+        curriculumNav.href = urlPath.href;
       }
     });
-  })
+
+    // Update label on mobile/desktop switch
+    curriculumNav.textContent = getCurriculumLabel();
+  });
 });

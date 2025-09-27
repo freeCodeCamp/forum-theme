@@ -1,3 +1,18 @@
+// common/color_definitions.scss
+
+// -----------------------------
+// Base Colors
+// -----------------------------
+$primary: #002ead; // main blue
+$secondary: #ffffff; // white
+$tertiary: #198eee; // accent color
+$danger: #ff4d4f; // danger/red color
+$header_primary: #fff;
+$header_background: #0a0a23;
+
+// -----------------------------
+// FCC Theme Colors
+// -----------------------------
 $fcc-primary-color: mix($primary, $secondary, 100%);
 $fcc-secondary-color: mix($primary, $secondary, 93%);
 $fcc-tertiary-color: mix($primary, $secondary, 87%);
@@ -10,12 +25,19 @@ $fcc-tertiary-background: mix($primary, $secondary, 13%);
 $fcc-secondary-background: mix($primary, $secondary, 7%);
 $fcc-primary-background: mix($primary, $secondary, 0%);
 $fcc-highlight-color: $tertiary;
-$fcc-highlight-background: if($fcc-highlight-color == #002ead, #99c9ff,#002ead); // Automatically lighten color 
+$fcc-highlight-background: if(
+  $fcc-highlight-color == #002ead,
+  #99c9ff,
+  #002ead
+);
 $fcc-highlight-mid: mix($fcc-highlight-color, $fcc-highlight-background, 50%);
 $secondary-header-background: mix($header_primary, $header_background, 93%);
 $fcc-d-selected: rgba($primary, 0.16);
 $fcc-d-hover: rgba($primary, 0.08);
 
+// -----------------------------
+// Grayscale
+// -----------------------------
 $--gray90: mix($header_background, $header_primary, 100%);
 $--gray85: mix($header_background, $header_primary, 93%);
 $--gray80: mix($header_background, $header_primary, 87%);
@@ -27,42 +49,45 @@ $--gray15: mix($header_background, $header_primary, 20%);
 $--gray10: mix($header_background, $header_primary, 13%);
 $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
-$--light-danger:lighten($danger, 15%);
+$--light-danger: lighten($danger, 15%);
 
-
+// -----------------------------
+// CSS Variables (:root)
+// -----------------------------
 :root {
-  --primary-low: #{$primary-low}; 
-  --primary-very-low: #{$primary-very-low}; 
-  --fcc-primary-color: #{mix($primary, $secondary, 100%)}; 
-  --fcc-secondary-color: #{mix($primary, $secondary, 93%)}; 
-  --fcc-tertiary-color: #{mix($primary, $secondary, 87%)}; 
-  --fcc-quaternary-color: #{mix($primary, $secondary, 80%)}; 
-  --fcc-gray-mid: #{mix($primary, $secondary, 50%)}; 
-  --fcc-quaternary-background: #{mix($primary, $secondary, 20%)}; 
-  --fcc-tertiary-background: #{mix($primary, $secondary, 13%)}; 
-  --fcc-secondary-background: #{mix($primary, $secondary, 7%)};
-  --fcc-primary-background: #{mix($primary, $secondary, 0%)};
-  --fcc-highlight-color: #{$tertiary};
-  --secondary-header-background: #{mix($header_primary, $header_background, 93%)};
+  --primary-low: #{$primary};
+  --primary-very-low: lighten($primary, 70%);
+
+  --fcc-primary-color: #{$fcc-primary-color};
+  --fcc-secondary-color: #{$fcc-secondary-color};
+  --fcc-tertiary-color: #{$fcc-tertiary-color};
+  --fcc-quaternary-color: #{$fcc-quaternary-color};
+  --fcc-gray-mid: #{$fcc-gray-mid};
+  --fcc-quaternary-background: #{$fcc-quaternary-background};
+  --fcc-tertiary-background: #{$fcc-tertiary-background};
+  --fcc-secondary-background: #{$fcc-secondary-background};
+  --fcc-primary-background: #{$fcc-primary-background};
+  --fcc-highlight-color: #{$fcc-highlight-color};
+  --secondary-header-background: #{$secondary-header-background};
 
   --gray90: #{$--gray90};
-  --gray85: #{mix($header_background, $header_primary, 93%)}; 
-  --gray75: #{mix($header_background, $header_primary, 80%)};
-  --gray65: #{mix($header_background, $header_primary, 67%)};
-  --gray45: #{mix($header_background, $header_primary, 50%)}; 
+  --gray85: #{$--gray85};
+  --gray75: #{$--gray75};
+  --gray65: #{$--gray65};
+  --gray45: #{$--gray45};
   --gray10: #{$--gray10};
-  --gray05: #{mix($header_background, $header_primary, 7%)};
+  --gray05: #{$--gray05};
   --gray00: #{$--gray00};
 
-  --light-danger: #{$--light-danger}; 
-  --fcc-d-hover: rgba(var(--primary), 0.08);
-  --fcc-d-selected: #{$fcc-d-selected}; 
+  --light-danger: #{$--light-danger};
+  --fcc-d-hover: #{$fcc-d-hover};
+  --fcc-d-selected: #{$fcc-d-selected};
   --dark-blue: #002ead;
   --blue-50: #198eee;
-  --header_primary: #fff;
-  --header_background: #0a0a23;
+  --header_primary: #{$header_primary};
+  --header_background: #{$header_background};
   --fcc-highlight-mid: #{$fcc-highlight-mid};
-  --fcc-highlight-background: #{$fcc-highlight-background}; 
-  --d-hover: #{$fcc-d-hover}; 
+  --fcc-highlight-background: #{$fcc-highlight-background};
+  --d-hover: #{$fcc-d-hover};
   --d-selected: #{$fcc-d-selected};
 }

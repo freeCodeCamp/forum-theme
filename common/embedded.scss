@@ -1,41 +1,51 @@
+// common/embedded.scss
+
 .discourse-embedding {
-  background-color: #fff;
-  color: #0a0a23;
+  background-color: var(--fcc-primary-background);
+  color: var(--header_background);
   overflow-y: auto;
-}
+  font-family: "Lato", sans-serif;
 
-.discourse-embedding .button {
-  padding: 0px 14px;
-  outline: none;
-  cursor: pointer;
-  margin-right: 5px;
-  height: 30px;
-  line-height: 24px; /* centers the text for all browser font sizes */
-  text-decoration: none;
-  background-color: #feac32;
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border: 3px solid #feac32;
-  color: #0a0a23;
-  display: inline-flex;
-  align-items: center;
-}
+  // Buttons inside embedding
+  .button {
+    padding: 0 14px;
+    height: 30px;
+    line-height: 24px; // text vertically centered
+    margin-right: 5px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--fcc-highlight-color);
+    background-image: linear-gradient(
+      var(--fcc-highlight-mid),
+      var(--fcc-highlight-color)
+    );
+    border: 3px solid var(--fcc-highlight-color);
+    color: var(--header_background);
+    transition: all 0.2s ease-in-out;
 
-.discourse-embedding .button:hover,
-.discourse-embedding .button:focus,
-.discourse-embedding .button:active:hover {
-  background-color: #fecc4c;
-  border-width: 3px;
-  border-color: #f1a02a;
-  background-image: none;
-  color: #0a0a23;
-  text-decoration: none;
-}
-.discourse-embedding .button:active {
-  background-image: none;
-  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-}
+    &:hover,
+    &:focus,
+    &:active:hover {
+      background-color: var(--fcc-highlight-mid);
+      border-color: darken(var(--fcc-highlight-color), 10%);
+      background-image: none;
+      color: var(--header_background);
+      text-decoration: none;
+    }
 
-.discourse-embedding footer .logo {
-  display: none;
+    &:active {
+      background-image: none;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+    }
+  }
+
+  footer {
+    .logo {
+      display: none;
+    }
+  }
 }
