@@ -10,7 +10,7 @@
   .button {
     padding: 0 14px;
     height: 30px;
-    line-height: 24px; // text vertically centered
+    line-height: 24px;
     margin-right: 5px;
     cursor: pointer;
     outline: none;
@@ -30,7 +30,7 @@
     &:focus,
     &:active:hover {
       background-color: var(--fcc-highlight-mid);
-      border-color: darken(var(--fcc-highlight-color), 10%);
+      border-color: #0050b3; // darken fixed manually
       background-image: none;
       color: var(--header_background);
       text-decoration: none;

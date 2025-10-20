@@ -1,13 +1,9 @@
 // common/common.scss
 
-// ---------------------------------------------------
-// Variables & Theme Setup
-// ---------------------------------------------------
 $--global-nav-height: 38px;
 $hints-index: 1000;
 $--header-offset: 10px;
 
-// Media query breakpoints
 $breakpoints: (
   "screen-xxs-max": 400px,
   "screen-xs-min": 401px,
@@ -23,7 +19,6 @@ $breakpoints: (
   "screen-xxl-min": 1200px,
 );
 
-// Media query mixins
 @mixin at-least($device-width) {
   $value: map-get($breakpoints, $device-width);
   @if $value != null {
@@ -42,19 +37,14 @@ $breakpoints: (
   }
 }
 
-// Fonts
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700");
 
-// Focus outline mixin
 @mixin focus-outline {
   outline: 3px solid var(--blue-50) !important;
   outline-offset: 0 !important;
 }
 
-// ---------------------------------------------------
-// Global styles
-// ---------------------------------------------------
 html {
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -70,9 +60,6 @@ html {
   }
 }
 
-// ---------------------------------------------------
-// Footer
-// ---------------------------------------------------
 .site-footer {
   position: relative;
   color: var(--fcc-secondary-color);
@@ -120,7 +107,6 @@ html {
   }
 }
 
-// Responsive footer grids
 @include at-least(screen-sm-min) {
   .footer-top {
     grid-template-columns: repeat(auto-fit, minmax(30.5em, 1fr));
@@ -140,9 +126,6 @@ html {
   }
 }
 
-// ---------------------------------------------------
-// Navigation
-// ---------------------------------------------------
 .site-nav {
   display: flex;
   align-items: center;
@@ -168,7 +151,6 @@ html {
   }
 }
 
-// Header
 .d-header {
   background: var(--secondary-header-background);
   margin-top: $--global-nav-height;
@@ -196,9 +178,6 @@ html {
   }
 }
 
-// ---------------------------------------------------
-// Buttons
-// ---------------------------------------------------
 .btn {
   color: var(--primary) !important;
   background-color: transparent;
@@ -232,9 +211,6 @@ html {
   }
 }
 
-// ---------------------------------------------------
-// Topic list, Pills, and Sidebar
-// ---------------------------------------------------
 .topic-list .posters a,
 .topic-list-item.visited a.title {
   color: var(--primary-medium);
@@ -257,15 +233,11 @@ html {
   }
 }
 
-// Sidebar links hover
 .sidebar-section-link-wrapper .sidebar-section-link:hover,
 .sidebar-section-link-wrapper .sidebar-section-link.active {
   color: var(--primary);
 }
 
-// ---------------------------------------------------
-// Utility
-// ---------------------------------------------------
 .anchor {
   padding-top: calc(#{$--global-nav-height} * 2 + 1rem);
   margin-top: calc(-1rem - #{$--global-nav-height} * 2);
@@ -276,7 +248,6 @@ html {
   }
 }
 
-// Dropdowns
 .select-kit-header,
 .select-kit-row.is-highlighted,
 .select-kit-row.is-selected {
@@ -284,7 +255,6 @@ html {
   color: var(--primary-low) !important;
 }
 
-// Modal buttons
 .modal-header .modal-close:hover svg,
 .modal-header .modal-close:focus svg {
   color: var(--fcc-primary-background) !important;
