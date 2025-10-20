@@ -1,5 +1,3 @@
-// javascripts/api-initializers/freecodecamp.js
-
 import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("0.8", (api) => {
@@ -7,14 +5,18 @@ export default apiInitializer("0.8", (api) => {
 
   const getCurriculumLabel = () => {
     return api.container.lookup("service:site").mobileView
-      ? settings.curriculum_title_short
-      : settings.curriculum_title;
+      ? siteSettings.curriculum_title_short
+      : siteSettings.curriculum_title;
   };
 
+  // Render curriculum link before header panel
   api.renderInOutlet("before-header-panel", <template>
-    <a class="curriculum-nav" href={{settings.curriculum_src}}>{{getCurriculumLabel()}}</a>
+    <a class="curriculum-nav" href={{siteSettings.curriculum_src}}>
+      {{getCurriculumLabel()}}
+    </a>
   </template>);
 
+  // Render site navigation above site header
   api.renderInOutlet("above-site-header", <template>
     <nav class="site-nav nav-padding">
       <div class="site-nav-logo">
@@ -30,8 +32,8 @@ export default apiInitializer("0.8", (api) => {
     </nav>
   </template>);
 
-  const curriculumSlugs = settings.curriculum_slug.split('|');
-  const languages = settings.languages.split('|');
+  const curriculumSlugs = siteSettings.curriculum_slug.split('|');
+  const languages = siteSettings.languages.split('|');
 
   api.onPageChange(() => {
     const curriculumNav = document.querySelector('.curriculum-nav');
@@ -39,11 +41,11 @@ export default apiInitializer("0.8", (api) => {
 
     if (!curriculumNav) return;
 
-    curriculumNav.href = settings.curriculum_src;
+    curriculumNav.href = siteSettings.curriculum_src;
 
     languages.forEach((lang, i) => {
       if (lang.toLowerCase() === category?.slug?.toLowerCase()) {
-        const urlPath = new URL(curriculumSlugs[i], settings.curriculum_src);
+        const urlPath = new URL(curriculumSlugs[i], siteSettings.curriculum_src);
         curriculumNav.href = urlPath.href;
       }
     });

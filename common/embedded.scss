@@ -1,5 +1,3 @@
-// common/embedded.scss
-
 .discourse-embedding {
   background-color: var(--fcc-primary-background);
   color: var(--header_background);
@@ -47,5 +45,33 @@
     .logo {
       display: none;
     }
+  }
+
+  // Links inside embedded content
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      color: var(--accent-blue);
+      text-decoration: underline;
+    }
+  }
+
+  // Headings inside embedded content
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--header_background);
+    font-family: "Lato", sans-serif;
+  }
+
+  // Paragraphs
+  p {
+    color: var(--header_background);
+    line-height: 1.6;
   }
 }

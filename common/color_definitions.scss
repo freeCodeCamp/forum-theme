@@ -34,6 +34,7 @@ $fcc-highlight-mid: mix($fcc-highlight-color, $fcc-highlight-background, 50%);
 $secondary-header-background: mix($header_primary, $header_background, 93%);
 $fcc-d-selected: rgba($primary, 0.16);
 $fcc-d-hover: rgba($primary, 0.08);
+$light-danger: lighten($danger, 15%);
 
 // -----------------------------
 // Grayscale
@@ -49,7 +50,6 @@ $--gray15: mix($header_background, $header_primary, 20%);
 $--gray10: mix($header_background, $header_primary, 13%);
 $--gray05: mix($header_background, $header_primary, 7%);
 $--gray00: mix($header_background, $header_primary, 0%);
-$--light-danger: lighten($danger, 15%);
 
 // -----------------------------
 // CSS Variables (:root)
@@ -79,11 +79,11 @@ $--light-danger: lighten($danger, 15%);
   --gray05: #{$--gray05};
   --gray00: #{$--gray00};
 
-  --light-danger: #{$--light-danger};
+  --light-danger: #{$light-danger};
   --fcc-d-hover: #{$fcc-d-hover};
   --fcc-d-selected: #{$fcc-d-selected};
-  --dark-blue: #002ead;
-  --blue-50: #198eee;
+  --dark-blue: #{$primary};
+  --blue-50: #{$tertiary};
   --header_primary: #{$header_primary};
   --header_background: #{$header_background};
   --fcc-highlight-mid: #{$fcc-highlight-mid};

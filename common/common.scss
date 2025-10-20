@@ -1,5 +1,7 @@
 // common/common.scss
 
+@import "color_definitions.scss";
+
 $--global-nav-height: 38px;
 $hints-index: 1000;
 $--header-offset: 10px;
@@ -60,6 +62,7 @@ html {
   }
 }
 
+/* ---------------- Footer ---------------- */
 .site-footer {
   position: relative;
   color: var(--fcc-secondary-color);
@@ -111,7 +114,6 @@ html {
   .footer-top {
     grid-template-columns: repeat(auto-fit, minmax(30.5em, 1fr));
   }
-
   .trending-guides-articles {
     grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
   }
@@ -126,6 +128,7 @@ html {
   }
 }
 
+/* ---------------- Header ---------------- */
 .site-nav {
   display: flex;
   align-items: center;
@@ -178,6 +181,7 @@ html {
   }
 }
 
+/* ---------------- Buttons ---------------- */
 .btn {
   color: var(--primary) !important;
   background-color: transparent;
@@ -202,60 +206,11 @@ html {
 
   &.btn-danger {
     color: var(--fcc-quaternary-color);
-    background-color: var(--danger);
+    background-color: $danger; // SCSS variable
     &:hover,
     &.btn-hover {
-      background-color: var(--light-danger);
+      background-color: $light-danger; // SCSS variable
       color: var(--fcc-quaternary-color);
     }
   }
-}
-
-.topic-list .posters a,
-.topic-list-item.visited a.title {
-  color: var(--primary-medium);
-}
-
-.nav-pills {
-  > li {
-    > a {
-      color: var(--primary);
-      border: 3px solid var(--primary);
-      &:hover {
-        color: var(--fcc-secondary-background);
-        background-color: var(--primary);
-      }
-    }
-    a.active {
-      color: var(--fcc-secondary-background);
-      background-color: var(--primary);
-    }
-  }
-}
-
-.sidebar-section-link-wrapper .sidebar-section-link:hover,
-.sidebar-section-link-wrapper .sidebar-section-link.active {
-  color: var(--primary);
-}
-
-.anchor {
-  padding-top: calc(#{$--global-nav-height} * 2 + 1rem);
-  margin-top: calc(-1rem - #{$--global-nav-height} * 2);
-
-  @include at-least(screen-md-min) {
-    padding-top: calc(#{$--global-nav-height} + 1rem);
-    margin-top: calc(-1rem - #{$--global-nav-height});
-  }
-}
-
-.select-kit-header,
-.select-kit-row.is-highlighted,
-.select-kit-row.is-selected {
-  background-color: var(--primary) !important;
-  color: var(--primary-low) !important;
-}
-
-.modal-header .modal-close:hover svg,
-.modal-header .modal-close:focus svg {
-  color: var(--fcc-primary-background) !important;
 }
