@@ -279,7 +279,11 @@ p.footer-donation {
 }
 
 #main-outlet {
-  padding-top: $--global-nav-height * 3;
+  padding-top: 0px;
+}
+
+#main-outlet-wrapper {
+    padding-top: $--global-nav-height * 2;
 }
 
 .d-header {
@@ -440,7 +444,7 @@ a.curriculum-nav:focus {
 
 @include at-least(screen-md-min) {
   #main-outlet {
-    padding-top: $--global-nav-height * 3;
+    padding-top: $--global-nav-height;
   }
   .d-header {
     background-color: var(--gray90);
