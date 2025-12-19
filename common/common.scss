@@ -289,8 +289,6 @@ p.footer-donation {
 .d-header {
   background: var(--secondary-header-background);
   margin-top: $--global-nav-height;
-  margin-left: 10px;
-  margin-right: 10px;
   height: $--global-nav-height;
   background-color: var(--gray85);
   box-shadow: none;
@@ -301,6 +299,10 @@ p.footer-donation {
 
 .d-header .title {
   display: none;
+}
+
+.d-header>.wrap .contents {
+  margin: 0px 10px;
 }
 
 body.no-ember {
