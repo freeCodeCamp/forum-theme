@@ -289,6 +289,8 @@ p.footer-donation {
 .d-header {
   background: var(--secondary-header-background);
   margin-top: $--global-nav-height;
+  margin-left: 10px;
+  margin-right: 10px;
   height: $--global-nav-height;
   background-color: var(--gray85);
   box-shadow: none;
@@ -366,7 +368,6 @@ body.no-ember {
 a.curriculum-nav {
   color: white;
   padding: 0 10px;
-  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
