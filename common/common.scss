@@ -98,7 +98,6 @@ html {
   padding-bottom: 40px;
   font-size: 16px;
   overflow-x: hidden;
-  width: min(100%, 1300px);
 }
 
 .footer-container p {
@@ -279,7 +278,11 @@ p.footer-donation {
 }
 
 #main-outlet {
-  padding-top: $--global-nav-height * 2;
+  padding-top: 0px;
+}
+
+#main-outlet-wrapper {
+    padding-top: $--global-nav-height * 2;
 }
 
 .d-header {
@@ -288,13 +291,17 @@ p.footer-donation {
   height: $--global-nav-height;
   background-color: var(--gray85);
   box-shadow: none;
-  position: static;
+  position: fixed;
   z-index: $hints-index - 3;
   top: 0;
 }
 
 .d-header .title {
   display: none;
+}
+
+.d-header>.wrap .contents {
+  margin: 0px 10px;
 }
 
 body.no-ember {
@@ -351,7 +358,7 @@ body.no-ember {
 
 .d-header-icons .icon:hover .d-icon,
 .d-header-icons .icon:focus .d-icon {
-  color: var(--gray45);
+  color: var(--header_primary);
 }
 
 .d-header-icons .icon img.avatar {
@@ -362,7 +369,6 @@ body.no-ember {
 a.curriculum-nav {
   color: white;
   padding: 0 10px;
-  height: $--global-nav-height;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,7 +377,7 @@ a.curriculum-nav {
 a.curriculum-nav:hover,
 a.curriculum-nav:focus {
   color: var(--gray90);
-  background-color: var(--secondary);
+  background-color: var(--header_primary);
 }
 
 .navigation-container {
@@ -440,7 +446,7 @@ a.curriculum-nav:focus {
 
 @include at-least(screen-md-min) {
   #main-outlet {
-    padding-top: $--global-nav-height * 2;
+    padding-top: $--global-nav-height;
   }
   .d-header {
     background-color: var(--gray90);
@@ -467,378 +473,3 @@ a.curriculum-nav:focus {
   }
 }
 
-// theme specific --------------------
-.btn:hover .d-icon,
-.btn .d-icon,
-.btn-primary .d-icon {
-  color: inherit;
-}
-
-.d-header-icons .badge-notification {
-  top: 0px;
-}
-
-img.avatar {
-  border-radius: 0px;
-  background: var(--fcc-gray-mid);
-}
-
-.topic-list .posters a:first-child .avatar.latest:not(.single) {
-  position: relative;
-  top: 0px;
-  left: -2px;
-}
-
-.topic-list .posters a {
-  border: 2px solid transparent;
-  position: relative;
-  top: 0px;
-  left: -2px;
-}
-
-.topic-list .posters a:first-child .avatar.latest:not(.single) {
-  box-shadow: none;
-}
-
-@include at-least(screen-lg-min) {
-  .topic-list .posters {
-    width: 162px;
-  }
-}
-
-#banner .close,
-.modal-header .modal-close {
-  padding-left: 0.2em;
-  padding-right: 0.2em;
-}
-
-.modal-header .modal-close:hover svg,
-.modal-header .modal-close:focus svg {
-  color: var(--fcc-primary-background) !important;
-}
-
-.badge-notification,
-.badge-group {
-  border-radius: none;
-}
-
-// user summary
-html.whos-online-ring.desktop-view body.user-page-online .primary img.avatar {
-  margin: 8px 20px 10px 8px;
-}
-//new topic
-@include until(screen-md-max) {
-  button#create-topic span {
-    display: inline;
-  }
-}
-
-//main page grid ----------------------------
-td.poster-names a {
-  color: dark-light-choose(var(--primary-medium), var(--secondary-medium));
-}
-
-#whos-online {
-  color: dark-light-choose(var(--primary-medium), var(--secondary-medium)) !important;
-}
-
-//buttons ----------------------------
-.btn:not(.btn-flat),
-.select-kit.dropdown-select-box .dropdown-select-box-header {
-  position: relative;
-  color: var(--primary) !important;
-  background-color: transparent;
-  border: 3px solid var(--primary);
-
-  &:focus,
-  &:hover,
-  &.btn-hover,
-  &.btn-social:hover,
-  &.btn-social.btn-hover,
-  &:active,
-  &.btn-active {
-    background-color: var(--primary) !important;
-    color: var(--fcc-quaternary-background) !important;
-  }
-
-  &[href] {
-    color: var(--fcc-quaternary-color);
-  }
-
-  &[disabled],
-  &.disabled {
-    opacity: 0.6 !important;
-  }
-
-  &.hidden {
-    display: none;
-  }
-
-  &.btn-primary {
-    color: var(--fcc-tertiary-color);
-    background-color: var(--fcc-tertiary-background);
-    &:hover,
-    &.btn-hover {
-      background-color: var(--fcc-highlight-color);
-      color: var(--fcc-secondary-background);
-    }
-  }
-
-  &.btn-danger {
-    color: var(--fcc-quaternary-color);
-    background-color: var(--danger);
-
-    &:hover,
-    &.btn-hover {
-      background-color: var(--light-danger);
-      color: var(--fcc-quaternary-color);
-    }
-  }
-}
-
-.d-editor-button-bar .btn {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  background: none;
-}
-
-// button exceptions
-.d-editor-button-bar
-  .select-kit.dropdown-select-box
-  .dropdown-select-box-header {
-  border: none;
-}
-
-// All categories button sizing exception fix
-div.select-kit-header {
-  margin-bottom: 0 !important;
-}
-
-.login-modal,
-.create-account {
-  .btn-social {
-    background-color: transparent !important;
-  }
-}
-
-.login-modal #login-buttons:not(.hidden) button,
-.create-account #login-buttons:not(.hidden) button {
-  white-space: initial;
-}
-
-#reply-control .btn-mini-toggle:hover,
-#reply-control .btn-mini-toggle:focus {
-  .d-icon {
-    color: var(--secondary);
-  }
-}
-
-// Pill nav ----------------------------
-
-.nav-pills {
-  > li {
-    > a {
-      color: var(--primary);
-      border: 3px solid var(--primary);
-      &:hover {
-        color: var(--fcc-secondary-background);
-        background-color: var(--primary);
-        border: 3px solid var(--primary);
-      }
-    }
-    a.active {
-      color: var(--fcc-secondary-background);
-      background-color: var(--primary);
-      border: 3px solid var(--primary);
-    }
-
-    // This pseudo element is a blue underline.
-    a.active::after {
-      display: none;
-    }
-
-    a .d-icon,
-    button .d-icon {
-      transition: none; // Disable the default delay in color change when the icon is hovered
-    }
-
-    a.active .d-icon,
-    a:hover .d-icon,
-    button.active .d-icon,
-    button:hover .d-icon {
-      color: inherit;
-    }
-  }
-}
-
-//topic-list ----------------------------
-.list-controls {
-  clear: both;
-  margin-bottom: 5px;
-  .combo-box .combo-box-header {
-    background: var(--secondary);
-    color: var(--primary);
-    border: 3px solid var(--primary);
-    padding: 6px 12px;
-    font-size: $font-up-1;
-    transition: none;
-    height: 42px;
-    &:hover,
-    &:focus {
-      color: var(--fcc-secondary-background);
-      background-color: var(--primary);
-    }
-  }
-  .select-kit {
-    align-self: center;
-    .select-kit-collection {
-      font-size: $font-down-1;
-      max-height: 40vh;
-      .texts,
-      .icons {
-        font-size: $font-up-1;
-      }
-    }
-    &.categories-admin-dropdown,
-    &.tags-admin-dropdown,
-    &.category-notifications-button,
-    &.tag-notifications-button {
-      float: right;
-      button {
-        display: inline-block;
-      }
-    }
-  }
-  .category-heading {
-    max-width: 100%;
-  }
-}
-
-.topic-list-item.visited,
-.latest-topic-list-item.visited,
-.category-topic-link.visited {
-  a.title:not(.badge-notification) {
-    color: var(--primary-medium);
-  }
-}
-
-.topic-list-main-link {
-  font-size: $font-up-1;
-  a.title {
-    padding: 15px 0;
-    word-break: break-word;
-    color: var(--primary);
-  }
-
-  .anon & {
-    a.title:visited:not(.badge-notification) {
-      color: var(--primary-medium);
-    }
-  }
-
-  a.title.visited:not(.badge-notification) {
-    color: var(--primary-medium);
-  }
-}
-
-.topic-list .main-link {
-  &.focused {
-    box-shadow: none !important; /* Unset the default Discourse styles */
-  }
-}
-
-.topic-timer-heading > span {
-  display: none;
-}
-
-// anchor links
-.anchor {
-  padding-top: calc(#{$--global-nav-height} * 2 + 1rem);
-  margin-top: calc(-1rem - #{$--global-nav-height} * 2);
-}
-
-@include at-least(screen-md-min) {
-  .anchor {
-    padding-top: calc(#{$--global-nav-height} + 1rem);
-    margin-top: calc(-1rem - #{$--global-nav-height});
-  }
-}
-
-// Display the Updated topic banner in the DOM flow
-#list-area .show-more {
-  position: relative;
-}
-
-// Adjust hover and read(selected) states
-.user-menu .quick-access-panel li:hover,
-.menu-panel .widget-link:hover, .menu-panel .widget-link:focus, .menu-panel .categories-link:hover, .menu-panel .categories-link:focus {
-  background-color: var(--fcc-d-hover) !important;
-}
-
-.user-menu .quick-access-panel li button {
-  border: none;
-
-  &:hover {
-    background-color: transparent !important;
-  }
-}
-
-// Dropdown
-.select-kit-header {
-  color: var(--fcc-primary-color) !important;
-}
-
-.select-kit-header:hover,
-.select-kit.is-expanded .select-kit-header,
-.select-kit-row.is-highlighted,
-.select-kit-row.is-selected, 
-.select-kit-row.is-highlighted a,
-.select-kit-row.is-highlighted span {
-  background-color: var(--primary) !important;
-  color: var(--primary-low) !important;
-}
-
-.search-menu-container .search-input {
-  // `.search-input` is a div that wraps around the input and the search button.
-  // This div already has an focus outline set by Discourse,
-  // so we need to remove ours to avoid having nested focus outlines.
-  #search-term:focus-visible {
-    outline: none !important;
-  }
-
-  .btn.show-advanced-search {
-    margin-right: 0.5em;
-  }
-
-  .btn.show-advanced-search .d-icon {
-    color: inherit;
-  }
-}
-
-.topic-body .contents details {
-  &:not([open]):hover,
-  &:not([open]):focus,
-  &:not([open]):focus-within {
-    background-color: var(--fcc-d-hover);
-  }
-}
-
-.activate-account-page .alert-error {
-  margin: 1em;
-  padding-top: 1.875em;
-}
-
-// Categories sidebar
-.sidebar-section-link-wrapper .sidebar-section-link:hover,
-.sidebar-section-link-wrapper .sidebar-section-link.active {
-  color: var(--primary);
-}
-
-.hamburger-panel .revamped {
-	--d-sidebar-row-height: 1.5em;
-}
-
-.menu-panel.drop-down .panel-body {
-  max-width: calc(100vw - 2em);
-}
