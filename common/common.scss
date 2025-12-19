@@ -279,7 +279,7 @@ p.footer-donation {
 }
 
 #main-outlet {
-  padding-top: $--global-nav-height * 2;
+  padding-top: $--global-nav-height * 3;
 }
 
 .d-header {
@@ -288,7 +288,7 @@ p.footer-donation {
   height: $--global-nav-height;
   background-color: var(--gray85);
   box-shadow: none;
-  position: static;
+  position: fixed;
   z-index: $hints-index - 3;
   top: 0;
 }
@@ -351,7 +351,7 @@ body.no-ember {
 
 .d-header-icons .icon:hover .d-icon,
 .d-header-icons .icon:focus .d-icon {
-  color: var(--gray45);
+  color: var(--header_primary);
 }
 
 .d-header-icons .icon img.avatar {
@@ -362,7 +362,7 @@ body.no-ember {
 a.curriculum-nav {
   color: white;
   padding: 0 10px;
-  height: $--global-nav-height;
+  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,7 +371,7 @@ a.curriculum-nav {
 a.curriculum-nav:hover,
 a.curriculum-nav:focus {
   color: var(--gray90);
-  background-color: var(--secondary);
+  background-color: var(--header_primary);
 }
 
 .navigation-container {
@@ -440,7 +440,7 @@ a.curriculum-nav:focus {
 
 @include at-least(screen-md-min) {
   #main-outlet {
-    padding-top: $--global-nav-height * 2;
+    padding-top: $--global-nav-height * 3;
   }
   .d-header {
     background-color: var(--gray90);
