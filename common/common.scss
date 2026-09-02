@@ -67,8 +67,8 @@ $breakpoints: (
 
 // general ---------------------------------------------------------------
 :root {
-  --header-offset: {$--header-offset};
-  --global-nav-height: {$--global-nav-height}; 
+  --header-offset: #{$--header-offset};
+  --global-nav-height: #{$--global-nav-height}; 
 }
 
 html {
