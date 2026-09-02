@@ -66,6 +66,11 @@ $breakpoints: (
 }
 
 // general ---------------------------------------------------------------
+:root {
+  --header-offset: #{$--header-offset};
+  --global-nav-height: #{$--global-nav-height}; 
+}
+
 html {
   font-family: "Lato", sans-serif;
   font-size: 18px;
