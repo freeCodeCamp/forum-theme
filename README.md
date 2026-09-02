@@ -22,6 +22,12 @@ Some of the theme plugins we are using as of now are:
   from discourse_~~ [User Top Nav](https://github.com/discourse/discourse-users-nav) Using the official plugin. 
 - [Trust Level Avatar Flair](https://github.com/tshenry/discourse-trust-level-avatar-flair)
 
+## Releases
+
+This repo uses [release-please](https://github.com/googleapis/release-please). Commits landing on `main` must use conventional-commit subjects (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`) - the subject determines the version bump and the changelog entry.
+
+release-please keeps an open `chore(main): release x.y.z` PR holding the `CHANGELOG.md` and `about.json` `theme_version` updates. Merging that PR tags the release and publishes a GitHub Release.
+
 ## Support:
 
 You can report any support issues, bugs in our
