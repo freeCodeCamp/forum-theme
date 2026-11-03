@@ -2,12 +2,14 @@ import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("0.8", (api) => {
   const siteSettings = api.container.lookup("service:site-settings");
-  const rawLabel = api.container.lookup("service:site").mobileView
-    ? settings.curriculum_title_short
-    : settings.curriculum_title;
+  const site = api.container.lookup("service:site");
 
   api.renderInOutlet("before-header-panel", <template>
-    <a class="curriculum-nav" href={{settings.curriculum_src}}>{{rawLabel}}</a>
+    <a class="curriculum-nav" href={{settings.curriculum_src}}>{{if
+        site.mobileView
+        settings.curriculum_title_short
+        settings.curriculum_title
+      }}</a>
   </template>);
 
   api.renderInOutlet("above-site-header", <template>
