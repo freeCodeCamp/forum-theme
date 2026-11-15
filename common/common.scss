@@ -321,8 +321,8 @@ body.no-ember {
   font-family: "Roboto Mono", monospace;
 }
 
-.d-header .extra-info-wrapper + .panel .header-buttons,
-.d-header .extra-info-wrapper + .panel .d-header-icons {
+.mobile-view .d-header .extra-info-wrapper ~ .panel .header-buttons,
+.mobile-view .d-header .extra-info-wrapper ~ .panel .d-header-icons {
   display: flex;
 }
 
