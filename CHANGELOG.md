@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.3](https://github.com/freeCodeCamp/forum-theme/compare/v1.1.2...v1.1.3) (2026-11-15)
+
+
+### Bug Fixes
+
+* read mobile view when the header renders ([#170](https://github.com/freeCodeCamp/forum-theme/issues/170)) ([d5611a4](https://github.com/freeCodeCamp/forum-theme/commit/d5611a46b1507f25b4dd86129bd8e257a0dc6afe))
+
+
+### Chores
+
+* **github:** remove CODEOWNERS ([#168](https://github.com/freeCodeCamp/forum-theme/issues/168)) ([1ad3e73](https://github.com/freeCodeCamp/forum-theme/commit/1ad3e73f15a4f4283c14a74efa45d6084298b3a8))
+
 ## [1.1.2](https://github.com/freeCodeCamp/forum-theme/compare/v1.1.1...v1.1.2) (2026-10-15)
 
 
