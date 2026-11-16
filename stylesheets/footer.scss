@@ -6,6 +6,8 @@
 }
 
 .footer-container {
+  box-sizing: border-box;
+  max-width: var(--d-max-width, 1110px);
   margin-inline: auto;
   padding: 40px 15px;
   font-size: 16px;
@@ -115,13 +117,16 @@ p.footer-donation {
 }
 
 @media (width >= 1200px) {
+  .footer-top {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
   p.footer-donation {
     margin-top: 18px;
   }
 
   .footer-bottom .our-nonprofit {
     padding: 0 10px;
-    justify-content: space-between;
     margin-top: 20px;
   }
 
