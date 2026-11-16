@@ -168,7 +168,7 @@ snapshots:
 lockfileVersion: '9.0'
 
 settings:
-  autoInstallPeers: false
+  autoInstallPeers: true
   excludeLinksFromLockfile: false
 
 importers:
@@ -178,15 +178,6 @@ importers:
       '@discourse/lint-configs':
         specifier: 3.10.0
         version: 3.10.0(eslint@10.6.0(supports-color@10.2.2))(postcss@8.5.33)(prettier@3.8.1)(stylelint@17.5.0(supports-color@10.2.2)(typescript@5.9.3))(supports-color@10.2.2)
-      eslint:
-        specifier: 10.6.0
-        version: 10.6.0(supports-color@10.2.2)
-      prettier:
-        specifier: 3.8.1
-        version: 3.8.1
-      stylelint:
-        specifier: 17.5.0
-        version: 17.5.0(supports-color@10.2.2)(typescript@5.9.3)
 
 packages:
 
