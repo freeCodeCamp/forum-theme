@@ -1,0 +1,23 @@
+:root {
+  --global-nav-height: 38px;
+}
+
+html {
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+}
+
+@mixin focus-outline {
+  outline: 3px solid var(--blue-50) !important;
+  outline-offset: 0 !important;
+}
+
+:focus-visible {
+  @include focus-outline;
+}
+
+@supports not selector(:focus-visible) {
+  :focus {
+    @include focus-outline;
+  }
+}

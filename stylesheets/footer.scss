@@ -1,0 +1,137 @@
+.site-footer {
+  position: relative;
+  color: var(--fcc-secondary-color);
+  background: var(--fcc-secondary-background);
+  line-height: 1.6;
+}
+
+.footer-container {
+  margin-inline: auto;
+  padding: 40px 15px;
+  font-size: 16px;
+  overflow-x: hidden;
+
+  p {
+    margin: 0 0 1.45rem;
+    line-height: 30px;
+  }
+
+  a {
+    color: var(--fcc-secondary-color);
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  .col-header {
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px 15px;
+  }
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19em), 1fr));
+}
+
+.footer-desc-col {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 15px;
+  margin-bottom: 30px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+p.footer-donation {
+  font-weight: 700;
+  font-size: 18px;
+
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+}
+
+.trending-guides {
+  margin: 0 0 3rem;
+}
+
+.trending-guides-articles {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem 2rem;
+}
+
+.footer-bottom {
+  .col-header {
+    margin: 0;
+  }
+
+  .our-nonprofit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      padding: 5px 10px;
+    }
+  }
+}
+
+@media (width >= 500px) {
+  .footer-top {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30.5em), 1fr));
+  }
+
+  .trending-guides-articles {
+    grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+  }
+}
+
+@media (width >= 800px) {
+  .trending-guides-articles {
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  }
+
+  .footer-bottom .our-nonprofit a {
+    padding: 5px;
+  }
+}
+
+@media (width >= 1020px) {
+  .trending-guides-articles {
+    grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
+  }
+}
+
+@media (width >= 1200px) {
+  p.footer-donation {
+    margin-top: 18px;
+  }
+
+  .footer-bottom .our-nonprofit {
+    padding: 0 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .footer-bottom .col-header {
+    display: none;
+  }
+
+  .footer-divider {
+    height: 1px;
+    margin: 0 15px;
+    background-color: var(--fcc-tertiary-background);
+  }
+}
