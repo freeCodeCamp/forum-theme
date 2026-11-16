@@ -6,8 +6,14 @@
 
 ### Themes
 
-Both dark and light themes are managed in this repo using different color
-schemes.
+This repository contains one Discourse theme with four palettes defined in
+`about.json`: light, dark, dark-low-contrast, and dark-very-low-contrast.
+
+Discourse loads `common/common.scss`, which imports the base, header, and footer
+styles from `stylesheets/`. Palette-dependent styles are in
+`common/color_definitions.scss`. The initializer in
+`javascripts/discourse/api-initializers/` registers the header and footer
+components with Discourse’s plugin outlets.
 
 You can learn more about themes in [this comprehensive article](https://meta.discourse.org/t/developer-s-guide-to-discourse-themes/93648) and learn how to test your changes with theme creator using [this article](https://meta.discourse.org/t/beginners-guide-to-using-theme-creator-and-theme-cli-to-start-building-a-discourse-theme/108444).
 

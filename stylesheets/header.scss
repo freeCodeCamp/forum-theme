@@ -1,0 +1,207 @@
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  font-family: Lato, sans-serif;
+  height: var(--global-nav-height);
+  background-color: var(--gray90);
+
+  // Same level as the Discourse header, so its slide-in menu covers this bar.
+  z-index: 1000;
+  color: var(--header_primary);
+  width: 100%;
+  top: 0;
+}
+
+.site-nav-logo {
+  min-width: 0;
+  max-width: 100%;
+  font-size: 1.7rem;
+  line-height: 1;
+  letter-spacing: -0.5px;
+
+  a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    width: auto;
+    height: 24px;
+    margin: 7px 0;
+  }
+}
+
+.d-header-wrap {
+  top: var(--global-nav-height);
+}
+
+.d-header {
+  height: var(--global-nav-height);
+  background-color: var(--gray85);
+  box-shadow: none;
+
+  .title {
+    display: none;
+  }
+
+  > .wrap {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0;
+    max-width: none;
+
+    .contents {
+      margin: 0 10px;
+    }
+  }
+
+  .d-header-icons {
+    font-family: "Roboto Mono", monospace;
+  }
+
+  .categories-wrapper,
+  .extra-info-wrapper {
+    display: none;
+  }
+
+  .header-buttons {
+    margin-top: 0;
+  }
+}
+
+.mobile-view .d-header .extra-info-wrapper ~ .panel {
+  .header-buttons,
+  .d-header-icons {
+    display: flex;
+  }
+}
+
+body.no-ember {
+  .d-header {
+    margin-top: 0;
+    top: 0;
+    background-color: var(--gray90);
+
+    #site-logo {
+      max-width: 40vw;
+      height: auto;
+      max-height: 24px;
+    }
+
+    .title {
+      display: flex;
+    }
+  }
+
+  .curriculum-nav,
+  .site-nav {
+    display: none;
+  }
+}
+
+.d-header-icons {
+  height: var(--global-nav-height);
+
+  .icon {
+    height: var(--global-nav-height);
+    width: 42px;
+    padding: 2px;
+    box-sizing: border-box;
+    border: 0 !important;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: var(--gray75) !important;
+    }
+
+    img.avatar {
+      width: 70%;
+      height: auto;
+    }
+  }
+
+  .btn .d-icon {
+    color: var(--fcc-gray-mid);
+  }
+
+  .icon:hover .d-icon,
+  .icon:focus .d-icon {
+    color: var(--header_primary);
+  }
+}
+
+a.curriculum-nav {
+  color: var(--header_primary);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    color: var(--gray90);
+    background-color: var(--header_primary);
+  }
+}
+
+.navigation-container {
+  align-items: center;
+}
+
+.loading-indicator-container {
+  z-index: 1201;
+}
+
+@media (width <= 400px) {
+  .d-header > .wrap {
+    padding: 0 5px;
+  }
+
+  a.curriculum-nav {
+    padding: 0 5px;
+  }
+
+  .d-header-icons {
+    margin: 0;
+  }
+}
+
+@media (width >= 800px) {
+  .d-header {
+    background-color: var(--gray90);
+  }
+
+  .d-header-wrap {
+    top: 0;
+  }
+
+  .site-nav {
+    position: fixed;
+    z-index: 1200;
+    width: 210px;
+    left: 50%;
+    margin-left: -105px;
+  }
+
+  .d-header-icons .icon {
+    width: 49px;
+  }
+
+  body.no-ember .d-header #site-logo {
+    position: absolute;
+    margin: 7px 0 7px -105px;
+    top: 0;
+    left: 50%;
+  }
+}

@@ -1,19 +1,10 @@
 # Forum languages
-# These settings are needed because forum languages and /learn/<language> are different
+# Forum and curriculum slugs below are paired by position.
 languages:
   default: espanol|chinese|chinese-traditional|italiano|portugues|ukrainian|japanese|german
   description: "Languages forum slug names which are also available on freeCodeCamp curriculum"
   type: list
   list_type: simple
-  choices:
-    - espanol
-    - chinese
-    - chinese-traditional
-    - italiano
-    - portugues
-    - ukrainian
-    - japanese
-    - german
 
 # Navigation
 curriculum_title:
@@ -27,18 +18,9 @@ curriculum_src:
   description: "The link to related language curriculum"
 curriculum_slug:
   default: espanol|chinese|chinese-traditional|italian|portuguese|ukrainian|japanese|german
-  description: "Slug attached to curriculum_src"
+  description: "Curriculum slugs in the same order as the forum languages"
   type: list
-  list-type: simple
-  choices:
-    - espanol
-    - chinese
-    - chinese-traditional
-    - italian
-    - portuguese
-    - ukrainian
-    - japanese
-    - german
+  list_type: simple
 
 # Analytics
 Google_Tag_Manager:
@@ -60,7 +42,7 @@ footer_paragraph_2:
 footer_paragraph_3:
   default: "Donations to freeCodeCamp go toward our education initiatives, and
     help pay for servers, services, and staff."
-  description: "Second footer paragraph"
+  description: "Third footer paragraph"
 footer_donation_cta:
   default: "You can make a tax-deductible donation here."
   description: "Footer donation paragraph"
