@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.4](https://github.com/freeCodeCamp/forum-theme/compare/v1.1.3...v1.1.4) (2026-11-16)
+
+
+### Bug Fixes
+
+* **deps:** pin linters through lint-configs ([824e5c4](https://github.com/freeCodeCamp/forum-theme/commit/824e5c4716f495fbd67eaa2137fd01549c8cb076))
+* theme standardization, footer content width ([#173](https://github.com/freeCodeCamp/forum-theme/issues/173)) ([895189b](https://github.com/freeCodeCamp/forum-theme/commit/895189b6e001251c5723bca4e76c981d1e6067d4))
+* **viewport:** read mobile view at render ([#171](https://github.com/freeCodeCamp/forum-theme/issues/171)) ([19bc01c](https://github.com/freeCodeCamp/forum-theme/commit/19bc01cb510e040a931c49438e4dc2537acdc735))
+
 ## [1.1.3](https://github.com/freeCodeCamp/forum-theme/compare/v1.1.2...v1.1.3) (2026-11-15)
 
 
