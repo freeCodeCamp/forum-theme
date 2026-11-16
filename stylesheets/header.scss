@@ -6,7 +6,9 @@
   font-family: Lato, sans-serif;
   height: var(--global-nav-height);
   background-color: var(--gray90);
-  z-index: 1001;
+
+  // Same level as the Discourse header, so its slide-in menu covers this bar.
+  z-index: 1000;
   color: var(--header_primary);
   width: 100%;
   top: 0;
