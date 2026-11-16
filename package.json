@@ -11,7 +11,7 @@
     "lint:fix": "eslint javascripts --fix && stylelint '{common,stylesheets}/**/*.scss' --fix && prettier '{common,stylesheets}/**/*.scss' 'javascripts/**/*.{js,gjs}' --write"
   },
   "engines": {
-    "node": ">= 22"
+    "node": ">= 26"
   },
   "packageManager": "pnpm@12.21.0"
 }
