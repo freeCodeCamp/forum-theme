@@ -13,11 +13,17 @@
 }
 
 .site-nav-logo {
+  min-width: 0;
+  max-width: 100%;
   font-size: 1.7rem;
   line-height: 1;
   letter-spacing: -0.5px;
 
   a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     color: inherit;
 
     &:hover {
