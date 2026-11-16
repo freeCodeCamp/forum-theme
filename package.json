@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@discourse/lint-configs": "3.10.0",
+    "eslint": "10.6.0",
+    "prettier": "3.8.1",
+    "stylelint": "17.5.0"
+  },
+  "scripts": {
+    "lint": "pnpm lint:js && pnpm lint:css && pnpm lint:prettier",
+    "lint:js": "eslint javascripts",
+    "lint:css": "stylelint '{common,stylesheets}/**/*.scss'",
+    "lint:prettier": "prettier '{common,stylesheets}/**/*.scss' 'javascripts/**/*.{js,gjs}' --check",
+    "lint:fix": "eslint javascripts --fix && stylelint '{common,stylesheets}/**/*.scss' --fix && prettier '{common,stylesheets}/**/*.scss' 'javascripts/**/*.{js,gjs}' --write"
+  },
+  "engines": {
+    "node": ">= 22"
+  },
+  "packageManager": "pnpm@12.21.0"
+}

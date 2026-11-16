@@ -1,6 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "local>freeCodeCamp/renovate-config"
+  "extends": ["local>freeCodeCamp/renovate-config"],
+  "packageRules": [
+    {
+      "groupName": "Discourse lint",
+      "matchPackageNames": [
+        "@discourse/lint-configs",
+        "eslint",
+        "prettier",
+        "stylelint"
+      ]
+    }
   ]
 }

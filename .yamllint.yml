@@ -1,6 +1,14 @@
 ---
 extends: default
 
+ignore: |
+  node_modules/
+  pnpm-lock.yaml
+
 rules:
   line-length: disable
   document-start: disable
+  comments:
+    min-spaces-from-content: 1
+  truthy:
+    check-keys: false
