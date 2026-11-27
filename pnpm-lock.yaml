@@ -176,8 +176,8 @@ importers:
   .:
     devDependencies:
       '@discourse/lint-configs':
-        specifier: 3.10.0
-        version: 3.10.0(eslint@10.6.0(supports-color@10.2.2))(postcss@8.5.33)(prettier@3.8.1)(stylelint@17.5.0(supports-color@10.2.2)(typescript@5.9.3))(supports-color@10.2.2)
+        specifier: 3.11.0
+        version: 3.11.0(eslint@10.6.0(supports-color@10.2.2))(postcss@8.5.33)(prettier@3.8.1)(stylelint@17.5.0(supports-color@10.2.2)(typescript@5.9.3))(supports-color@10.2.2)
 
 packages:
 
@@ -452,8 +452,8 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.1.1
 
-  '@discourse/lint-configs@3.10.0':
-    resolution: {integrity: sha512-kiaZL0MbfFbI4xwIcx6kCxG1umINEm8RA210cCBErKXfI6qTQJlvCgMaK58dkVbKJSEObIccCipi0gRZRaJpgA==}
+  '@discourse/lint-configs@3.11.0':
+    resolution: {integrity: sha512-f6cImT0QzSCemTcfiSoeBw31rIPawwkW3LK0T4eGyEKxOScQxPJJWvm9K04N3b9dR+IL8brCmgIZ11CCX03Xkg==}
     peerDependencies:
       eslint: 10.6.0
       prettier: 3.8.1
@@ -2099,7 +2099,7 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.2.1
 
-  '@discourse/lint-configs@3.10.0(eslint@10.6.0(supports-color@10.2.2))(postcss@8.5.33)(prettier@3.8.1)(stylelint@17.5.0(supports-color@10.2.2)(typescript@5.9.3))(supports-color@10.2.2)':
+  '@discourse/lint-configs@3.11.0(eslint@10.6.0(supports-color@10.2.2))(postcss@8.5.33)(prettier@3.8.1)(stylelint@17.5.0(supports-color@10.2.2)(typescript@5.9.3))(supports-color@10.2.2)':
     dependencies:
       '@babel/core': 8.1.2
       '@babel/eslint-parser': 8.1.2(@babel/core@8.1.2)(eslint@10.6.0(supports-color@10.2.2))
