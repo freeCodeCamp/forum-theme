@@ -1,7 +1,7 @@
 {
   "private": true,
   "devDependencies": {
-    "@discourse/lint-configs": "3.10.0"
+    "@discourse/lint-configs": "3.11.0"
   },
   "scripts": {
     "lint": "pnpm lint:js && pnpm lint:css && pnpm lint:prettier",
